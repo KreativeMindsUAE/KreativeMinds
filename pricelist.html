@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | Kreative Minds Dubai | Marketing & Digital Strategy Rates</title>
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="9hffjj_Svr9QBWuIzOw5KG4tm1Lt8Vefj7thhNFKwgg" />
+
+    <!-- SEO Meta Data -->
+    <meta name="keywords" content="Kreative Minds Pricing, Marketing Agency Rates Dubai, SEO Cost Dubai, Social Media Management Price UAE, Amazon UAE Store Setup Cost, Business formation Dubai fees, Website development rates Dubai, USA LLC formation Dubai, UK Company setup UAE">
+    <meta name="description" content="View the transparent services and pricing list for Kreative Minds Dubai. Competitive rates for Branding, Digital Marketing, SEO, eCommerce, and Business Setup Services.">
+    <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)">
+    <link rel="canonical" href="https://kreativeminds.ae/pricing" />
+
+    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        km: {
+                            dark: '#0B0F19',
+                            card: '#121826',
+                            primary: '#6366f1', // Indigo
+                            accent: '#a855f7',  // Purple
+                            gold: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right bottom, rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.8)), url('https://images.unsplash.com/photo-1512453979798-5ea904ac66de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a855f7; 
+        }
+
+        /* High-Contrast Text Selection */
+        ::selection {
+            background-color: #fbbf24 !important; /* km-gold */
+            color: #000000 !important; /* Pure black */
+        }
+        ::-moz-selection {
+            background-color: #fbbf24 !important;
+            color: #000000 !important;
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Card Hover & Mobile Touch Zoom Effect */
+        .hover-zoom {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            touch-action: manipulation;
+        }
+        
+        /* Laptop Hover */
+        .hover-zoom:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        /* Mobile Touch Feedback */
+        .hover-zoom:active {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Live Background Canvas Layer */
+        #live-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: #0B0F19; /* Keep the dark base intact */
+            opacity: 0.4; /* 40% visibility as requested */
+        }
+        
+        /* Dark Shadow Overlay to ensure content pop */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%);
+            pointer-events: none;
+        }
+
+        /* Hero Star Sky Layer */
+        #hero-stars-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Nav Transition */
+        #navbar {
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-scrolled {
+            top: 0 !important;
+            height: 3.5rem !important;
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* Pricing Card Special Styling */
+        .price-tag {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+        .usd-price {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden">
+
+    <!-- Live "Digital Galaxy" Global Background -->
+    <canvas id="live-bg-canvas"></canvas>
+    <div class="bg-overlay"></div>
+
+    <!-- Top Utility Bar (NON-STICKY) -->
+    <div id="utility-bar" class="relative w-full bg-km-gold text-km-dark py-1.5 text-[10px] md:text-xs font-bold z-[60] border-b-[0.5px] border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-clock mr-2 opacity-75"></i>
+                <span id="dubai-clock" class="tracking-wide uppercase">Dubai, UAE: Loading Time...</span>
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:hi@kreativeminds.ae" class="flex items-center hover:opacity-70 transition-opacity">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span class="hidden sm:inline">hi@kreativeminds.ae</span>
+                    <span class="sm:hidden">Email Us</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (STICKY) -->
+    <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex items-center justify-between">
+                <!-- Logo & Brand Name -->
+                <div class="flex-shrink-0 cursor-pointer">
+                    <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
+                        <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner transition-all duration-300" id="nav-logo-container">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-xl md:text-2xl">Kreative <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 ml-1">Minds</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-6">
+                        <a href="https://kreativeminds.ae" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Home</a>
+                        <a href="index.html#about" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">About</a>
+                        <a href="index.html#services" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Services</a>
+                        <a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Brief</a>
+                        <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+                            Let's Connect
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-km-card border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="https://kreativeminds.ae" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html#services" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="https://blog.kreativeminds.ae" target="_blank" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Brief</a>
+                <a href="index.html#contact" class="text-indigo-400 block px-3 py-2 rounded-md text-base font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Content -->
+    <header class="pt-48 pb-20 relative overflow-hidden text-center">
+        <canvas id="hero-stars-canvas"></canvas>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-6">
+                Services & <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Pricing</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                All prices are basic starting rates and scope-based. Final quotations provided after consultation with <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a>.
+            </p>
+        </div>
+    </header>
+
+    <!-- Pricing Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Branding & Strategy -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-fingerprint text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Branding & Strategy</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Brand Strategy & Identity</h3>
+                        <p class="text-gray-500 text-xs mb-2">Positioning, messaging, logo, visual identity, brand guidelines.</p>
+                        <p class="price-tag">From AED 5,000 <span class="usd-price">/ $ 1,365</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Market Positioning Sprint/ Strategy</h3>
+                        <p class="text-gray-500 text-xs mb-2">2-3 week strategic engagement for startups, founders & growing businesses.</p>
+                        <p class="price-tag">From AED 6,500 <span class="usd-price">/ $ 1,775</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Business Plan & Feasibility Study</h3>
+                        <p class="text-gray-500 text-xs mb-2">Business plan with market research, competitor analysis, and financial projections.</p>
+                        <p class="price-tag">From AED 4,500 <span class="usd-price">/ $ 1,230</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Website Development -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-code text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Website Development</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">WordPress Website</h3>
+                        <p class="text-gray-500 text-xs mb-2">Up to 10 pages, conversion-focused and basic SEO setup.</p>
+                        <p class="price-tag">From AED 1,500 <span class="usd-price">/ $ 415</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Shopify Ecommerce</h3>
+                        <p class="text-gray-500 text-xs mb-2">Store setup, product structuring, payment & tracking integration.</p>
+                        <p class="price-tag">From AED 1,500 <span class="usd-price">/ $ 415</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Corporate / Custom Website</h3>
+                        <p class="text-gray-500 text-xs mb-2">Custom design, advanced structure, lead generation focus, integrations.</p>
+                        <p class="price-tag">From AED 3,500 <span class="usd-price">/ $ 960</span></p>
+                    </div>
+                </div>
+                <p class="mt-8 text-[10px] text-gray-500 italic">* Domain, hosting, premium themes & plugins not included.</p>
+            </div>
+
+            <!-- Ecommerce & Marketplace -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-bag-shopping text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Ecommerce & Marketplace</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Amazon / Noon Store Setup</h3>
+                        <p class="text-gray-500 text-xs mb-2">Account onboarding, compliance guidance, up-to 5 SKUs listing.</p>
+                        <p class="price-tag">From AED 2,500 <span class="usd-price">/ $ 685</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Amazon / Noon Listing Optimization</h3>
+                        <p class="text-gray-500 text-xs mb-2">Keyword research, bullet points, and listing content optimization.</p>
+                        <p class="price-tag">From AED 250/SKU <span class="usd-price">/ $ 70</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Product Research & Validation</h3>
+                        <p class="text-gray-500 text-xs mb-2">Demand analysis, competitor research and launch road-map.</p>
+                        <p class="price-tag">From AED 4,000 <span class="usd-price">/ $ 1,095</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Marketing & PPC -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom lg:col-span-2" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-chart-line text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Performance Marketing & PPC</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 border-b border-white/5 pb-8">
+                    <div class="bg-white/5 p-4 rounded-xl">
+                        <h4 class="text-white font-bold text-xs uppercase mb-3 text-km-gold">Startup Basic</h4>
+                        <p class="text-white font-bold mb-1 text-sm">AED 2,500/mo</p>
+                        <p class="usd-price">$ 685/USD</p>
+                        <p class="text-gray-500 text-[10px] mt-2">Basic campaign setup & monitoring</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl">
+                        <h4 class="text-white font-bold text-xs uppercase mb-3 text-km-gold">Growth Foundation</h4>
+                        <p class="text-white font-bold mb-1 text-sm">AED 4,500/mo</p>
+                        <p class="usd-price">$ 1230/USD</p>
+                        <p class="text-gray-500 text-[10px] mt-2">Structured setup, tracking, bi-weekly optimization</p>
+                    </div>
+                    <div class="bg-white/5 p-4 rounded-xl">
+                        <h4 class="text-white font-bold text-xs uppercase mb-3 text-km-gold">Growth Accelerator</h4>
+                        <p class="text-white font-bold mb-1 text-sm">AED 7,500/mo</p>
+                        <p class="usd-price">$ 2050/USD</p>
+                        <p class="text-gray-500 text-[10px] mt-2">Full funnel, weekly optimization and retargeting setup</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-sm mb-1">Amazon Account & PPC Management</h3>
+                    <p class="text-gray-500 text-xs mb-2">Campaign structuring and ACOS management.</p>
+                    <p class="price-tag">From AED 2,500/mo <span class="usd-price">/ $ 685</span></p>
+                    <p class="mt-4 text-[10px] text-gray-500 italic">* Ad budget paid separately by client.</p>
+                </div>
+            </div>
+
+            <!-- SEO Services -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-magnifying-glass text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">SEO Services</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">SEO Foundation Setup</h3>
+                        <p class="text-gray-500 text-xs mb-2">Technical audit and keyword mapping.</p>
+                        <p class="price-tag">From AED 2,000 <span class="usd-price">/ $ 550</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Ongoing SEO Growth</h3>
+                        <p class="text-gray-500 text-xs mb-2">Content roadmap, backlink strategy, reporting.</p>
+                        <p class="price-tag">From AED 2,500/mo <span class="usd-price">/ $ 685</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Local SEO & Google Maps</h3>
+                        <p class="text-gray-500 text-xs mb-2">Google Business Profile, local keyword, citation setup.</p>
+                        <p class="price-tag">From AED 2,000/mo <span class="usd-price">/ $ 550</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media & Content -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-hashtag text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Social Media & Content</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Content Management</h3>
+                        <p class="text-gray-500 text-xs mb-2">10 posts, captions & hashtags, 2 carousels, 2 AI reels. Calendar included.</p>
+                        <p class="price-tag">From AED 1,200/mo <span class="usd-price">/ $ 330</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Brand Social Growth</h3>
+                        <p class="text-gray-500 text-xs mb-2">Strategy-led content, growth plan, performance monitoring.</p>
+                        <p class="price-tag">From AED 2,500/mo <span class="usd-price">/ $ 685</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Founder's Personal Branding</h3>
+                        <p class="text-gray-500 text-xs mb-2">LinkedIn positioning, content strategy, audience growth.</p>
+                        <p class="price-tag">From AED 3,500/mo <span class="usd-price">/ $ 960</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PR & Media Publishing -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom lg:col-span-2" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-bullhorn text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">PR & Media Publishing</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-white font-bold text-sm mb-1">Online Media Publishing</h3>
+                            <p class="text-gray-500 text-xs mb-2">Placement in digital publications (DA 30-35 range).</p>
+                            <p class="price-tag">From AED 1,200/placement <span class="usd-price">/ $ 330</span></p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-sm mb-1">Premium Online Features</h3>
+                            <p class="text-gray-500 text-xs mb-2">High-authority media placement with content drafting.</p>
+                            <p class="price-tag">From AED 5,500/placement <span class="usd-price">/ $ 1,500</span></p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-white font-bold text-sm mb-1">Authority & Reputation Management</h3>
+                            <p class="text-gray-500 text-xs mb-2">Brand credibility through media visibility and review growth.</p>
+                            <p class="price-tag">From AED 7,500 <span class="usd-price">/ $ 2,050</span></p>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-sm mb-1">Elite Media & Brand Exposure</h3>
+                            <p class="text-gray-500 text-xs mb-2">High-impact regional or international media placement and premium positioning.</p>
+                            <p class="price-tag">From AED 13,000 <span class="usd-price">/ $ 3,500</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Setup & Project Management Services - LANDSCAPE FULL WIDTH -->
+            <div class="bg-km-card/40 backdrop-blur-xl border border-white/5 p-8 rounded-3xl hover-zoom lg:col-span-3" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-8">
+                    <i class="fas fa-briefcase text-indigo-400 text-2xl"></i>
+                    <h2 class="text-xl font-heading font-bold text-white uppercase tracking-wider">Business Setup & Project Management Services</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">Dubai Mainland Company Formation</h3>
+                        <p class="price-tag">AED 2,500 <span class="usd-price">/ $ 685</span></p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">UAE Free Zone Company Formation</h3>
+                        <p class="price-tag">AED 1,000 <span class="usd-price">/ $ 275</span></p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">UAE Business Bank Account Assistance</h3>
+                        <p class="price-tag">AED 1,500 <span class="usd-price">/ $ 410</span></p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">USA LLC Company Formation</h3>
+                        <p class="price-tag">AED 500 <span class="usd-price">/ $ 150</span></p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">USA Corporation (INC) Formation</h3>
+                        <p class="price-tag">AED 500 <span class="usd-price">/ $ 150</span></p>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-white font-bold text-sm mb-1">UK Limited (Ltd) Company Formation</h3>
+                        <p class="price-tag">AED 500 <span class="usd-price">/ $ 150</span></p>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-white/5">
+                    <p class="text-[10px] text-gray-500 leading-relaxed italic">
+                        Note: The prices represent our professional service and facilitation charges only. All government fees, registration charges, filing costs, and official documentation fees are paid directly by the client.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="pt-24 pb-8 bg-black/90 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+            <h2 class="text-4xl font-heading font-bold text-white mb-4">Ready to elevate your brand?</h2>
+            <p class="text-gray-400 mb-12">Let's discuss your project with <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a>.</p>
+            <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
+                <div class="flex items-center"><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</div>
+                <div class="flex items-center"><i class="fas fa-phone text-indigo-400 mr-2"></i> +971 503656096</div>
+                <div class="flex items-center"><i class="fas fa-envelope text-indigo-400 mr-2"></i> info@kmmpr.com</div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center">
+            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[10px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
+                <a href="https://kreativeminds.ae" class="hover:text-km-gold transition-colors">Home</a>
+                <span class="text-gray-700">|</span>
+                <a href="pricing.html" class="text-km-gold font-bold">Pricing</a>
+                <span class="text-gray-700">|</span>
+                <a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy and Cookie Policy</a>
+                <span class="text-gray-700">|</span>
+                <a href="terms.html" class="hover:text-km-gold transition-colors">Terms and Conditions</a>
+                <span class="text-gray-700">|</span>
+                <a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-km-gold transition-colors">Blog</a>
+            </div>
+
+            <p class="text-gray-500 text-[10px] md:text-xs mb-2"><a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a> registered as KM Marketing and PR in Dubai Mainland under license No: 1377759.</p>
+            <p class="text-gray-600 text-[10px] md:text-xs">© 2025 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds (KM)</a> Marketing and PR. All rights reserved. <span id="last-updated-date" class="ml-1 opacity-50 italic"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function updateClock() {
+            const options = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const clockEl = document.getElementById('dubai-clock');
+            if(clockEl) clockEl.textContent = `Dubai, UAE: ${new Intl.DateTimeFormat('en-US', options).format(new Date())}`;
+        }
+
+        function setLastUpdated() {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const dateEl = document.getElementById('last-updated-date');
+            if(dateEl) dateEl.textContent = `(last updated: ${yesterday.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })})`;
+        }
+        
+        // GLOBAL GALAXY BACKGROUND SCRIPT
+        const canvas = document.getElementById('live-bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initBackground() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = Math.min(window.innerWidth / 10, 100); 
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 1.5 + 0.5
+                });
+            }
+        }
+
+        function drawBackground() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(251, 191, 36, 0.5)"; 
+            ctx.strokeStyle = "rgba(99, 102, 241, 0.1)"; 
+            particles.forEach((p, i) => {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fill();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 150) {
+                        ctx.lineWidth = 1 - dist / 150;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            });
+            requestAnimationFrame(drawBackground);
+        }
+
+        // HERO STAR SKY SCRIPT
+        const heroCanvas = document.getElementById('hero-stars-canvas');
+        const heroCtx = heroCanvas.getContext('2d');
+        let heroStars = [];
+        let heroAngle = 0;
+
+        function initHeroStars() {
+            heroCanvas.width = window.innerWidth;
+            heroCanvas.height = 400; // Header area
+            heroStars = [];
+            const starCount = 150;
+            const maxRadius = Math.max(heroCanvas.width, heroCanvas.height) * 1.2;
+            for (let i = 0; i < starCount; i++) {
+                heroStars.push({
+                    r: Math.random() * maxRadius,
+                    angle: Math.random() * Math.PI * 2,
+                    size: Math.random() * 1.5,
+                    twinkleSpeed: 0.02 + Math.random() * 0.05,
+                    brightness: Math.random()
+                });
+            }
+        }
+
+        function drawHeroStars() {
+            heroCtx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
+            heroAngle += 0.0005; 
+            const centerX = heroCanvas.width / 2;
+            const centerY = heroCanvas.height / 2;
+            heroStars.forEach(s => {
+                const x = centerX + s.r * Math.cos(s.angle + heroAngle);
+                const y = centerY + s.r * Math.sin(s.angle + heroAngle);
+                s.brightness += s.twinkleSpeed;
+                if (s.brightness > 1 || s.brightness < 0) s.twinkleSpeed *= -1;
+                const opacity = 0.2 + (Math.max(0, s.brightness) * 0.8);
+                heroCtx.beginPath(); heroCtx.arc(x, y, s.size, 0, Math.PI * 2);
+                heroCtx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
+                heroCtx.fill();
+            });
+            requestAnimationFrame(drawHeroStars);
+        }
+
+        window.addEventListener('resize', () => {
+            initBackground();
+            initHeroStars();
+        });
+        
+        initBackground();
+        drawBackground();
+        initHeroStars();
+        drawHeroStars();
+        setInterval(updateClock, 1000);
+        updateClock();
+        setLastUpdated();
+
+        // Navbar scroll logic
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const logoContainer = document.getElementById('nav-logo-container');
+            if (window.scrollY > 40) {
+                navbar.classList.add('nav-scrolled');
+                logoContainer.classList.add('w-8', 'h-8');
+                logoContainer.classList.remove('w-9', 'h-9');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                logoContainer.classList.remove('w-8', 'h-8');
+                logoContainer.classList.add('w-9', 'h-9');
+            }
+        });
+    </script>
+</body>
+</html>

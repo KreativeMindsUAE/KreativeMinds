@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy and Cookie Policy | Kreative Minds Dubai | Khalid Mir</title>
+    
+    <!-- SEO Meta Data -->
+    <meta name="keywords" content="Kreative Minds Privacy Policy, Cookie Policy Kreative Minds, KM Marketing and PR Dubai, Data Protection Dubai, Marketing Agency Privacy UAE, Business formation privacy">
+    <meta name="description" content="Official Privacy and Cookie Policy for Kreative Minds (KM Marketing and PR) Dubai. Learn how we collect, protect, and manage your data on kreativeminds.ae.">
+    <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)">
+    <link rel="canonical" href="https://kreativeminds.ae/privacy" />
+
+    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        km: {
+                            dark: '#0B0F19',
+                            card: '#121826',
+                            primary: '#6366f1',
+                            accent: '#a855f7',
+                            gold: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+
+        ::selection { background-color: #fbbf24 !important; color: #000000 !important; }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Live Background Canvas Layer */
+        #live-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: #0B0F19;
+            opacity: 0.4;
+        }
+        
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%);
+            pointer-events: none;
+        }
+
+        #navbar { transition: all 0.3s ease-in-out; }
+        .nav-scrolled {
+            top: 0 !important;
+            height: 3.5rem !important;
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* Typography for Policy Content */
+        .policy-content h2 {
+            font-family: 'Outfit', sans-serif;
+            color: #fbbf24;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .policy-content h3 {
+            color: #fff;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .policy-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .policy-content ul {
+            margin-bottom: 1.5rem;
+            list-style-type: none;
+        }
+        .policy-content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .policy-content li::before {
+            content: "•";
+            color: #fbbf24;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden">
+
+    <!-- Live "Digital Galaxy" Global Background -->
+    <canvas id="live-bg-canvas"></canvas>
+    <div class="bg-overlay"></div>
+
+    <!-- Top Utility Bar (NON-STICKY) -->
+    <div id="utility-bar" class="relative w-full bg-km-gold text-km-dark py-1.5 text-[10px] md:text-xs font-bold z-[60] border-b-[0.5px] border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-clock mr-2 opacity-75"></i>
+                <span id="dubai-clock" class="tracking-wide uppercase">Dubai, UAE: Loading Time...</span>
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:hi@kreativeminds.ae" class="flex items-center hover:opacity-70 transition-opacity">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span class="hidden sm:inline">hi@kreativeminds.ae</span>
+                    <span class="sm:hidden">Email Us</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (STICKY) -->
+    <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex items-center justify-between">
+                <div class="flex-shrink-0 cursor-pointer">
+                    <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
+                        <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner transition-all duration-300" id="nav-logo-container">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-xl md:text-2xl">Kreative <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 ml-1">Minds</span></span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-6">
+                        <a href="https://kreativeminds.ae" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Home</a>
+                        <a href="index.html#about" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">About</a>
+                        <a href="index.html#services" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Services</a>
+                        <a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-white transition-colors px-2 py-1 text-sm font-medium">Brief</a>
+                        <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+                            Let's Connect
+                        </a>
+                    </div>
+                </div>
+
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-km-card border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="https://kreativeminds.ae" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html#services" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="https://blog.kreativeminds.ae" target="_blank" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Brief</a>
+                <a href="index.html#contact" class="text-indigo-400 block px-3 py-2 rounded-md text-base font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Content -->
+    <header class="pt-48 pb-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-heading font-black text-white leading-tight mb-6">
+                Privacy & <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Cookie Policy</span>
+            </h1>
+            <p class="text-km-gold font-bold tracking-widest uppercase text-sm">Effective Date: 24 May 2024 | Last Updated: 24 February 2026</p>
+        </div>
+    </header>
+
+    <!-- Policy Content -->
+    <main class="pb-32 relative">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 bg-km-card/30 backdrop-blur-xl border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl policy-content" data-aos="fade-up" data-aos-delay="100">
+            
+            <p><a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a> operates under KM Marketing and PR, a company licensed in Dubai Mainland, United Arab Emirates. We are committed to protecting your privacy and handling your personal information responsibly.</p>
+
+            <p>This Policy explains how we collect, use, and safeguard your information when you visit <a href="https://kreativeminds.ae" class="text-km-gold font-bold hover:underline">kreativeminds.ae</a> or engage our services.</p>
+
+            <h2>Information We Collect</h2>
+            <p>We may collect the following information:</p>
+
+            <h3>Personal Information</h3>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Company name</li>
+                <li>Project details submitted through our contact forms</li>
+            </ul>
+
+            <h3>Technical Information</h3>
+            <ul>
+                <li>IP address</li>
+                <li>Browser type</li>
+                <li>Device information</li>
+                <li>Pages visited</li>
+                <li>Date and time of access</li>
+            </ul>
+
+            <p>We collect this information when you submit a form, contact us directly, or interact with our website.</p>
+
+            <h2>How We Use Your Information</h2>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Respond to inquiries and service requests</li>
+                <li>Provide marketing and project management services</li>
+                <li>Communicate regarding proposals or ongoing projects</li>
+                <li>Improve website performance and user experience</li>
+                <li>Comply with legal and regulatory obligations</li>
+            </ul>
+            <p>We do not sell or trade your personal information.</p>
+
+            <h2>Legal Basis for Processing</h2>
+            <p>Where applicable, we process personal data based on:</p>
+            <ul>
+                <li>Your consent</li>
+                <li>Contractual necessity</li>
+                <li>Legitimate business interests</li>
+                <li>Compliance with legal obligations</li>
+            </ul>
+
+            <h2>Cookies and Website Tracking</h2>
+            <p>Our website may use essential cookies and basic analytics tools to ensure proper functionality and understand general visitor behavior.</p>
+            <p>Cookies are small text files stored on your device that help improve website performance and user experience.</p>
+            <p>We may use analytics services to collect non-sensitive usage data such as page visits and traffic patterns. This information is used only for performance improvement and business insights.</p>
+            <p>We do not use cookies to collect sensitive personal information.</p>
+            <p>You may manage or disable cookies through your browser settings. Please note that disabling certain cookies may affect website functionality.</p>
+
+            <h2>Third Party Services</h2>
+            <p>We may use third party service providers including hosting providers, analytics platforms, and professional advisors.</p>
+            <p>Where services such as business formation coordination or international support are involved, information may be shared with licensed partner firms as necessary to deliver agreed services.</p>
+            <p>We take reasonable steps to ensure that third parties handle data securely.</p>
+
+            <h2>International Data Processing</h2>
+            <p>As a Dubai based firm working with remote teams and international partners, your information may be processed outside your country of residence. We apply appropriate safeguards to protect your data.</p>
+
+            <h2>Data Retention</h2>
+            <p>We retain personal information only for as long as necessary to fulfill business purposes or comply with legal obligations.</p>
+
+            <h2>Data Security</h2>
+            <p>We implement reasonable technical and organizational measures to protect personal data from unauthorized access, misuse, or disclosure. However, no online transmission method can be guaranteed as fully secure.</p>
+
+            <h2>Your Rights</h2>
+            <p>Depending on applicable laws, you may have the right to:</p>
+            <ul>
+                <li>Request access to your personal data</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your data</li>
+                <li>Withdraw consent where applicable</li>
+            </ul>
+            <p>Requests may be submitted using the contact details below.</p>
+
+            <h2>Third Party Links</h2>
+            <p>Our website may contain links to external websites. We are not responsible for the privacy practices of third party websites.</p>
+
+            <h2>Updates to This Policy</h2>
+            <p>We may update this Privacy and Cookie Policy from time to time. Any updates will be published on this page with a revised effective date.</p>
+
+            <h2>Contact Information</h2>
+            <p class="text-white font-bold mb-1">Kreative Minds</p>
+            <p class="mb-1">KM Marketing and PR</p>
+            <p class="mb-4">Dubai, United Arab Emirates</p>
+            <p class="mb-1">Email: <a href="mailto:info@kmmpr.com" class="text-km-gold hover:underline">info@kmmpr.com</a></p>
+            <p>Website: <a href="https://kreativeminds.ae" class="text-km-gold hover:underline">https://kreativeminds.ae</a></p>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="pt-24 pb-8 bg-black/90 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+            <h2 class="text-4xl font-heading font-bold text-white mb-4">Ready to Dominate?</h2>
+            <p class="text-gray-400 mb-12">Discuss your next campaign or <strong>Business formation in Dubai</strong> with <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a>.</p>
+            <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
+                <div class="flex items-center"><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</div>
+                <div class="flex items-center"><i class="fas fa-phone text-indigo-400 mr-2"></i> +971 503656096</div>
+                <div class="flex items-center"><i class="fas fa-envelope text-indigo-400 mr-2"></i> info@kmmpr.com</div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center text-xs">
+           
+           <div class="border-t border-gray-800 pt-8 text-center">
+            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[10px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
+                <a href="https://kreativeminds.ae" class="hover:text-km-gold transition-colors">Home</a>
+                <span class="text-gray-700">|</span>
+                <a href="pricing.html" class="text-km-gold font-bold">Pricing</a>
+                <span class="text-gray-700">|</span>
+                <a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy and Cookie Policy</a>
+                <span class="text-gray-700">|</span>
+                <a href="terms.html" class="hover:text-km-gold transition-colors">Terms and Conditions</a>
+                <span class="text-gray-700">|</span>
+                <a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-km-gold transition-colors">Blog</a>
+            </div>
+            <p class="text-gray-500 mb-2"><a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a> registered as KM Marketing and PR in Dubai Mainland under license No: 1377759.</p>
+            <p class="text-gray-600">© 2025 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds (KM)</a>. All rights reserved. <span id="last-updated-date" class="ml-1 opacity-50 italic"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function updateClock() {
+            const options = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const clockEl = document.getElementById('dubai-clock');
+            if(clockEl) clockEl.textContent = `Dubai, UAE: ${new Intl.DateTimeFormat('en-US', options).format(new Date())}`;
+        }
+
+        function setLastUpdated() {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const dateEl = document.getElementById('last-updated-date');
+            if(dateEl) dateEl.textContent = `(last updated: ${yesterday.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })})`;
+        }
+        
+        // GLOBAL GALAXY BACKGROUND SCRIPT
+        const canvas = document.getElementById('live-bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initBackground() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = Math.min(window.innerWidth / 10, 100); 
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 1.5 + 0.5
+                });
+            }
+        }
+
+        function drawBackground() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(251, 191, 36, 0.5)"; 
+            ctx.strokeStyle = "rgba(99, 102, 241, 0.1)"; 
+            
+            particles.forEach((p, i) => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 150) {
+                        ctx.lineWidth = 1 - dist / 150;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            });
+            requestAnimationFrame(drawBackground);
+        }
+
+        window.addEventListener('resize', initBackground);
+        initBackground();
+        drawBackground();
+        setInterval(updateClock, 1000);
+        updateClock();
+        setLastUpdated();
+
+        // Navbar Scroll Handler
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const logoContainer = document.getElementById('nav-logo-container');
+            
+            if (window.scrollY > 40) {
+                navbar.classList.add('nav-scrolled');
+                logoContainer.classList.add('w-8', 'h-8');
+                logoContainer.classList.remove('w-9', 'h-9');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                logoContainer.classList.remove('w-8', 'h-8');
+                logoContainer.classList.add('w-9', 'h-9');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+*.env
+
+# API keys and credentials
+secrets/
+credentials/
+*.secret
+*.key
+config/secrets.yml
+config/credentials.yml
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+
+# Build output
+dist/
+build/
+.output/
+.cache/
+.temp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# PHP
+*.php.bak
+
+# Cloudflare / Deployment
+.wrangler/
+wrangler.toml.bak
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Sensitive configuration
+wp-config.php
+config.php

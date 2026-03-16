@@ -111,7 +111,7 @@
         </div>
     </div>
 
-    <!-- Navigation (MATCHING SCREENSHOT 2.02.05 AM) -->
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
             <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
@@ -132,6 +132,15 @@
                 <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-105">Let's Connect</a>
             </div>
             <button onclick="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-km-card border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#about" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html#services" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="https://blog.kreativeminds.ae" target="_blank" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Brief</a>
+                <a href="index.html#contact" class="text-indigo-400 block px-3 py-2 rounded-md text-base font-bold">Contact Us</a>
+            </div>
         </div>
     </nav>
 
@@ -154,9 +163,8 @@
         <article class="ethics-card" data-aos="fade-up">
             <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-6">About Kreative Minds</h2>
             <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
-                <!-- Founder Head Area Frame -->
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-xl flex-shrink-0">
-                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhLGaDFGoACbb4mU5CxPd-BtwePaqaUzqIEErTk2FOQHKtIYPrJ3-SIwQnDN965J6RKT8E849Cr0gD2BphxjpdWDeOR9gG-JVx06zUgXPO4HOq_QMbqAsuM3DEbCm4G26tASMreyHlmCxwx6oJCVay_8-2WiPx6kK5ZUpXMIpHJruMTXrDhL44P9LJ7=s540" alt="Khalid Hussain Mir - Founder" class="w-full h-full object-cover object-top scale-110">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-xl flex-shrink-0 bg-white/5 p-4 flex items-center justify-center">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
                 </div>
                 <div>
                     <p class="leading-relaxed text-lg">
@@ -176,7 +184,6 @@
                     <p><i class="fas fa-check text-indigo-500 mr-2"></i> Website development and digital assets</p>
                     <p><i class="fas fa-check text-indigo-500 mr-2"></i> Social media management and content creation</p>
                     <p><i class="fas fa-check text-indigo-500 mr-2"></i> Project management for business initiatives</p>
-                    <!-- UPDATED: UAE & Globally -->
                     <p class="text-white font-bold"><i class="fas fa-globe text-indigo-500 mr-2"></i> Business formation (UAE & Globally)</p>
                 </div>
             </div>
@@ -227,7 +234,6 @@
                     </p>
                 </div>
                 <div class="bg-red-500/5 border border-red-500/20 p-8 rounded-2xl shadow-lg shadow-red-500/5">
-                    <!-- FIXED: Updated Heading & Warning icon -->
                     <h3 class="text-red-500 font-bold mb-6 uppercase text-xs tracking-widest flex items-center gap-2">
                         <i class="fas fa-ban"></i> Exclusion Policy 🚫 Services We Do Not Provide
                     </h3>
@@ -285,7 +291,6 @@
     <!-- Footer -->
     <footer id="contact" class="pt-16 pb-8 bg-black/90 relative border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 mb-16 text-center">
-            <!-- FIXED: Removed "Authorized" -->
             <h2 class="text-3xl font-heading font-bold text-white mb-12">Contact Channels</h2>
             <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
                 <span><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</span>
@@ -295,7 +300,7 @@
         </div>
         <div class="border-t border-gray-800 pt-8 text-center px-4">
             <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[9px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-km-gold transition-colors">Home</a><span class="text-gray-700">|</span><a href="pricelist.html" class="hover:text-km-gold transition-colors">Pricing</a><span class="text-gray-700">|</span><a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="terms.html" class="hover:text-km-gold transition-colors">Terms</a><span class="text-gray-700">|</span><a href="careers.html" class="hover:text-km-gold transition-colors">Careers</a>
+                <a href="index.html" class="hover:text-km-gold transition-colors">Home</a><span class="text-gray-700">|</span><a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="terms.html" class="hover:text-km-gold transition-colors">Terms</a><span class="text-gray-700">|</span><a href="ethics.html" class="hover:text-km-gold transition-colors">Standards and Ethics</a><span class="text-gray-700">|</span><a href="careers.html" class="hover:text-km-gold transition-colors">Careers</a><span class="text-gray-700">|</span><a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-km-gold transition-colors">Blog</a>
             </div>
             <p class="text-gray-500 text-[10px] md:text-xs mb-2">Kreative Minds registered as KM Marketing and PR in Dubai Mainland under license No: 1377759.</p>
             <p class="text-gray-600 text-[10px] md:text-xs">© 2025 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds (KM)</a> Marketing and PR. All rights reserved. <span id="last-updated-date" class="ml-1 opacity-50 italic"></span></p>
@@ -304,7 +309,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Theme toggle logic
         function initTheme() {
             var saved = localStorage.getItem('km-theme');
             if (saved === 'light') { document.documentElement.classList.remove('dark'); updateThemeIcons(false); } 
@@ -339,7 +343,6 @@
             if(el) el.textContent = `(last updated: ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})`;
         }
         
-        // Background Logic
         const canvas = document.getElementById('live-bg-canvas'), ctx = canvas.getContext('2d');
         let p = [], s = [], b = ['🎯', '🚀', '💡', '🤝'];
         function initBackground() {

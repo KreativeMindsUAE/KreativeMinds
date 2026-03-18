@@ -2,8 +2,6 @@ backend:
   name: github
   repo: khalidmir/KreativeMinds
   branch: main
-  auth_type: pkce
-  app_id: Ov23lip4ZNrvlWxwwi37
 
 publish_mode: editorial_workflow
 
@@ -39,7 +37,6 @@ collections:
         name: "image"
         widget: "image"
         hint: "Upload or paste URL of the featured image"
-        allow_multiple: false
       - label: "Publish Date"
         name: "date"
         widget: "datetime"

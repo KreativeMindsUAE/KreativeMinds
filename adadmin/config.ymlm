@@ -1,0 +1,74 @@
+backend:
+  name: github
+    repo: khalidmir/KreativeMinds
+      branch: main
+
+      publish_mode: editorial_workflow
+
+      media_folder: "assets/images/blog"
+      public_folder: "/assets/images/blog"
+
+      collections:
+        - name: "blog"
+            label: "Blog Posts"
+                folder: "blog/posts"
+                    create: true
+                        slug: "{{slug}}"
+                            extension: "md"
+                                format: "frontmatter"
+                                    fields:
+                                          - label: "Title"
+                                                  name: "title"
+                                                          widget: "string"
+                                                                  hint: "The main headline of your blog post"
+
+                                                                        - label: "Subtitle / Tag Label"
+                                                                                name: "subtitle"
+                                                                                        widget: "string"
+                                                                                                hint: "Short label shown above the title (e.g. Marketing Strategy, Ecommerce Insight)"
+
+                                                                                                      - label: "Description"
+                                                                                                              name: "description"
+                                                                                                                      widget: "text"
+                                                                                                                              hint: "Brief summary for the blog card and SEO meta description"
+                                                                                                                              
+                                                                                                                                    - label: "Feature Image"
+                                                                                                                                            name: "image"
+                                                                                                                                                    widget: "image"
+                                                                                                                                                            hint: "Upload or paste URL of the featured image"
+                                                                                                                                                                    allow_multiple: false
+                                                                                                                                                                    
+                                                                                                                                                                          - label: "Publish Date"
+                                                                                                                                                                                  name: "date"
+                                                                                                                                                                                          widget: "datetime"
+                                                                                                                                                                                                  format: "YYYY-MM-DD"
+                                                                                                                                                                                                          date_format: "MMMM D, YYYY"
+                                                                                                                                                                                                                  time_format: false
+                                                                                                                                                                                                                  
+                                                                                                                                                                                                                        - label: "Author"
+                                                                                                                                                                                                                                name: "author"
+                                                                                                                                                                                                                                        widget: "string"
+                                                                                                                                                                                                                                                default: "Khalid Hussain Mir (Khalidgraphy)"
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                      - label: "Read Time"
+                                                                                                                                                                                                                                                              name: "readtime"
+                                                                                                                                                                                                                                                                      widget: "string"
+                                                                                                                                                                                                                                                                              default: "5 Min Read"
+                                                                                                                                                                                                                                                                                      hint: "Estimated reading time (e.g. 6 Min Read)"
+                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                            - label: "Tags"
+                                                                                                                                                                                                                                                                                                    name: "tags"
+                                                                                                                                                                                                                                                                                                            widget: "list"
+                                                                                                                                                                                                                                                                                                                    hint: "Comma separated tags"
+                                                                                                                                                                                                                                                                                                                            required: false
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                  - label: "SEO Keywords"
+                                                                                                                                                                                                                                                                                                                                          name: "keywords"
+                                                                                                                                                                                                                                                                                                                                                  widget: "string"
+                                                                                                                                                                                                                                                                                                                                                          required: false
+                                                                                                                                                                                                                                                                                                                                                                  hint: "Comma-separated keywords for SEO meta tag"
+                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                        - label: "Body"
+                                                                                                                                                                                                                                                                                                                                                                                name: "body"
+                                                                                                                                                                                                                                                                                                                                                                                        widget: "markdown"
+                                                                                                                                                                                                                                                                                                                                                                                                hint: "Write your article content here using the rich editor"

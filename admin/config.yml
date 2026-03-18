@@ -2,6 +2,7 @@ backend:
   name: github
   repo: khalidmir/KreativeMinds
   branch: main
+  base_url: https://km-cms-auth.khalidgraphy-com.workers.dev
 
 media_folder: "assets/images/blog"
 public_folder: "/assets/images/blog"

@@ -1,0 +1,61 @@
+name: Update Blog Posts JSON
+
+on:
+  push:
+    paths:
+      - 'blog/*.html'
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate posts.json from blog HTML files
+        run: |
+          echo "[" > /tmp/posts.json
+          first=true
+          for file in blog/*.html; do
+            filename=$(basename "$file")
+            if [ "$filename" = "index.html" ] || [ "$filename" = "blog.html" ]; then
+              continue
+            fi
+            slug="${filename%.html}"
+            title=$(grep -oP '(?<=<title>).*?(?=</title>)' "$file" | head -1 | sed 's/ | Kreative Minds Blog//')
+            description=$(grep -oP '(?<=<meta name="description" content=")[^"]*' "$file" | head -1)
+            image=$(grep -oP '(?<=<meta property="og:image" content=")[^"]*' "$file" | head -1)
+            if [ -z "$title" ]; then
+              title=$(echo "$slug" | sed 's/-/ /g')
+            fi
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> /tmp/posts.json
+            fi
+            title=$(echo "$title" | sed 's/"/\\\\"/g')
+            description=$(echo "$description" | sed 's/"/\\\\"/g')
+            cat >> /tmp/posts.json << ENTRY
+          {
+            "slug": "$slug",
+            "title": "$title",
+            "description": "$description",
+            "image": "$image"
+          }
+          ENTRY
+          done
+          echo "]" >> /tmp/posts.json
+          cp /tmp/posts.json blog/posts.json
+
+      - name: Commit updated posts.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/posts.json
+          git diff --staged --quiet || git commit -m "Auto-update blog/posts.json"
+          git push

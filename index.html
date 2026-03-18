@@ -987,6 +987,18 @@
   </div>
 </section>
 
+<!-- Latest Insights Section -->
+<section class="py-24 bg-km-dark/80 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <h2 class="text-indigo-500 font-bold tracking-widest uppercase mb-2 text-sm">From The Blog</h2>
+    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Latest Insights</h2>
+    <div id="homepage-blog-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-left"></div>
+    <div class="mt-10">
+      <a href="/blog" class="inline-flex items-center text-indigo-400 font-bold text-sm uppercase tracking-widest hover:text-km-gold transition-all group">View All Insights <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></a>
+    </div>
+  </div>
+</section>
+
 <!-- Team / Founders Section -->
 <section class="py-24 bg-km-dark/80 relative overflow-hidden border-t border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -1409,6 +1421,48 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     }
   });
 });
+</script>
+
+
+<script>
+// ---- HOMEPAGE LATEST BLOG POSTS ----
+(async function() {
+  var container = document.getElementById('homepage-blog-container');
+  if (!container) return;
+  try {
+    var response = await fetch('/blog/posts.json?v=' + Date.now());
+    if (!response.ok) return;
+    var posts = await response.json();
+    if (!posts || posts.length === 0) {
+      container.parentElement.parentElement.style.display = 'none';
+      return;
+    }
+    var latest = posts.slice(0, 3);
+    container.innerHTML = '';
+    latest.forEach(function(post) {
+      var slug = post.slug || post.file.replace('.html', '');
+      var url = '/blog/' + slug;
+      var image = post.image || '';
+      var title = post.title || slug;
+      var desc = post.description || '';
+      var card = document.createElement('article');
+      card.className = 'bg-km-dark/60 rounded-2xl overflow-hidden border border-white/5 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col';
+      card.setAttribute('data-aos', 'fade-up');
+      var imgDiv = '<div class="aspect-square overflow-hidden">' +
+        '<img src="' + image + '" alt="' + title.replace(/"/g, '&quot;') + '" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">' +
+        '</div>';
+      var bodyDiv = '<div class="p-6 flex flex-col flex-grow">' +
+        '<h3 class="text-lg font-heading font-bold dark:text-white text-gray-900 mb-3 hover:text-km-gold transition-colors line-clamp-2"><a href="' + url + '">' + title + '</a></h3>' +
+        '<p class="dark:text-gray-400 text-gray-600 line-clamp-2 mb-6 text-sm leading-relaxed flex-grow">' + desc + '</p>' +
+        '<div><a href="' + url + '" class="inline-flex items-center text-indigo-400 font-bold text-sm uppercase tracking-widest hover:text-km-gold transition-all group">Read More <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></a></div>' +
+        '</div>';
+      card.innerHTML = imgDiv + bodyDiv;
+      container.appendChild(card);
+    });
+  } catch(e) {
+    container.parentElement.parentElement.style.display = 'none';
+  }
+})();
 </script>
 
 </body>

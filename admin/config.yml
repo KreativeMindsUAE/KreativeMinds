@@ -2,11 +2,17 @@ backend:
   name: github
   repo: khalidmir/KreativeMinds
   branch: main
+  auth_type: pkce
+  app_id: Ov23lip4ZNrvlWxwwi37
 
 publish_mode: editorial_workflow
 
 media_folder: "assets/images/blog"
 public_folder: "/assets/images/blog"
+
+site_url: https://kreativeminds.ae
+display_url: https://kreativeminds.ae
+logo_url: https://i.ibb.co/LzXrqZ21/KM-new-logo.png
 
 collections:
   - name: "blog"

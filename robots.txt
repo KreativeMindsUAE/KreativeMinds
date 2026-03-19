@@ -1,3 +1,6 @@
+# Kreative Minds (KM Marketing and PR) - Robots.txt
+# Optimized for SEO, AEO, and GEO (AI Search)
+
 # As a condition of accessing this website, you agree to abide by the following
 # content signals:
 
@@ -28,18 +31,13 @@
 User-agent: *
 Content-Signal: search=yes,ai-train=no
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /aieo
 
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: Applebot-Extended
+# Specific AI & Search Bot Permissions
+User-agent: GPTBot
 Allow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
 
 User-agent: ClaudeBot
 Allow: /
@@ -47,13 +45,27 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: GPTBot
+User-agent: Applebot-Extended
 Allow: /
+
+# Block aggressive or undesirable crawlers
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 User-agent: meta-externalagent
 Disallow: /
 
 # END Cloudflare Managed Content
 
-
+# Sitemaps & AI Discovery
 Sitemap: https://kreativeminds.ae/sitemap.xml
+Sitemap: https://kreativeminds.ae/llms.txt
+Sitemap: https://kreativeminds.ae/aieo
+
+# End of robots.txt

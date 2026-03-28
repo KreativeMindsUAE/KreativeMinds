@@ -1,0 +1,16 @@
+Options -Indexes
+
+  # Serve .html files for extensionless URLs
+  RewriteEngine On
+
+# If the request is not for an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Try appending .html
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+
+  # Fallback: serve index.html for any remaining unmatched routes
+  # (Remove or comment the lines below if you do NOT want SPA-style fallback)
+# RewriteRule ^ index.html [L]

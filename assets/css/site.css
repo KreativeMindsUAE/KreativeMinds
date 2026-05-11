@@ -65,8 +65,10 @@ em.accent, .accent-text { font-style: normal; color: var(--accent); }
 }
 .nav.scrolled { border-bottom-color: var(--line); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; gap: 10px; }
 .brand img { height: 40px; width: auto; display: block; transition: opacity 0.3s ease; }
+.brand-text { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.15rem; letter-spacing: -0.015em; color: var(--accent); line-height: 1; white-space: nowrap; }
+@media (max-width: 520px) { .brand-text { display: none; } }
 .brand .logo-light { display: block; }
 .brand .logo-dark { display: none; }
 html.dark .brand .logo-light { display: none; }
@@ -322,6 +324,44 @@ html.dark .partners-track img:hover { opacity: 1; filter: grayscale(0); }
 .cta-headline em { font-style: normal; color: var(--accent); }
 .cta-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .cta-actions p { margin: 0 0 6px; color: var(--muted); font-size: 0.92rem; }
+
+/* NDA INLINE LINK (subtle but discoverable) */
+.nda-link { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: help; transition: color 0.2s ease; }
+.nda-link:hover { color: var(--accent); }
+
+/* CONTACT FORM */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+.contact-info h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.4rem; margin: 0 0 16px; letter-spacing: -0.02em; }
+.contact-info p { color: var(--ink-soft); margin: 0 0 24px; line-height: 1.6; }
+.contact-channels { list-style: none; padding: 0; margin: 0; }
+.contact-channels li { padding: 16px 0; border-bottom: 1px solid var(--line); display: flex; align-items: flex-start; gap: 16px; }
+.contact-channels li:last-child { border-bottom: 0; }
+.contact-channels .ic { width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-channels .ic svg { width: 18px; height: 18px; }
+.contact-channels .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 4px; }
+.contact-channels a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.contact-channels a:hover { color: var(--accent); }
+.contact-form { padding: 36px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg-elev); }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .contact-form .row { grid-template-columns: 1fr; } }
+.contact-form .field { margin-bottom: 18px; }
+.contact-form label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  width: 100%; padding: 12px 14px; background: var(--bg); border: 1px solid var(--line-strong); border-radius: 10px;
+  font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--ink);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  outline: none; border-color: var(--accent); background: var(--bg-elev);
+}
+.contact-form textarea { min-height: 140px; resize: vertical; line-height: 1.55; }
+.contact-form .submit-row { margin-top: 12px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.contact-form .hint { color: var(--muted); font-size: 0.84rem; }
+.form-success, .form-error { padding: 14px 16px; border-radius: 10px; margin-bottom: 18px; font-size: 0.92rem; display: none; }
+.form-success { background: var(--accent-soft); border: 1px solid var(--accent); color: var(--ink); }
+.form-error { background: rgba(220, 50, 50, 0.08); border: 1px solid rgba(220, 50, 50, 0.4); color: var(--ink); }
+.form-success.show, .form-error.show { display: block; }
 
 /* PROSE (for blog posts + legal pages) */
 .prose { max-width: 70ch; margin: 0 auto; color: var(--ink); }

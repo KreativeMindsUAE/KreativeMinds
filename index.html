@@ -730,8 +730,8 @@
     document.querySelectorAll('[data-count]').forEach(animateCount);
   }
 
-  // Audience cards: spotlight that follows cursor
-  document.querySelectorAll('.audience-card').forEach(function (c) {
+  // Cards with cursor-following spotlight glow
+  document.querySelectorAll('.audience-card, .product, .price-card, .insight-card').forEach(function (c) {
     c.addEventListener('mousemove', function (e) {
       var r = c.getBoundingClientRect();
       c.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');

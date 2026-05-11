@@ -95,8 +95,12 @@
 
   .why-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   @media (max-width: 800px) { .why-cards { grid-template-columns: 1fr; } }
-  .why-card { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-elev); }
-  .why-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.15rem; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .why-card { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-elev); transition: transform 0.35s cubic-bezier(.2,.7,.3,1), border-color 0.3s ease, box-shadow 0.35s ease; position: relative; overflow: hidden; }
+  .why-card::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 0; background: var(--accent); transition: width 0.5s cubic-bezier(.2,.7,.3,1); }
+  .why-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 14px 36px -20px var(--accent-soft); }
+  .why-card:hover::before { width: 100%; }
+  .why-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.15rem; margin: 0 0 10px; letter-spacing: -0.01em; transition: color 0.25s ease; }
+  .why-card:hover h3 { color: var(--accent); }
   .why-card p { color: var(--ink-soft); margin: 0; font-size: 0.95rem; line-height: 1.55; }
 
   .platforms-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }

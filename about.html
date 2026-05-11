@@ -70,9 +70,13 @@
 <style>
   .leader-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
   @media (max-width: 800px) { .leader-grid { grid-template-columns: 1fr; } }
-  .leader { padding: 32px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg-elev); display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start; }
-  .leader-avatar { width: 80px; height: 80px; border-radius: 999px; background: var(--accent-soft); border: 1px solid var(--accent); display: inline-flex; align-items: center; justify-content: center; overflow: hidden; }
+  .leader { padding: 32px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg-elev); display: grid; grid-template-columns: 96px 1fr; gap: 24px; align-items: start; transition: transform 0.3s cubic-bezier(.2,.7,.3,1), border-color 0.3s ease, box-shadow 0.3s ease; }
+  .leader:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 12px 32px -18px var(--accent-soft); }
+  .leader-avatar { width: 96px; height: 96px; border-radius: 999px; background: var(--accent-soft); border: 1px solid var(--accent); display: inline-flex; align-items: center; justify-content: center; overflow: hidden; }
+  .leader-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(.2,.7,.3,1); }
+  .leader:hover .leader-avatar img { transform: scale(1.06); }
   .leader-avatar svg { width: 38px; height: 38px; color: var(--accent); }
+  @media (max-width: 480px) { .leader { grid-template-columns: 1fr; gap: 16px; } .leader-avatar { width: 80px; height: 80px; } }
   .leader h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.3rem; margin: 0 0 4px; letter-spacing: -0.015em; }
   .leader .role { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; display: block; }
   .leader p { color: var(--ink-soft); margin: 0 0 14px; font-size: 0.94rem; line-height: 1.6; }
@@ -334,7 +338,7 @@
     <div class="leader-grid">
       <div class="leader">
         <div class="leader-avatar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <img src="assets/images/team/khalid-mir.png" alt="Khalid Hussain Mir, Founder and CEO of Kreative Minds" loading="lazy" width="96" height="96" />
         </div>
         <div>
           <h3>Khalid Hussain Mir</h3>
@@ -348,7 +352,7 @@
       </div>
       <div class="leader">
         <div class="leader-avatar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <img src="assets/images/team/noor-bano.jpg" alt="Noor Bano, Co-founder and Head of HR at Kreative Minds" loading="lazy" width="96" height="96" />
         </div>
         <div>
           <h3>Noor Bano</h3>
@@ -457,7 +461,7 @@
       <details>
         <summary>What industries do you work with?</summary>
         <div class="answer">
-          We work with eCommerce, technology, hospitality, retail, professional services, real estate and consumer brands. Both early stage startups and established businesses.
+          We work with eCommerce, technology, hospitality, retail, professional services and consumer brands. Both early stage startups and established businesses.
         </div>
       </details>
       <details>

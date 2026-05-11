@@ -378,7 +378,7 @@
         <span class="lbl"><strong>Years</strong> building products and scaling businesses</span>
       </div>
       <div class="num-cell">
-        <div class="big" data-count="470" data-suffix="+">0+</div>
+        <div class="big" data-count="471" data-suffix="+">0+</div>
         <span class="lbl"><strong>Projects delivered</strong> across marketing and product</span>
       </div>
       <div class="num-cell">
@@ -400,7 +400,7 @@
       <div class="section-num mono">07 / Tech &amp; AI</div>
       <div>
         <h2 class="section-title">Boring tech that scales, and AI where it earns its place.</h2>
-        <p class="section-lead">We pick tools that are fast, cheap to run, and easy to operate at three in the morning. No vendor cosplay, no over-engineering.</p>
+        <p class="section-lead">We pick tools that are fast, reliable, and simple to run. No buzzwords, no over-engineering, just what works.</p>
       </div>
     </div>
     <div class="tech-grid">
@@ -690,7 +690,7 @@
     el.dataset.done = '1';
     var target = parseInt(el.getAttribute('data-count'), 10) || 0;
     var suffix = el.getAttribute('data-suffix') || '';
-    var dur = Math.min(2000, 500 + target * 3);
+    var dur = 1800;
     var start = performance.now();
     function frame(t) {
       var p = Math.min(1, (t - start) / dur);

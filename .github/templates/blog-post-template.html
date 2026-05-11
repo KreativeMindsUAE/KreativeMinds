@@ -1,241 +1,218 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<!doctype html>
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{TITLE}} | Kreative Minds Blog</title>
+<meta name="description" content="{{DESCRIPTION}}" />
+<meta name="keywords" content="{{KEYWORDS}}" />
+<meta name="author" content="Khalid Hussain Mir (Khalidgraphy)" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kreativeminds.ae/blog/{{SLUG}}.html" />
 
-    <title>{{TITLE}} | Kreative Minds Blog</title>
-    <meta name="description" content="{{DESCRIPTION}}">
-    <meta name="keywords" content="{{KEYWORDS}}">
-    <meta name="author" content="{{AUTHOR}}">
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{TITLE}}" />
+<meta property="og:description" content="{{DESCRIPTION}}" />
+<meta property="og:image" content="{{IMAGE}}" />
+<meta property="og:url" content="https://kreativeminds.ae/blog/{{SLUG}}.html" />
+<meta property="og:site_name" content="Kreative Minds" />
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{TITLE}}">
-    <meta property="og:description" content="{{DESCRIPTION}}">
-    <meta property="og:image" content="{{IMAGE}}">
-    <meta property="og:url" content="https://kreativeminds.ae/blog/{{SLUG}}">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{TITLE}}" />
+<meta name="twitter:description" content="{{DESCRIPTION}}" />
+<meta name="twitter:image" content="{{IMAGE}}" />
 
-    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{TITLE}}",
+  "image": "{{IMAGE}}",
+  "author": {
+    "@type": "Person",
+    "name": "Khalid Hussain Mir",
+    "url": "https://linkedin.com/in/Khalidgraphy"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kreative Minds",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kreativeminds.ae/logo-purple.png"
+    }
+  },
+  "datePublished": "{{DATE}}",
+  "description": "{{DESCRIPTION}}",
+  "mainEntityOfPage": "https://kreativeminds.ae/blog/{{SLUG}}.html"
+}
+</script>
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        km: { dark: '#0B0F19', card: '#121826', primary: '#6366f1', accent: '#a855f7', gold: '#fbbf24' }
-                    },
-                    fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+<link rel="icon" href="../logo-purple.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
-        ::selection { background-color: #fbbf24 !important; color: #000000 !important; }
-        .glass-nav { background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        html:not(.dark) .glass-nav { background: rgba(255, 255, 255, 0.88); border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
-        #live-bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: #0B0F19; opacity: 0.4; }
-        html:not(.dark) #live-bg-canvas { background: #f8fafc; opacity: 0.3; }
-        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%); pointer-events: none; }
-        .article-content { max-width: 800px; margin: 0 auto; font-size: 1.08rem; line-height: 1.9; }
-        .article-content h2 { font-family: 'Outfit', sans-serif; font-size: 1.7rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; color: white; }
-        .article-content h3 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: white; }
-        .article-content p { margin-bottom: 1.25rem; color: #9ca3af; }
-        .article-content ul, .article-content ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: #9ca3af; }
-        .article-content li { margin-bottom: 0.5rem; }
-        .article-content a { color: #818cf8; text-decoration: underline; }
-        .article-content blockquote { border-left: 4px solid #fbbf24; padding: 1rem 1.5rem; margin: 1.5rem 0; background: rgba(251, 191, 36, 0.05); border-radius: 0 12px 12px 0; font-style: italic; color: #d1d5db; }
-        .article-content strong { color: #e5e7eb; font-weight: 600; }
-        html:not(.dark) .article-content h2, html:not(.dark) .article-content h3 { color: #111827; }
-        html:not(.dark) .article-content p, html:not(.dark) .article-content li { color: #4b5563; }
-        html:not(.dark) .article-content strong { color: #1f2937; }
-    </style>
+<script>
+  (function () {
+    var saved = localStorage.getItem('km-theme');
+    if (saved === 'dark') document.documentElement.classList.replace('light', 'dark');
+  })();
+</script>
+
+<link rel="stylesheet" href="../assets/css/site.css" />
+
+<style>
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 32px; }
+  .back-link:hover { color: var(--accent); }
+  .post-meta { display: flex; gap: 24px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
+  .post-hero-image { max-width: 70ch; margin: 40px auto 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .post-hero-image img { width: 100%; height: auto; display: block; }
+  .prose .lead { font-size: 1.2rem; line-height: 1.6; color: var(--ink); font-family: 'Outfit', sans-serif; font-weight: 400; }
+  .prose .pull { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.35rem; color: var(--accent); line-height: 1.35; margin-top: 2.4em; }
+</style>
 </head>
-<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden dark:text-gray-400">
+<body>
 
-    <canvas id="live-bg-canvas"></canvas>
-    <div class="bg-overlay"></div>
-
-    <!-- Utility Bar -->
-    <div id="utility-bar" class="relative w-full bg-km-gold text-km-dark py-1.5 text-[10px] md:text-xs font-bold z-[60] border-b-[0.5px] border-black/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center"><i class="fas fa-clock mr-2 opacity-75"></i><span id="dubai-clock">Dubai, UAE</span></div>
-            <div class="flex items-center"><a href="mailto:hi@kreativeminds.ae" class="hover:opacity-70 transition-opacity"><i class="fas fa-envelope mr-2"></i>hi@kreativeminds.ae</a></div>
-        </div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="brand" aria-label="Kreative Minds home">
+      <img class="logo-light" src="../logo-purple.png" alt="Kreative Minds" />
+      <img class="logo-dark" src="../logo-yellow.png" alt="Kreative Minds" />
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../services.html">Services</a>
+      <a href="../pricelist.html">Pricing</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../index.html#contact">Contact</a>
     </div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="../index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
-                <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner" id="nav-logo-container">
-                    <img src="https://i.ibb.co/LzXrqZ21/KM-new-logo.png" alt="KM Logo" class="w-full h-full object-contain">
-                </div>
-                <span class="text-xl md:text-2xl">Kreative <span class="text-indigo-400">Minds</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wider">
-                <a href="../index.html" class="hover:text-km-gold transition">Home</a>
-                <a href="../index.html#about" class="hover:text-km-gold transition">About</a>
-                <a href="../services.html" class="hover:text-km-gold transition">Services</a>
-                <a href="/blog" class="text-km-gold">Blog</a>
-                <button onclick="toggleTheme()" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition ml-2" aria-label="Toggle theme">
-                    <i id="sun-icon" class="fas fa-sun text-km-gold text-sm hidden"></i>
-                    <i id="moon-icon" class="fas fa-moon text-indigo-400 text-sm"></i>
-                </button>
-                <a href="../index.html#contact" class="bg-km-gold text-km-dark px-5 py-2 rounded-full text-xs font-bold hover:bg-yellow-300 transition-all shadow-lg">Let's Connect</a>
-            </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-white text-xl" aria-label="Menu"><i class="fas fa-bars"></i></button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-km-dark/95 backdrop-blur-lg z-[100] hidden flex-col items-center justify-center gap-6 text-lg font-heading font-bold">
-        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-2xl text-white"><i class="fas fa-times"></i></button>
-        <a href="../index.html" onclick="toggleMobileMenu()" class="hover:text-km-gold transition">Home</a>
-        <a href="../index.html#about" onclick="toggleMobileMenu()" class="hover:text-km-gold transition">About</a>
-        <a href="../services.html" onclick="toggleMobileMenu()" class="hover:text-km-gold transition">Services</a>
-        <a href="/blog" onclick="toggleMobileMenu()" class="text-km-gold">Blog</a>
-        <a href="../index.html#contact" class="bg-km-gold text-km-dark px-6 py-3 rounded-full text-sm font-bold mt-4 hover:bg-yellow-300 transition-all">Let's Connect</a>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="../index.html#contact" class="btn btn-primary">
+        Start a project
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
+  </div>
+</nav>
 
-    <!-- Post Hero -->
-    <header class="pt-48 pb-12 relative overflow-hidden">
-        <canvas id="hero-stars-canvas"></canvas>
-        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center" data-aos="fade-up">
-            <span class="inline-block py-1 px-3 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-6">
-                {{SUBTITLE}}
-            </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black dark:text-white text-gray-900 leading-tight mb-6">
-                {{TITLE}}
-            </h1>
-            <div class="flex items-center justify-center gap-6 text-xs text-gray-500 mb-12 uppercase tracking-widest font-bold">
-                <span><i class="far fa-calendar-alt mr-2 text-indigo-400"></i> {{DATE}}</span>
-                <span><i class="far fa-clock mr-2 text-indigo-400"></i> {{READTIME}}</span>
-            </div>
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Blog
+    </a>
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>Article</span>
+    </div>
+    <h1>{{TITLE}}</h1>
+    <p class="page-lead">{{DESCRIPTION}}</p>
+    <div class="post-meta">
+      <span>Published {{DATE}}</span>
+      <span>{{READTIME}}</span>
+    </div>
+    <div class="post-hero-image">
+      <img src="{{IMAGE}}" alt="{{TITLE}}" />
+    </div>
+  </div>
+</header>
 
-            <!-- Featured Image -->
-            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/5 relative bg-white/5">
-                <img src="{{IMAGE}}" alt="{{TITLE}}" class="w-full h-auto max-h-[550px] object-cover block">
-            </div>
-        </div>
-    </header>
+<!-- ARTICLE -->
+<section class="block">
+  <article class="prose">
+    <div class="container">
+{{CONTENT}}
+    </div>
+  </article>
+</section>
 
-    <!-- Article Content -->
-    <main class="pb-32 relative z-10">
-        <article class="article-content px-4" data-aos="fade-up">
-{{BODY}}
-        </article>
+<!-- CTA -->
+<section class="cta-block" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="cta-headline">Want this kind of thinking applied to your business?</h2>
+      <div class="cta-actions">
+        <p>Tell us what you're trying to launch, fix, or grow. We reply within a working day.</p>
+        <a href="mailto:hi@kreativeminds.ae" class="btn btn-primary">
+          hi@kreativeminds.ae
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="index.html" class="btn btn-ghost">Read more articles</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Related Placeholder -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
-            <h2 class="text-2xl font-heading font-bold dark:text-white text-gray-900 mb-12 text-center uppercase tracking-widest opacity-50 text-sm">Related Insights</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 opacity-40 grayscale">
-                <div class="bg-km-card p-6 rounded-2xl h-48 border border-white/5 flex items-center justify-center text-xs italic">More stories coming soon...</div>
-                <div class="bg-km-card p-6 rounded-2xl h-48 border border-white/5 flex items-center justify-center text-xs italic">More stories coming soon...</div>
-                <div class="bg-km-card p-6 rounded-2xl h-48 border border-white/5 flex items-center justify-center text-xs italic">More stories coming soon...</div>
-            </div>
-        </section>
-    </main>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-about foot-brand">
+        <a href="../index.html" aria-label="Kreative Minds home">
+          <img class="logo-light" src="../logo-purple.png" alt="Kreative Minds" />
+          <img class="logo-dark" src="../logo-yellow.png" alt="Kreative Minds" />
+        </a>
+        <p>A Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. Working with clients worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="../services.html#core">Strategy</a>
+        <a href="../services.html#core">Product &amp; SaaS</a>
+        <a href="../services.html#core">AI &amp; Automation</a>
+        <a href="../services.html#core">Brand &amp; Marketing</a>
+        <a href="../pricelist.html">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="../index.html#about">About</a>
+        <a href="../jobs.html">Careers</a>
+        <a href="../climate-impact.html">Sustainability</a>
+        <a href="../standards-and-ethics.html">Standards &amp; Ethics</a>
+        <a href="index.html">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:hi@kreativeminds.ae">hi@kreativeminds.ae</a>
+        <a href="https://linkedin.com/in/Khalidgraphy" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../tool/kreativeqr.html">KreativeQR Tool</a>
+        <a href="../aieo.html">AIEO Profile</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kreative Minds. KM Marketing &amp; PR, Dubai Mainland License No. 1377759.</span>
+      <span>
+        <a href="../privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="../terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="../standards-and-ethics.html">Standards</a>
+      </span>
+    </div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer id="contact" class="pt-16 pb-8 bg-black/90 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 mb-16 text-center">
-            <h2 class="text-3xl font-heading font-bold text-white mb-12">Contact Channels</h2>
-            <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
-                <span><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</span>
-                <span><i class="fas fa-globe text-indigo-400 mr-2"></i> <a href="https://kreativeminds.ae" target="_blank" rel="noopener noreferrer" class="hover:text-km-gold">kreativeminds.ae</a></span>
-                <span><i class="fas fa-envelope text-indigo-400 mr-2"></i> hi@kreativeminds.ae</span>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 pt-8 text-center px-4">
-            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[9px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
-                <a href="../privacy.html" class="hover:text-km-gold transition">Privacy Policy</a>
-                <span class="opacity-30">|</span>
-                <a href="../terms.html" class="hover:text-km-gold transition">Terms</a>
-                <span class="opacity-30">|</span>
-                <a href="../standards-and-ethics.html" class="hover:text-km-gold transition">Standards</a>
-            </div>
-            <p class="text-[10px] text-gray-600">&copy; 2025 Kreative Minds (KM Marketing and PR) — Dubai, UAE. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        function initTheme() {
-            const saved = localStorage.getItem('theme');
-            if (saved === 'light') document.documentElement.classList.remove('dark');
-            else document.documentElement.classList.add('dark');
-            updateIcons();
-        }
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            updateIcons();
-        }
-        function updateIcons() {
-            const sun = document.getElementById('sun-icon');
-            const moon = document.getElementById('moon-icon');
-            if (!sun || !moon) return;
-            const isD = document.documentElement.classList.contains('dark');
-            sun.classList.toggle('hidden', isD);
-            moon.classList.toggle('hidden', !isD);
-        }
-        function updateClock() {
-            const el = document.getElementById('dubai-clock');
-            if (!el) return;
-            const d = new Date();
-            const opts = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            el.textContent = 'Dubai, UAE: ' + d.toLocaleTimeString('en-US', opts);
-        }
-        function toggleMobileMenu() {
-            const m = document.getElementById('mobile-menu');
-            m.classList.toggle('hidden');
-            m.classList.toggle('flex');
-        }
-        function initBackground() {
-            const canvas = document.getElementById('live-bg-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            let w, h, particles = [];
-            function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
-            resize(); window.addEventListener('resize', resize);
-            for (let i = 0; i < 60; i++) particles.push({ x: Math.random()*w, y: Math.random()*h, r: Math.random()*1.5+0.5, dx: (Math.random()-0.5)*0.3, dy: (Math.random()-0.5)*0.3 });
-            function draw() {
-                ctx.clearRect(0,0,w,h);
-                const isD = document.documentElement.classList.contains('dark');
-                particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle = isD ? 'rgba(99,102,241,0.3)' : 'rgba(99,102,241,0.15)'; ctx.fill(); p.x+=p.dx; p.y+=p.dy; if(p.x<0||p.x>w)p.dx*=-1; if(p.y<0||p.y>h)p.dy*=-1; });
-                requestAnimationFrame(draw);
-            }
-            draw();
-        }
-        function initHeroStars() {
-            const canvas = document.getElementById('hero-stars-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;';
-            let w, h, stars = [];
-            function resize() { w = canvas.width = canvas.offsetWidth; h = canvas.height = canvas.offsetHeight; }
-            resize(); window.addEventListener('resize', resize);
-            for (let i = 0; i < 80; i++) stars.push({ x: Math.random()*w, y: Math.random()*h, r: Math.random()*1.2+0.3, a: Math.random(), da: (Math.random()-0.5)*0.01 });
-            function draw() {
-                ctx.clearRect(0,0,w,h);
-                stars.forEach(s => { s.a += s.da; if(s.a>1||s.a<0)s.da*=-1; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fillStyle = 'rgba(165,180,252,'+s.a+')'; ctx.fill(); });
-                requestAnimationFrame(draw);
-            }
-            draw();
-        }
-        initTheme(); updateClock(); setInterval(updateClock, 1000); initBackground(); initHeroStars();
-        AOS.init({ duration: 800, once: true, offset: 80 });
-    </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    root.classList.toggle('dark', !isDark);
+    root.classList.toggle('light', isDark);
+    localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
+  });
+</script>
 </body>
 </html>

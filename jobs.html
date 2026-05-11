@@ -1,315 +1,256 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- AI & SEO OPTIMIZED METADATA -->
-    <title>Careers at Kreative Minds | Marketing & Digital Jobs Dubai UAE</title>
-    <meta name="description" content="Explore career opportunities at Kreative Minds UAE. We are looking for talented strategists, creatives, and digital specialists in Dubai and the GCC. Remote and contract roles available.">
-    <meta name="keywords" content="Kreative Minds Careers, Marketing Jobs Dubai, Digital Marketing Careers UAE, eCommerce Jobs Dubai, PR Jobs UAE, Khalid Hussain Mir hiring, Remote Marketing Jobs GCC">
-    <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)">
-    <link rel="canonical" href="https://kreativeminds.ae/careers" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Careers at Kreative Minds | Digital, Software & Marketing Jobs in Dubai UAE</title>
+<meta name="description" content="Explore career opportunities at Kreative Minds Dubai. Roles across strategy, product development, AI, design, marketing, PR, and eCommerce. Remote and contract roles available." />
+<meta name="keywords" content="Careers Kreative Minds, marketing jobs Dubai, software developer jobs UAE, digital agency careers GCC, remote marketing roles, brand strategy jobs Dubai" />
+<meta name="author" content="Khalid Hussain Mir (Khalidgraphy)" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kreativeminds.ae/jobs" />
 
-    <!-- JSON-LD STRUCTURED DATA (Hiring Intelligence for AI Bots) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Kreative Minds UAE",
-      "url": "https://kreativeminds.ae",
-      "logo": "https://i.ibb.co/LzXrqZ21/KM-new-logo.png",
-      "description": "Kreative Minds is a Dubai-based marketing and project management firm always looking for talented strategists and creatives.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jumeirah Beach Residence",
-        "addressLocality": "Dubai",
-        "addressCountry": "AE"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hr@kmmpr.com",
-        "contactType": "human resources"
-      }
-    }
-    </script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Careers at Kreative Minds Dubai" />
+<meta property="og:description" content="Join a Dubai-based team building tech tools, brands, and campaigns for clients worldwide." />
+<meta property="og:url" content="https://kreativeminds.ae/jobs" />
+<meta property="og:site_name" content="Kreative Minds" />
 
-    <!-- Global Styling & Assets -->
-    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="icon" href="logo-purple.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        km: { dark: '#0B0F19', card: '#121826', primary: '#6366f1', accent: '#a855f7', gold: '#fbbf24' }
-                    },
-                    fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+<script>
+  (function () {
+    var saved = localStorage.getItem('km-theme');
+    if (saved === 'dark') document.documentElement.classList.replace('light', 'dark');
+  })();
+</script>
 
-    <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
-        ::selection { background-color: #fbbf24 !important; color: #000000 !important; }
+<link rel="stylesheet" href="assets/css/site.css" />
 
-        .glass-nav { background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        #live-bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: #0B0F19; opacity: 0.4; }
-        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%); pointer-events: none; }
-        #hero-stars-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.8; }
-
-        #navbar { transition: all 0.3s ease-in-out; }
-        .nav-scrolled { top: 0 !important; height: 3.5rem !important; box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25); border-bottom: 1px solid rgba(99, 102, 241, 0.2); }
-        
-        .career-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; transition: all 0.3s ease; }
-        .career-card:hover { border-color: rgba(99, 102, 241, 0.3); transform: translateY(-5px); }
-        .accent-text { color: #fbbf24; font-weight: 700; }
-    </style>
+<style>
+  .role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 900px) { .role-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .role-grid { grid-template-columns: 1fr; } }
+  .role-card { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-elev); transition: border-color 0.2s ease, transform 0.2s ease; }
+  .role-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .role-card .ic { width: 38px; height: 38px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .role-card .ic svg { width: 18px; height: 18px; }
+  .role-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.1rem; margin: 0 0 10px; }
+  .role-card p { color: var(--ink-soft); margin: 0; font-size: 0.92rem; }
+  .apply-card { padding: 48px; border: 1px solid var(--accent); border-radius: 18px; background: var(--accent-soft); text-align: center; max-width: 760px; margin: 0 auto; }
+  .apply-card h2 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.8rem; color: var(--accent); margin: 0 0 18px; }
+  .apply-email { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.8rem; color: var(--ink); text-decoration: none; display: block; margin: 18px 0; transition: color 0.2s ease; }
+  .apply-email:hover { color: var(--accent); }
+  .apply-list { text-align: left; max-width: 480px; margin: 32px auto 0; padding: 24px; background: var(--bg-elev); border-radius: 12px; border: 1px solid var(--line); }
+  .apply-list h4 { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+  .apply-list p { margin: 8px 0; font-size: 0.92rem; color: var(--ink-soft); display: flex; align-items: center; gap: 12px; }
+  .apply-list svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+</style>
 </head>
-<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden">
+<body>
 
-    <canvas id="live-bg-canvas"></canvas>
-    <div class="bg-overlay"></div>
-
-    <!-- Top Utility Bar (SAME AS HOME) -->
-    <div id="utility-bar" class="relative w-full bg-km-gold text-km-dark py-1.5 text-[10px] md:text-xs font-bold z-[60] border-b-[0.5px] border-black/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center"><i class="fas fa-clock mr-2 opacity-75"></i><span id="dubai-clock" class="tracking-wide uppercase">Dubai, UAE: Loading...</span></div>
-            <div class="flex items-center"><a href="mailto:hi@kreativeminds.ae" class="hover:opacity-70 transition-opacity"><i class="fas fa-envelope mr-2"></i>hi@kreativeminds.ae</a></div>
-        </div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Kreative Minds home">
+      <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+      <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="services.html">Services</a>
+      <a href="pricelist.html">Pricing</a>
+      <a href="blog/">Blog</a>
+      <a href="index.html#contact">Contact</a>
     </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary">
+        Start a project
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Navigation (SAME AS HOME) -->
-    <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
-                <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner transition-all duration-300" id="nav-logo-container">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
-                </div>
-                <span class="text-xl md:text-2xl">Kreative <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 ml-1">Minds</span></span>
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html" class="hover:text-white transition-colors text-sm font-medium">Home</a>
-                <a href="index.html#about" class="hover:text-white transition-colors text-sm font-medium">About</a>
-                <a href="index.html#services" class="hover:text-white transition-colors text-sm font-medium">Services</a>
-                <a href="pricelist.html" class="hover:text-white transition-colors text-sm font-medium">Pricing</a>
-                <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/30">Let's Connect</a>
-            </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white"><i class="fas fa-bars text-xl"></i></button>
-        </div>
-    </nav>
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>Careers</span>
+    </div>
+    <h1>Build with a team that <em>ships its own.</em></h1>
+    <p class="page-lead">We're a Dubai-based digital agency working with founders, agencies, and global teams. Currently a team of 3, growing to 5. We're always interested in connecting with people who care about practical work and long-term value.</p>
+  </div>
+</header>
 
-    <!-- Header / Hero -->
-    <header class="pt-48 pb-16 relative overflow-hidden text-center">
-        <canvas id="hero-stars-canvas"></canvas>
-        <div class="max-w-4xl mx-auto px-4 relative z-10" data-aos="fade-up">
-            <h1 class="text-5xl md:text-7xl font-heading font-black text-white leading-tight mb-6">
-                Careers at <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Kreative Minds</span>
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
-                Join a collective of strategists, creatives, and digital specialists focusing on practical brand growth and long-term value in the UAE and beyond.
-            </p>
-        </div>
-    </header>
+<!-- ABOUT WORK -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">01 / Who we are</div>
+      <div>
+        <h2 class="section-title">A multidisciplinary team for product, brand, and growth.</h2>
+        <p class="section-lead">Strategy, design, development, marketing, and operations under one roof. We've shipped our own products (InvoiceDubai, MyKard) and run client engagements across the UAE, GCC, UK, Europe, and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 space-y-16 relative z-10">
-        
-        <!-- Company Context -->
-        <article class="career-card" data-aos="fade-up">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-2">
-                    <h2 class="text-3xl font-heading font-bold text-white mb-6">Building the Future of Digital Trade</h2>
-                    <p class="text-gray-400 leading-relaxed text-lg mb-4">
-                        Kreative Minds UAE is a Dubai-based marketing and project management company working with startups, founders, creators, and growing businesses across the <span class="text-white">UAE and GCC</span>.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed">
-                        We operate as a multidisciplinary team. We are always interested in connecting with talented individuals who are passionate about <span class="accent-text">digital marketing, branding, ecommerce, and strategic communication</span>.
-                    </p>
-                </div>
-                <div class="bg-indigo-500/10 border border-indigo-500/20 p-6 rounded-2xl text-center">
-                    <i class="fas fa-rocket text-4xl text-indigo-400 mb-4"></i>
-                    <p class="text-white font-bold">Growth Mindset</p>
-                    <p class="text-gray-500 text-xs mt-2">Focused on practical outcomes and creative excellence.</p>
-                </div>
-            </div>
-        </article>
+<!-- ROLES -->
+<section class="block-sm">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">02 / Roles</div>
+      <div>
+        <h2 class="section-title">Areas we occasionally open roles in.</h2>
+      </div>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg></div>
+        <h3>Digital Marketing Strategy</h3>
+        <p>Strategic planning and data-informed execution across diverse client portfolios.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Software Engineering</h3>
+        <p>Full-stack development: SaaS, custom tools, internal dashboards, Cloudflare Workers, React.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7.5V18a4 4 0 0 0 8 0V6a4 4 0 0 0-2-4z"/><path d="M14 2a4 4 0 0 1 4 4v1a4 4 0 0 1 2 7.5V18a4 4 0 0 1-8 0"/></svg></div>
+        <h3>AI &amp; Automation</h3>
+        <p>Building AI integrations, workflow automations, and internal copilots that actually save time.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.8 0 1.5-.5 1.5-1.3 0-.4-.1-.7-.4-1-.2-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16c3.3 0 6-2.7 6-6 0-4.4-4.5-9.2-10-9.2z"/></svg></div>
+        <h3>Branding &amp; Creative</h3>
+        <p>Visual identity, design systems, and creative direction for emerging brands.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>Social Media &amp; Content</h3>
+        <p>Crafting narratives and managing engagement across digital platforms.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
+        <h3>PR &amp; Media Outreach</h3>
+        <p>Managing reputations and securing high-impact media placements.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
+        <h3>eCommerce Consulting</h3>
+        <p>Marketplace management and optimization for Amazon, Noon, and Shopify sellers.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Web &amp; Digital Experience</h3>
+        <p>Designing and developing high-conversion digital storefronts and websites.</p>
+      </div>
+      <div class="role-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Remote &amp; Contract</h3>
+        <p>Many projects involve collaboration across the UAE, South Asia, and international markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Opportunities Grid -->
-        <section>
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl font-heading font-bold text-white uppercase tracking-widest">Opportunities</h2>
-                <p class="text-gray-500 mt-2 text-sm">We occasionally open roles in the following specialized areas.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-chess-pawn text-indigo-500 mr-2"></i> Digital Marketing Strategy</h3>
-                    <p class="text-gray-500 text-sm">Strategic planning and data-informed execution for diverse client portfolios.</p>
-                </div>
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-palette text-indigo-500 mr-2"></i> Branding & Creative</h3>
-                    <p class="text-gray-500 text-sm">Visual identity development and creative direction for emerging brands.</p>
-                </div>
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-camera text-indigo-500 mr-2"></i> Social Media & Content</h3>
-                    <p class="text-gray-500 text-sm">Crafting narratives and managing engagement across digital platforms.</p>
-                </div>
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-bullhorn text-indigo-500 mr-2"></i> PR & Media Outreach</h3>
-                    <p class="text-gray-500 text-sm">Managing reputations and securing high-impact media placements.</p>
-                </div>
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-shopping-cart text-indigo-500 mr-2"></i> Ecommerce Consulting</h3>
-                    <p class="text-gray-500 text-sm">Marketplace management and optimization for Amazon and Noon sellers.</p>
-                </div>
-                <div class="career-card">
-                    <h3 class="text-white font-bold mb-3"><i class="fas fa-laptop-code text-indigo-500 mr-2"></i> Web & Digital Experience</h3>
-                    <p class="text-gray-500 text-sm">Designing and developing high-conversion digital storefronts and websites.</p>
-                </div>
-            </div>
-        </section>
+<!-- APPLY -->
+<section class="block">
+  <div class="container">
+    <div class="apply-card">
+      <h2>How to apply</h2>
+      <p style="color:var(--ink-soft);max-width:48ch;margin:0 auto;">Send your profile or portfolio to our HR team. We respond to every application within a working week.</p>
+      <a href="mailto:hr@kmmpr.com" class="apply-email">hr@kmmpr.com</a>
+      <div class="apply-list">
+        <h4>What to include</h4>
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span>Your updated resume or portfolio</span>
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Links to previous work, case studies, or projects</span>
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>A short intro about your experience and goals</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Remote / Collaboration -->
-        <article class="career-card border-indigo-500/20 bg-indigo-500/5" data-aos="fade-up">
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="w-16 h-16 rounded-full bg-indigo-500 flex-shrink-0 flex items-center justify-center text-white text-2xl">
-                    <i class="fas fa-globe-americas"></i>
-                </div>
-                <div>
-                    <h2 class="text-2xl font-heading font-bold text-white mb-2">Remote and Contract Work</h2>
-                    <p class="text-gray-400">
-                        Many of our projects involve collaboration across the <span class="text-white">UAE, South Asia, and international markets</span>. Depending on the specific role and scope, remote and project-based collaboration may be possible.
-                    </p>
-                </div>
-            </div>
-        </article>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-about foot-brand">
+        <a href="index.html" aria-label="Kreative Minds home">
+          <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+          <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+        </a>
+        <p>A Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. Working with clients worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="services.html#core">Strategy</a>
+        <a href="services.html#core">Product &amp; SaaS</a>
+        <a href="services.html#core">AI &amp; Automation</a>
+        <a href="services.html#core">Brand &amp; Marketing</a>
+        <a href="pricelist.html">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="index.html#about">About</a>
+        <a href="jobs.html">Careers</a>
+        <a href="climate-impact.html">Sustainability</a>
+        <a href="standards-and-ethics.html">Standards &amp; Ethics</a>
+        <a href="blog/">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:hi@kreativeminds.ae">hi@kreativeminds.ae</a>
+        <a href="mailto:hr@kmmpr.com">hr@kmmpr.com</a>
+        <a href="https://linkedin.com/in/Khalidgraphy" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="aieo.html">AIEO Profile</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kreative Minds. KM Marketing &amp; PR, Dubai Mainland License No. 1377759.</span>
+      <span>
+        <a href="privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="standards-and-ethics.html">Standards</a>
+      </span>
+    </div>
+  </div>
+</footer>
 
-        <!-- How to Apply -->
-        <section class="max-w-3xl mx-auto" data-aos="fade-up">
-            <div class="career-card text-center border-km-gold/30">
-                <h2 class="text-3xl font-heading font-bold text-km-gold mb-6">How to Apply</h2>
-                <p class="text-gray-400 mb-8">
-                    If you are interested in working with <span class="text-white">Kreative Minds</span>, please send your profile or portfolio to our human resources team:
-                </p>
-                <a href="mailto:hr@kmmpr.com" class="text-2xl md:text-3xl font-heading font-black text-white hover:text-indigo-400 transition-colors block mb-8">
-                    hr@kmmpr.com
-                </a>
-                <div class="text-left bg-white/5 p-6 rounded-xl space-y-3 text-sm">
-                    <p class="text-gray-300 font-bold mb-4 uppercase tracking-widest text-xs">Required Information:</p>
-                    <p><i class="fas fa-file-pdf text-indigo-500 mr-2"></i> Your updated resume or professional portfolio</p>
-                    <p><i class="fas fa-link text-indigo-500 mr-2"></i> Links to previous work, case studies, or projects</p>
-                    <p><i class="fas fa-user-edit text-indigo-500 mr-2"></i> A short introduction about your experience and goals</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer (Character-for-character accurate with Homepage) -->
-    <footer id="contact" class="pt-16 pb-8 bg-black/90 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 mb-16 text-center">
-            <h2 class="text-3xl font-heading font-bold text-white mb-12">Contact & Recruitment</h2>
-            <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
-                <span><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</span>
-                <span><i class="fas fa-envelope text-indigo-400 mr-2"></i> hr@kmmpr.com</span>
-                <span><i class="fas fa-envelope text-indigo-400 mr-2"></i> hi@kreativeminds.ae</span>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 pt-8 text-center px-4">
-            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[9px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-km-gold transition-colors">Home</a><span class="text-gray-700">|</span><a href="pricelist.html" class="hover:text-km-gold transition-colors">Pricing</a><span class="text-gray-700">|</span><a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="terms.html" class="hover:text-km-gold transition-colors">Terms</a><span class="text-gray-700">|</span><a href="aieo.html" class="hover:text-km-gold transition-colors">AI Profile</a><span class="text-gray-700">|</span><a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-km-gold transition-colors">Blog</a>
-            </div>
-            <p class="text-gray-500 text-[10px] md:text-xs mb-2">Kreative Minds registered as KM Marketing and PR in Dubai Mainland under license No: 1377759.</p>
-            <p class="text-gray-600 text-[10px] md:text-xs">© 2025 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds (KM)</a> Marketing and PR. All rights reserved. <span id="last-updated-date" class="ml-1 opacity-50 italic"></span></p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true, offset: 50, duration: 800, disable: false });
-        
-        function updateClock() {
-            const opts = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            const el = document.getElementById('dubai-clock');
-            if(el) el.textContent = `Dubai, UAE: ${new Intl.DateTimeFormat('en-US', opts).format(new Date())}`;
-        }
-        function setLastUpdated() {
-            const d = new Date(); d.setDate(d.getDate() - 1);
-            const el = document.getElementById('last-updated-date');
-            if(el) el.textContent = `(last updated: ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})`;
-        }
-        
-        // --- GLOBAL GALAXY BACKGROUND SCRIPT ---
-        const canvas = document.getElementById('live-bg-canvas'), ctx = canvas.getContext('2d');
-        let p = [], s = [], b = ['🎯', '📈', '🚀', '🔍', '💡', '📊', '💼', '💻', '🤝'];
-        function initBackground() {
-            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-            p = []; s = [];
-            for (let i = 0; i < Math.min(window.innerWidth / 10, 100); i++) p.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.5, vy: (Math.random() - 0.5) * 0.5, r: Math.random() * 1.5 + 0.5 });
-            for (let i = 0; i < Math.min(window.innerWidth / 50, 15); i++) s.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, t: b[Math.floor(Math.random() * b.length)], fs: Math.random() * 15 + 25, o: 0.5, c: Math.random() > 0.5 ? '#ffffff' : '#fbbf24' });
-        }
-        function drawBackground() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "rgba(251, 191, 36, 0.4)"; ctx.strokeStyle = "rgba(99, 102, 241, 0.1)"; 
-            p.forEach((pt, i) => {
-                pt.x += pt.vx; pt.y += pt.vy;
-                if (pt.x < 0 || pt.x > canvas.width) pt.vx *= -1; if (pt.y < 0 || pt.y > canvas.height) pt.vy *= -1;
-                ctx.beginPath(); ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2); ctx.fill();
-                for (let j = i + 1; j < p.length; j++) {
-                    const pt2 = p[j]; const dist = Math.hypot(pt.x - pt2.x, pt.y - pt2.y);
-                    if (dist < 150) { ctx.lineWidth = 1 - dist / 150; ctx.beginPath(); ctx.moveTo(pt.x, pt.y); ctx.lineTo(pt2.x, pt2.y); ctx.stroke(); }
-                }
-            });
-            s.forEach(sym => {
-                sym.x += sym.vx; sym.y += sym.vy;
-                if (sym.x < -50) sym.x = canvas.width + 50; if (sym.x > canvas.width + 50) sym.x = -50;
-                if (sym.y < -50) sym.y = canvas.height + 50; if (sym.y > canvas.height + 50) sym.y = -50;
-                ctx.font = `${sym.fs}px sans-serif`; ctx.globalAlpha = sym.o; ctx.fillStyle = sym.c; ctx.fillText(sym.t, sym.x, sym.y);
-            });
-            ctx.globalAlpha = 1.0; requestAnimationFrame(drawBackground);
-        }
-
-        const hc = document.getElementById('hero-stars-canvas'), hct = hc.getContext('2d');
-        let hs = [], ha = 0;
-        function initHeroStars() {
-            hc.width = window.innerWidth; hc.height = window.innerHeight;
-            hs = []; for (let i = 0; i < 200; i++) hs.push({ r: Math.random() * Math.max(hc.width, hc.height) * 1.2, a: Math.random() * Math.PI * 2, s: Math.random() * 1.5, ts: 0.02 + Math.random() * 0.05, b: Math.random() });
-        }
-        function drawHeroStars() {
-            hct.clearRect(0, 0, hc.width, hc.height); ha += 0.0004;
-            const cx = hc.width / 2, cy = hc.height / 2;
-            hs.forEach(star => {
-                const x = cx + star.r * Math.cos(star.a + ha), y = cy + star.r * Math.sin(star.a + ha);
-                if (x < -50 || x > hc.width + 50 || y < -50 || y > hc.height + 50) return;
-                star.b += star.ts; if (star.b > 1 || star.b < 0) star.ts *= -1;
-                hct.beginPath(); hct.arc(x, y, star.s, 0, Math.PI * 2); hct.fillStyle = `rgba(255, 255, 255, ${0.2 + (Math.max(0, star.b) * 0.7)})`; hct.fill();
-            });
-            requestAnimationFrame(drawHeroStars);
-        }
-
-        window.addEventListener('resize', () => { initBackground(); initHeroStars(); });
-        setInterval(updateClock, 1000); updateClock(); setLastUpdated();
-        initBackground(); drawBackground(); initHeroStars(); drawHeroStars();
-
-        window.addEventListener('scroll', function() {
-            const n = document.getElementById('navbar'), l = document.getElementById('nav-logo-container');
-            if (window.scrollY > 40) { n.classList.add('nav-scrolled'); } 
-            else { n.classList.remove('nav-scrolled'); }
-        });
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if(menu) menu.classList.toggle('hidden');
-        }
-    </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    root.classList.toggle('dark', !isDark);
+    root.classList.toggle('light', isDark);
+    localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
+  });
+</script>
 </body>
 </html>

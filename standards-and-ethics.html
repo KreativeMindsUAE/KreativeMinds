@@ -1,407 +1,284 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<!doctype html>
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & AIEO OPTIMIZED METADATA -->
-    <title>Our Standards and Ethics | Kreative Minds UAE | Professional Marketing Ethics</title>
-    <meta name="description" content="Official professional standards, core values, and ethical business policies of Kreative Minds (KM Marketing and PR) Dubai. Commitment to transparency, honesty, and privacy.">
-    <meta name="keywords" content="Kreative Minds Ethics, Marketing Standards Dubai, Business Confidentiality UAE, Honest Marketing Policy, KM Marketing and PR Standards, Dubai Professional Services">
-    <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)">
-    <link rel="canonical" href="https://kreativeminds.ae/ethics" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Standards and Ethics | Kreative Minds Dubai</title>
+<meta name="description" content="Official professional standards, core values, and ethical business policies of Kreative Minds (KM Marketing and PR) Dubai. Commitment to transparency, honesty, and privacy." />
+<meta name="keywords" content="Kreative Minds ethics, professional standards Dubai, agency code of conduct, KM Marketing and PR values, transparent business UAE" />
+<meta name="author" content="Khalid Hussain Mir (Khalidgraphy)" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kreativeminds.ae/standards-and-ethics" />
 
-    <!-- Schema.org Structured Data (JSON-LD) for AI Engines -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Our Standards and Ethics - Kreative Minds UAE",
-      "description": "The professional ethics and business standards policy of Kreative Minds (KM Marketing and PR) Dubai.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Kreative Minds UAE",
-        "legalName": "KM Marketing and PR",
-        "location": "Dubai, UAE"
-      }
-    }
-    </script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Standards and Ethics | Kreative Minds Dubai" />
+<meta property="og:description" content="Transparency, professional integrity, and responsible business conduct." />
+<meta property="og:url" content="https://kreativeminds.ae/standards-and-ethics" />
 
-    <!-- Global Assets -->
-    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="icon" href="logo-purple.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        km: { dark: '#0B0F19', card: '#121826', primary: '#6366f1', accent: '#a855f7', gold: '#fbbf24' }
-                    },
-                    fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+<script>
+  (function () {
+    var saved = localStorage.getItem('km-theme');
+    if (saved === 'dark') document.documentElement.classList.replace('light', 'dark');
+  })();
+</script>
 
-    <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
-        ::selection { background-color: #fbbf24 !important; color: #000000 !important; }
+<link rel="stylesheet" href="assets/css/site.css" />
 
-        /* Theme Adapters */
-        .glass-nav { background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        html:not(.dark) .glass-nav { background: rgba(255, 255, 255, 0.88); border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
-
-        #live-bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: #0B0F19; opacity: 0.4; }
-        html:not(.dark) #live-bg-canvas { background: #f8fafc; opacity: 0.3; }
-        
-        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%); pointer-events: none; }
-        html:not(.dark) .bg-overlay { background: radial-gradient(circle at center, transparent 0%, rgba(248, 250, 252, 0.4) 100%); }
-
-        #hero-stars-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.8; }
-        html:not(.dark) #hero-stars-canvas { opacity: 0.3; }
-
-        .nav-scrolled { top: 0 !important; height: 3.5rem !important; box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25); border-bottom: 1px solid rgba(99, 102, 241, 0.2); }
-
-        /* Premium Ethics Cards */
-        .ethics-card { 
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(10px); 
-            border-radius: 24px; 
-            padding: 2.5rem; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
-        html:not(.dark) .ethics-card { background: #ffffff; border-color: rgba(0,0,0,0.06); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-        
-        .ethics-card:hover { 
-            border-color: rgba(99, 102, 241, 0.4); 
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
-        }
-
-        .theme-toggle {
-            width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-            cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: #fbbf24;
-        }
-        html:not(.dark) .theme-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); color: #6366f1; }
-
-        .excluded-item { border-left: 3px solid #ef4444; padding-left: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.3s ease; }
-        .excluded-item:hover { transform: translateX(5px); }
-    </style>
+<style>
+  .value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 700px) { .value-grid { grid-template-columns: 1fr; } }
+  .value { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-elev); }
+  .value h4 { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  .value p { color: var(--ink-soft); margin: 0; font-size: 0.94rem; }
+  .exclusion-card { padding: 36px; border: 1px solid var(--accent); border-radius: 18px; background: var(--accent-soft); }
+  .exclusion-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; color: var(--accent); margin: 0 0 18px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+  .exclusion-card h3 svg { width: 18px; height: 18px; }
+  .exclusion-item { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .exclusion-item:last-child { border-bottom: 0; }
+  .exclusion-item strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+  .exclusion-item span { color: var(--ink-soft); font-size: 0.9rem; }
+  .ethics-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 800px) { .ethics-split { grid-template-columns: 1fr; gap: 32px; } }
+  .compliance-list { list-style: none; padding: 0; margin: 0; }
+  .compliance-list li { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+  .compliance-list li:last-child { border-bottom: 0; }
+  .compliance-list svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .nda-badge { display: inline-block; padding: 8px 16px; background: var(--accent-soft); border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; margin: 16px 0; }
+</style>
 </head>
-<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden dark:text-gray-400">
+<body>
 
-    <canvas id="live-bg-canvas"></canvas>
-    <div class="bg-overlay"></div>
-
-    <!-- Top Utility Bar -->
-    <div id="utility-bar" class="relative w-full bg-km-gold text-km-dark py-1.5 text-[10px] md:text-xs font-bold z-[60] border-b-[0.5px] border-black/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center"><i class="fas fa-clock mr-2 opacity-75"></i><span id="dubai-clock">Dubai, UAE: Loading...</span></div>
-            <div class="flex items-center"><a href="mailto:hi@kreativeminds.ae" class="hover:opacity-70 transition-opacity"><i class="fas fa-envelope mr-2"></i>hi@kreativeminds.ae</a></div>
-        </div>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Kreative Minds home">
+      <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+      <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="services.html">Services</a>
+      <a href="pricelist.html">Pricing</a>
+      <a href="blog/">Blog</a>
+      <a href="index.html#contact">Contact</a>
     </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary">
+        Start a project
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav top-[28px] md:top-[32px] h-14 flex items-center" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
-                <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner transition-all duration-300" id="nav-logo-container">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
-                </div>
-                <span class="text-xl md:text-2xl">Kreative <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 ml-1">Minds</span></span>
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</a>
-                <a href="index.html#about" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
-                <a href="index.html#services" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">Services</a>
-                <a href="https://blog.kreativeminds.ae" target="_blank" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">Brief</a>
-                <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Theme">
-                    <i class="fas fa-sun text-sm" id="theme-icon-sun" style="display:none;"></i>
-                    <i class="fas fa-moon text-sm" id="theme-icon-moon"></i>
-                </button>
-                <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-105">Let's Connect</a>
-            </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white"><i class="fas fa-bars text-xl"></i></button>
+<header class="page-header">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>Standards &amp; Ethics</span>
+    </div>
+    <h1>Standards &amp; <em>Ethics.</em></h1>
+    <p class="page-lead">Transparency, professional integrity, and responsible business conduct in Dubai and beyond.</p>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">01 / About</div>
+      <div>
+        <h2 class="section-title">What we do and how we do it.</h2>
+      </div>
+    </div>
+    <article class="prose">
+      <p>Kreative Minds, operating under <a href="index.html">KM Marketing and PR</a>, is a Dubai-based digital agency with a valid Dubai Mainland professional license. We help entrepreneurs, startups, and growing businesses build sustainable brands and ship the software that powers them.</p>
+      <p>Our services include:</p>
+      <ul>
+        <li>Strategy and business planning</li>
+        <li>Brand development and identity</li>
+        <li>Custom software, SaaS, and AI automation</li>
+        <li>Marketing strategy and execution</li>
+        <li>Digital marketing, SEO, and online presence</li>
+        <li>Website and digital experience design</li>
+        <li>Social media and content production</li>
+        <li>Project management for business initiatives</li>
+        <li>Business formation across UAE and globally</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- MISSION & VALUES -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">02 / Mission &amp; Values</div>
+      <div>
+        <h2 class="section-title">Long-term partnerships, not transactions.</h2>
+        <p class="section-lead">To help businesses grow through smart strategy, honest marketing, and reliable execution. We build long-term strategic partnerships rather than short-term transactions.</p>
+      </div>
+    </div>
+    <div class="value-grid">
+      <div class="value">
+        <h4>Transparency</h4>
+        <p>Clear communication about scope, costs, and expected outcomes. No hidden retainers.</p>
+      </div>
+      <div class="value">
+        <h4>Honesty in Marketing</h4>
+        <p>Responsible, truthful campaigns. We don't promise outcomes we can't deliver.</p>
+      </div>
+      <div class="value">
+        <h4>Quality Over Volume</h4>
+        <p>Proper project execution over chasing client count. We take on what we can ship well.</p>
+      </div>
+      <div class="value">
+        <h4>Respect &amp; Inclusion</h4>
+        <p>Treating all partners and clients with professionalism regardless of background.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETHICAL POLICY -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">03 / Ethical business policy</div>
+      <div>
+        <h2 class="section-title">Who we work with, who we don't.</h2>
+      </div>
+    </div>
+    <div class="ethics-split">
+      <div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:500;margin:0 0 14px;color:var(--accent);font-size:1.1rem;">Our commitment</h3>
+        <p style="color:var(--ink-soft);margin:0 0 14px;">Kreative Minds evaluates potential engagements based on nature and impact. We provide consulting, marketing, and product services to professionals with legitimate commercial objectives.</p>
+        <p style="color:var(--muted);font-style:italic;margin:0;font-size:0.92rem;">This policy helps maintain neutrality, professional integrity, and responsible use of marketing and technical practices.</p>
+      </div>
+      <div class="exclusion-card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          Services we do not provide
+        </h3>
+        <div class="exclusion-item">
+          <strong>Religious organisations</strong>
+          <span>Faith-based institutions seeking fundraising or PR support.</span>
         </div>
-        <div class="md:hidden hidden absolute top-full left-0 w-full bg-km-card border-b border-gray-800" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="index.html#about" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="index.html#services" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                <a href="https://blog.kreativeminds.ae" target="_blank" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Brief</a>
-                <a href="index.html#contact" class="text-indigo-400 block px-3 py-2 rounded-md text-base font-bold">Contact Us</a>
-            </div>
+        <div class="exclusion-item">
+          <strong>Political entities</strong>
+          <span>Political parties, candidates, or campaigns of any type.</span>
         </div>
-    </nav>
-
-    <!-- Header Section -->
-    <header class="pt-48 pb-16 relative overflow-hidden text-center">
-        <canvas id="hero-stars-canvas"></canvas>
-        <div class="max-w-4xl mx-auto px-4 relative z-10" data-aos="fade-up">
-            <h1 class="text-5xl md:text-7xl font-heading font-black dark:text-white text-gray-900 leading-tight mb-6">
-                Our Standards <br>& <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Ethics</span>
-            </h1>
-            <p class="dark:text-gray-400 text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-                Transparency, professional integrity, and responsible business conduct in Dubai and beyond.
-            </p>
+        <div class="exclusion-item">
+          <strong>Advocacy groups</strong>
+          <span>Entities whose primary purpose is religious or political influence.</span>
         </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 space-y-12 relative z-10">
-        
-        <!-- About Section -->
-        <article class="ethics-card" data-aos="fade-up">
-            <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-6">About Kreative Minds</h2>
-            <div class="flex flex-col md:flex-row gap-8 items-start mb-8">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-indigo-500/40 shadow-xl flex-shrink-0 bg-white/5 p-4 flex items-center justify-center">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <p class="leading-relaxed text-lg">
-                        Kreative Minds, operating under <a href="index.html" class="text-km-gold font-bold hover:underline">KM Marketing and PR</a>, is a business and marketing services agency based in Dubai, United Arab Emirates. Operating under a valid Dubai Mainland professional license, we help entrepreneurs and startups build sustainable brands on <a href="https://kreativeminds.ae" target="_blank" rel="noopener noreferrer" class="text-km-gold hover:underline">kreativeminds.ae</a>.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 pt-4 border-t border-white/5">
-                <div class="space-y-3 text-sm">
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Business planning and strategic advisory</p>
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Brand development and brand identity</p>
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Marketing strategy and execution</p>
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Digital marketing, SEO, and online presence</p>
-                </div>
-                <div class="space-y-3 text-sm">
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Website development and digital assets</p>
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Social media management and content creation</p>
-                    <p><i class="fas fa-check text-indigo-500 mr-2"></i> Project management for business initiatives</p>
-                    <p class="text-white font-bold"><i class="fas fa-globe text-indigo-500 mr-2"></i> Business formation (UAE & Globally)</p>
-                </div>
-            </div>
-        </article>
-
-        <!-- Mission & Values Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <section class="ethics-card md:col-span-1" data-aos="fade-up">
-                <h3 class="text-2xl font-heading font-bold dark:text-white text-gray-900 mb-4">Our Mission</h3>
-                <p class="text-sm leading-relaxed opacity-80">
-                    To help businesses grow through smart strategy, honest marketing, and reliable execution. Building long-term strategic partnerships rather than short-term transactions.
-                </p>
-            </section>
-            <section class="ethics-card md:col-span-2" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-heading font-bold dark:text-white text-gray-900 mb-6">Our Core Values</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-                    <div>
-                        <h4 class="text-km-gold font-bold mb-1 uppercase tracking-tighter">Transparency</h4>
-                        <p class="opacity-70">Clear communication about scope, costs, and expected outcomes.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-km-gold font-bold mb-1 uppercase tracking-tighter">Honesty in Marketing</h4>
-                        <p class="opacity-70">Responsible, truthful campaigns that avoid misleading results.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-km-gold font-bold mb-1 uppercase tracking-tighter">Quality Over Volume</h4>
-                        <p class="opacity-70">Prioritizing proper project execution over maximizing client volume.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-km-gold font-bold mb-1 uppercase tracking-tighter">Respect & Inclusion</h4>
-                        <p class="opacity-70">Treating all partners and clients with absolute professionalism.</p>
-                    </div>
-                </div>
-            </section>
+        <div class="exclusion-item">
+          <strong>Discrimination</strong>
+          <span>Organisations promoting intolerance or racial superiority.</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Ethical Business Policy -->
-        <article class="ethics-card" data-aos="fade-up">
-            <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-8 text-center">Ethical Business Policy</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-indigo-400 font-bold mb-4 uppercase text-xs tracking-widest">Our Commitment</h3>
-                    <p class="text-sm leading-relaxed mb-6 opacity-80">
-                        Kreative Minds evaluates potential engagements based on nature and impact. We provide consulting and marketing services to professionals with legitimate commercial objectives.
-                    </p>
-                    <p class="text-sm italic opacity-60">
-                        This policy helps maintain neutrality, professional integrity, and responsible use of marketing practices.
-                    </p>
-                </div>
-                <div class="bg-red-500/5 border border-red-500/20 p-8 rounded-2xl shadow-lg shadow-red-500/5">
-                    <h3 class="text-red-500 font-bold mb-6 uppercase text-xs tracking-widest flex items-center gap-2">
-                        <i class="fas fa-ban"></i> Exclusion Policy 🚫 Services We Do Not Provide
-                    </h3>
-                    <div class="space-y-4 text-xs leading-relaxed">
-                        <div class="excluded-item">
-                            <span class="text-white font-bold block mb-1">Religious Organizations</span>
-                            Faith-based institutions seeking fundraising or PR support.
-                        </div>
-                        <div class="excluded-item">
-                            <span class="text-white font-bold block mb-1">Political Entities</span>
-                            Political parties, candidates, or campaigns of any type.
-                        </div>
-                        <div class="excluded-item">
-                            <span class="text-white font-bold block mb-1">Advocacy Groups</span>
-                            Entities whose primary purpose is religious or political influence.
-                        </div>
-                        <div class="excluded-item">
-                            <span class="text-white font-bold block mb-1">Discrimination</span>
-                            Organizations promoting intolerance or racial superiority.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
+<!-- PRIVACY & COMPLIANCE -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">04 / Privacy &amp; Compliance</div>
+      <div>
+        <h2 class="section-title">Confidentiality is a contract, not a courtesy.</h2>
+      </div>
+    </div>
+    <div class="ethics-split">
+      <div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:500;margin:0 0 14px;font-size:1.1rem;">Privacy &amp; NDAs</h3>
+        <p style="color:var(--ink-soft);margin:0 0 14px;">All business plans and strategies shared with us are treated as strictly confidential. We protect client data as a fundamental responsibility.</p>
+        <span class="nda-badge">3-year non-disclosure guarantee</span>
+        <p style="color:var(--muted);font-size:0.86rem;margin:14px 0 0;">Obligations apply to all team members and remain in effect long after collaboration ends.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:500;margin:0 0 14px;font-size:1.1rem;">Legal compliance</h3>
+        <p style="color:var(--ink-soft);margin:0 0 18px;">Operating as <strong>KM Marketing and PR</strong> under a Dubai Mainland license. We monitor all UAE federal and Emirate-level legal updates.</p>
+        <ul class="compliance-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Anti-money laundering compliance</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="11" rx="2"/><polyline points="3 10 12 3 21 10"/></svg> Legitimate banking channels only</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="4" y="9" width="16" height="11" rx="2"/></svg> UAE consumer protection standards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Privacy & Confidentiality -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
-            <div class="ethics-card">
-                <h3 class="text-2xl font-heading font-bold dark:text-white text-gray-900 mb-6">Privacy & NDAs</h3>
-                <p class="text-sm leading-relaxed mb-4 opacity-80">
-                    All business plans and strategies shared with us are treated as strictly confidential. We protect client data as a fundamental responsibility.
-                </p>
-                <div class="bg-indigo-500/10 p-4 rounded-xl text-[10px] uppercase font-bold tracking-widest text-indigo-400 inline-block">
-                    3-Year Non-Disclosure Guarantee
-                </div>
-                <p class="text-xs mt-4 opacity-50">
-                    Obligations apply to all team members and remain in effect long after collaboration ends.
-                </p>
-            </div>
-            <div class="ethics-card">
-                <h3 class="text-2xl font-heading font-bold dark:text-white text-gray-900 mb-6">Legal Compliance</h3>
-                <p class="text-sm leading-relaxed mb-6 opacity-80">
-                    Operating as <span class="text-white font-bold">KM Marketing and PR</span> under a Dubai Mainland license. We monitor all UAE federal and Emirate-level legal updates.
-                </p>
-                <ul class="space-y-3 text-[11px] uppercase tracking-wider font-bold">
-                    <li><i class="fas fa-shield-alt text-km-gold mr-2"></i> Anti-Money Laundering Compliance</li>
-                    <li><i class="fas fa-university text-km-gold mr-2"></i> Legitimate Banking Channels only</li>
-                    <li><i class="fas fa-gavel text-km-gold mr-2"></i> UAE Consumer Protection Standards</li>
-                </ul>
-            </div>
-        </section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-about foot-brand">
+        <a href="index.html" aria-label="Kreative Minds home">
+          <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+          <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+        </a>
+        <p>A Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. Working with clients worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="services.html#core">Strategy</a>
+        <a href="services.html#core">Product &amp; SaaS</a>
+        <a href="services.html#core">AI &amp; Automation</a>
+        <a href="services.html#core">Brand &amp; Marketing</a>
+        <a href="pricelist.html">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="index.html#about">About</a>
+        <a href="jobs.html">Careers</a>
+        <a href="climate-impact.html">Sustainability</a>
+        <a href="standards-and-ethics.html">Standards &amp; Ethics</a>
+        <a href="blog/">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:hi@kreativeminds.ae">hi@kreativeminds.ae</a>
+        <a href="https://linkedin.com/in/Khalidgraphy" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tool/kreativeqr.html">KreativeQR Tool</a>
+        <a href="aieo.html">AIEO Profile</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kreative Minds. KM Marketing &amp; PR, Dubai Mainland License No. 1377759.</span>
+      <span>
+        <a href="privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="standards-and-ethics.html">Standards</a>
+      </span>
+    </div>
+  </div>
+</footer>
 
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="pt-16 pb-8 bg-black/90 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 mb-16 text-center">
-            <h2 class="text-3xl font-heading font-bold text-white mb-12">Contact Channels</h2>
-            <div class="flex flex-wrap justify-center gap-12 text-sm text-gray-300">
-                <span><i class="fas fa-map-marker-alt text-indigo-400 mr-2"></i> JBR, Dubai UAE</span>
-                <span><i class="fas fa-globe text-indigo-400 mr-2"></i> <a href="https://kreativeminds.ae" target="_blank" rel="noopener noreferrer" class="hover:text-km-gold transition-colors">kreativeminds.ae</a></span>
-                <span><i class="fas fa-envelope text-indigo-400 mr-2"></i> hi@kreativeminds.ae</span>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 pt-8 text-center px-4">
-            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[9px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-km-gold transition-colors">Home</a><span class="text-gray-700">|</span><a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="terms.html" class="hover:text-km-gold transition-colors">Terms</a><span class="text-gray-700">|</span><a href="ethics.html" class="hover:text-km-gold transition-colors">Standards and Ethics</a><span class="text-gray-700">|</span><a href="jobs.html" class="hover:text-km-gold transition-colors">Careers</a><span class="text-gray-700">|</span><a href="https://blog.kreativeminds.ae" target="_blank" class="hover:text-km-gold transition-colors">Blog</a>
-            </div>
-            <p class="text-gray-500 text-[10px] md:text-xs mb-2">Kreative Minds registered as KM Marketing and PR in Dubai Mainland under license No: 1377759.</p>
-            <p class="text-gray-600 text-[10px] md:text-xs">© 2025 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds (KM)</a> Marketing and PR. All rights reserved. <span id="last-updated-date" class="ml-1 opacity-50 italic"></span></p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        function initTheme() {
-            var saved = localStorage.getItem('km-theme');
-            if (saved === 'light') { document.documentElement.classList.remove('dark'); updateThemeIcons(false); } 
-            else { document.documentElement.classList.add('dark'); updateThemeIcons(true); }
-        }
-        function toggleTheme() {
-            var isDark = document.documentElement.classList.contains('dark');
-            if (isDark) { document.documentElement.classList.remove('dark'); localStorage.setItem('km-theme', 'light'); updateThemeIcons(false); } 
-            else { document.documentElement.classList.add('dark'); localStorage.setItem('km-theme', 'dark'); updateThemeIcons(true); }
-            location.reload(); 
-        }
-        function updateThemeIcons(isDark) {
-            var sun = document.getElementById('theme-icon-sun');
-            var moon = document.getElementById('theme-icon-moon');
-            if(sun && moon) {
-                sun.style.display = isDark ? 'none' : 'inline';
-                moon.style.display = isDark ? 'inline' : 'none';
-            }
-        }
-        initTheme();
-
-        AOS.init({ once: true, duration: 800 });
-        
-        function updateClock() {
-            const opts = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            const el = document.getElementById('dubai-clock');
-            if(el) el.textContent = `Dubai, UAE: ${new Intl.DateTimeFormat('en-US', opts).format(new Date())}`;
-        }
-        function setLastUpdated() {
-            const d = new Date(); d.setDate(d.getDate() - 1);
-            const el = document.getElementById('last-updated-date');
-            if(el) el.textContent = `(last updated: ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})`;
-        }
-        
-        const canvas = document.getElementById('live-bg-canvas'), ctx = canvas.getContext('2d');
-        let p = [], s = [], b = ['🎯', '🚀', '💡', '🤝'];
-        function initBackground() {
-            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-            p = []; s = [];
-            const isDark = document.documentElement.classList.contains('dark');
-            for (let i = 0; i < 60; i++) p.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.5, vy: (Math.random() - 0.5) * 0.5, r: Math.random() * 1.5 + 0.5 });
-            for (let i = 0; i < 10; i++) s.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, t: b[Math.floor(Math.random() * b.length)], fs: 25, o: isDark ? 0.3 : 0.1 });
-        }
-        function drawBackground() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            const isDark = document.documentElement.classList.contains('dark');
-            ctx.fillStyle = isDark ? "rgba(251, 191, 36, 0.4)" : "rgba(99, 102, 241, 0.3)";
-            p.forEach((pt) => {
-                pt.x += pt.vx; pt.y += pt.vy;
-                if (pt.x < 0 || pt.x > canvas.width) pt.vx *= -1; if (pt.y < 0 || pt.y > canvas.height) pt.vy *= -1;
-                ctx.beginPath(); ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2); ctx.fill();
-            });
-            s.forEach(sym => {
-                sym.x += sym.vx; sym.y += sym.vy;
-                ctx.font = `${sym.fs}px sans-serif`; ctx.globalAlpha = sym.o; ctx.fillText(sym.t, sym.x, sym.y);
-            });
-            ctx.globalAlpha = 1.0; requestAnimationFrame(drawBackground);
-        }
-
-        const hc = document.getElementById('hero-stars-canvas'), hct = hc.getContext('2d');
-        let hs = [], ha = 0;
-        function initHeroStars() {
-            hc.width = window.innerWidth; hc.height = window.innerHeight;
-            hs = []; for (let i = 0; i < 180; i++) hs.push({ r: Math.random() * Math.max(hc.width, hc.height) * 1.2, a: Math.random() * Math.PI * 2, s: Math.random() * 1.5, ts: 0.02 + Math.random() * 0.05, b: Math.random() });
-        }
-        function drawHeroStars() {
-            hct.clearRect(0, 0, hc.width, hc.height); ha += 0.0004;
-            const cx = hc.width / 2, cy = hc.height / 2;
-            const isDark = document.documentElement.classList.contains('dark');
-            hs.forEach(star => {
-                const x = cx + star.r * Math.cos(star.a + ha), y = cy + star.r * Math.sin(star.a + ha);
-                star.b += star.ts; if (star.b > 1 || star.b < 0) star.ts *= -1;
-                hct.beginPath(); hct.arc(x, y, star.s, 0, Math.PI * 2);
-                hct.fillStyle = isDark ? `rgba(255, 255, 255, ${0.2 + (Math.max(0, star.b) * 0.8)})` : `rgba(99, 102, 241, ${0.1 + (Math.max(0, star.b) * 0.3)})`;
-                hct.fill();
-            });
-            requestAnimationFrame(drawHeroStars);
-        }
-
-        window.addEventListener('resize', () => { initBackground(); initHeroStars(); });
-        setInterval(updateClock, 1000); updateClock(); setLastUpdated();
-        initBackground(); drawBackground(); initHeroStars(); drawHeroStars();
-
-        window.addEventListener('scroll', function() {
-            const n = document.getElementById('navbar');
-            if (window.scrollY > 40) { n.classList.add('nav-scrolled'); } 
-            else { n.classList.remove('nav-scrolled'); }
-        });
-
-        function toggleMobileMenu() { 
-            var m = document.getElementById('mobile-menu');
-            if(m) m.classList.toggle('hidden'); 
-        }
-    </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    root.classList.toggle('dark', !isDark);
+    root.classList.toggle('light', isDark);
+    localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
+  });
+</script>
 </body>
 </html>

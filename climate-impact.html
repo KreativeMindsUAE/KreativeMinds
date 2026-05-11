@@ -1,455 +1,362 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<!doctype html>
+<html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & AIEO OPTIMIZED METADATA -->
-    <title>Kreative Minds: Our carbon removal commitment | Sustainability UAE</title>
-    <meta name="description" content="Kreative Minds contributes 0.5% of revenue to fund next-generation carbon removal. See our live impact: AED 504+ contributed across 12 global projects.">
-    <meta name="keywords" content="Kreative Minds Climate, Carbon Removal Dubai, Stripe Climate Member UAE, Sustainable Marketing Agency, Business Impact UAE, Khalid Mir Sustainability">
-    <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)">
-    <link rel="canonical" href="https://kreativeminds.ae/climate-impact" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carbon Removal Commitment | Kreative Minds Dubai | Stripe Climate Member</title>
+<meta name="description" content="Kreative Minds contributes 0.5% of revenue to fund next-generation carbon removal through Stripe Climate. See our live contribution counter and the technologies we support." />
+<meta name="keywords" content="Stripe Climate, carbon removal, Kreative Minds sustainability, climate impact Dubai, Frontier climate, AED carbon contribution" />
+<meta name="author" content="Khalid Hussain Mir (Khalidgraphy)" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://kreativeminds.ae/climate-impact" />
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kreative Minds: Our carbon removal commitment" />
-    <meta property="og:description" content="Kreative Minds has joined Stripe Climate to help new carbon removal technologies scale. See our real-world impact." />
-    <meta property="og:image" content="https://i.ibb.co/39ZjVzy1/Kreative-Minds-Khalidgraphy-Dubai.jpg" />
-    <meta property="og:url" content="https://kreativeminds.ae/climate-impact" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Carbon Removal Commitment | Kreative Minds Dubai" />
+<meta property="og:description" content="0.5% of revenue funds next-generation carbon removal. Stripe Climate Member." />
+<meta property="og:url" content="https://kreativeminds.ae/climate-impact" />
+<meta property="og:site_name" content="Kreative Minds" />
 
-    <!-- Global Assets -->
-    <link rel="icon" href="https://i.ibb.co/LzXrqZ21/KM-new-logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="icon" href="logo-purple.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        km: { dark: '#0B0F19', card: '#121826', primary: '#6366f1', accent: '#a855f7', gold: '#fbbf24' }
-                    },
-                    fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Plus Jakarta Sans', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+<script>
+  (function () {
+    var saved = localStorage.getItem('km-theme');
+    if (saved === 'dark') document.documentElement.classList.replace('light', 'dark');
+  })();
+</script>
 
-    <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
-        ::selection { background-color: #fbbf24 !important; color: #000000 !important; }
-        html:not(.dark) ::-webkit-scrollbar-track { background: #f1f5f9; }
-        html:not(.dark) ::-webkit-scrollbar-thumb { background: #6366f1; }
+<link rel="stylesheet" href="assets/css/site.css" />
 
-        .glass-nav { background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        html:not(.dark) .glass-nav { background: rgba(255, 255, 255, 0.88); border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
-
-        #live-bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; background: #0B0F19; opacity: 0.4; }
-        html:not(.dark) #live-bg-canvas { background: #f8fafc; opacity: 0.3; }
-        
-        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, transparent 0%, rgba(11, 15, 25, 0.6) 100%); pointer-events: none; }
-        html:not(.dark) .bg-overlay { background: radial-gradient(circle at center, transparent 0%, rgba(248, 250, 252, 0.4) 100%); }
-
-        #hero-stars-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.8; }
-        html:not(.dark) #hero-stars-canvas { opacity: 0.3; }
-
-        .impact-card { 
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(10px); 
-            border-radius: 24px; 
-            padding: 2.5rem; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
-        html:not(.dark) .impact-card { background: #ffffff; border-color: rgba(0,0,0,0.06); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        .impact-card:hover { border-color: rgba(99, 102, 241, 0.4); transform: translateY(-5px); }
-
-        .theme-toggle {
-            width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-            cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; color: #fbbf24;
-        }
-        html:not(.dark) .theme-toggle { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); color: #6366f1; }
-
-        .eq-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(99, 102, 241, 0.1); color: #6366f1; margin-bottom: 1.5rem; }
-        html:not(.dark) .eq-icon { background: rgba(99, 102, 241, 0.05); }
-
-        .nav-scrolled { top: 0 !important; height: 3.5rem !important; box-shadow: 0 8px 30px rgba(99, 102, 241, 0.25); border-bottom: 1px solid rgba(99, 102, 241, 0.2); }
-        html:not(.dark) .nav-scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
-    </style>
+<style>
+  .climate-hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 900px) { .climate-hero { grid-template-columns: 1fr; gap: 40px; } }
+  .climate-badge { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; margin-bottom: 28px; background: var(--accent-soft); }
+  .climate-badge img { width: 18px; height: 18px; object-fit: contain; }
+  .climate-badge span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+  .climate-image { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .climate-image img { width: 100%; height: auto; display: block; }
+  .counter-card { padding: 48px; border: 1px solid var(--accent); border-radius: 22px; background: var(--accent-soft); display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; }
+  @media (max-width: 700px) { .counter-card { grid-template-columns: 1fr; text-align: center; gap: 24px; padding: 32px; } }
+  .counter-card .badge img { width: 88px; height: 88px; object-fit: contain; }
+  .counter-card .label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
+  .counter-card .amount { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: clamp(2.6rem, 5vw, 4rem); letter-spacing: -0.03em; line-height: 1; color: var(--ink); }
+  .counter-card .amount .currency { font-size: 0.5em; vertical-align: top; margin-right: 12px; color: var(--accent); }
+  .counter-card .amount .plus { font-size: 0.32em; vertical-align: top; color: var(--ink-soft); margin-left: 10px; font-weight: 400; }
+  .counter-card .note { color: var(--ink-soft); margin: 12px 0 0; max-width: 38ch; }
+  .equiv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+  @media (max-width: 700px) { .equiv-grid { grid-template-columns: 1fr; } }
+  .equiv { padding: 32px; border: 1px solid var(--line); border-radius: 16px; text-align: center; background: var(--bg-elev); }
+  .equiv .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .equiv .ic svg { width: 22px; height: 22px; }
+  .equiv .num { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.8rem; color: var(--ink); margin: 0; letter-spacing: -0.02em; }
+  .equiv .lab { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+  .why-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 800px) { .why-split { grid-template-columns: 1fr; } }
+  .why-img { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; aspect-ratio: 16/10; }
+  .why-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2); }
+  .portfolio-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+  .portfolio-stat { padding: 18px; border: 1px solid var(--line); border-radius: 12px; }
+  .portfolio-stat .n { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.5rem; color: var(--ink); }
+  .portfolio-stat .l { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+  .pathway-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; }
+  .pathway-row span { font-size: 0.92rem; }
+  .pathway-row .pct { color: var(--accent); font-weight: 600; font-family: 'Outfit', sans-serif; }
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .projects-grid { grid-template-columns: 1fr; } }
+  .project-card { border: 1px solid var(--line); border-radius: 18px; padding: 28px; background: var(--bg-elev); }
+  .project-card .head { display: flex; justify-content: space-between; align-items: center; margin: 0 0 12px; }
+  .project-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.4rem; margin: 0; letter-spacing: -0.02em; }
+  .project-card .pill { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); padding: 4px 10px; border: 1px solid var(--accent); border-radius: 999px; }
+  .project-card p { color: var(--ink-soft); margin: 0; font-size: 0.94rem; }
+</style>
 </head>
-<body class="bg-km-dark text-gray-300 font-body overflow-x-hidden dark:text-gray-400">
+<body>
 
-    <canvas id="live-bg-canvas"></canvas>
-    <div class="bg-overlay"></div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Kreative Minds home">
+      <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+      <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="services.html">Services</a>
+      <a href="pricelist.html">Pricing</a>
+      <a href="blog/">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary">
+        Start a project
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Top Utility Bar (Hidden on Mobile) -->
-    <div id="utility-bar" class="hidden md:block relative w-full bg-km-gold text-km-dark py-1 text-xs font-bold z-[60] border-b border-black/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center overflow-hidden">
-            <div class="flex items-center whitespace-nowrap">
-                <i class="fas fa-clock mr-2 opacity-75"></i>
-                <span id="dubai-clock">Dubai, UAE: Loading...</span>
-            </div>
-            <div class="flex items-center whitespace-nowrap">
-                <a href="mailto:hi@kreativeminds.ae" class="flex items-center hover:opacity-70 transition-opacity">
-                    <i class="fas fa-envelope mr-2"></i>
-                    <span>hi@kreativeminds.ae</span>
-                </a>
-            </div>
+<!-- HEADER / HERO -->
+<header class="page-header">
+  <div class="container">
+    <div class="climate-hero">
+      <div>
+        <div class="climate-badge">
+          <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/stripe%20climate%20logo%20.webp" alt="Stripe Climate" />
+          <span>Stripe Climate Member</span>
         </div>
+        <h1>Funding the future of <em>carbon removal.</em></h1>
+        <p class="page-lead">At Kreative Minds, we contribute <strong>0.5% of our revenue</strong> to scale next-generation carbon removal technologies through Stripe Climate. Permanent removal, vetted by Frontier.</p>
+        <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+          <a href="#impact" class="btn btn-primary">
+            View our impact
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://stripe.com/ae/climate" target="_blank" rel="noopener" class="btn btn-ghost">Learn with Stripe</a>
+        </div>
+      </div>
+      <div class="climate-image">
+        <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/Kreative-Climate-Impact.png" alt="Kreative Climate Impact" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- IMPACT -->
+<section class="block" id="impact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">01 / Live impact</div>
+      <div>
+        <h2 class="section-title">Real-time contribution.</h2>
+        <p class="section-lead">By partnering with Kreative Minds, you fund the transition from lab to field for permanent carbon removal.</p>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav top-0 md:top-[32px] h-14 flex items-center" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
-            <a href="index.html" class="flex items-center text-2xl font-heading font-bold text-km-gold tracking-tighter">
-                <div class="w-9 h-9 rounded-full border border-white/20 overflow-hidden mr-3 bg-white/5 flex items-center justify-center p-1 shadow-inner transition-all duration-300" id="nav-logo-container">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxMXv93DoF2w-sFnlq9SqqzLIDz749CfBX9hdzpuock0jFuoGHKz7jhDayMPNQUG4oyKgAlUrB6jHHovZh7MT6ImWfYk3urkQ3-X7JTtG_uB3EIFQjwWSo84EOPb_1dSyNfb4sebyOHY7ARigYRfhZZX7wkjkcwVcAPd5IeNtYVKtJBWGQZCx5VTM3_lCa/s1500/Kreative%20Minds%20Logo%20y.png" alt="KM Logo" class="w-full h-full object-contain">
-                </div>
-                <span class="text-xl md:text-2xl">Kreative <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 ml-1">Minds</span></span>
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.html" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</a>
-                <a href="services.html" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">Services</a>
-                <a href="index.html#about" class="dark:text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
-                <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Theme">
-                    <i class="fas fa-sun text-sm" id="theme-icon-sun" style="display:none;"></i>
-                    <i class="fas fa-moon text-sm" id="theme-icon-moon"></i>
-                </button>
-                <a href="index.html#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/30">Let's Connect</a>
-            </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white"><i class="fas fa-bars text-xl"></i></button>
+    <div class="counter-card">
+      <div class="badge">
+        <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/stripe%20climate%20logo%20.webp" alt="Stripe Climate" />
+      </div>
+      <div>
+        <span class="label">Contribution to date</span>
+        <div class="amount">
+          <span class="currency">AED</span>
+          <span id="impact-counter">504</span>
+          <span class="plus">+ and growing</span>
         </div>
-    </nav>
+        <p class="note">Funds allocated to <strong style="color:var(--ink);">12 projects</strong>. The value grows with every transaction, representing our 0.5% recurring revenue commitment on Stripe.</p>
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <header class="pt-48 pb-24 relative overflow-hidden">
-        <canvas id="hero-stars-canvas"></canvas>
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-[65%] text-center lg:text-left" data-aos="fade-right">
-                    <!-- UPDATED: Hero Badge with official Stripe Climate logo from repository -->
-                    <div class="inline-flex items-center gap-3 mb-8 bg-indigo-500/10 border border-indigo-500/20 px-4 py-2 rounded-full">
-                        <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/stripe%20climate%20logo%20.webp" class="w-5 h-5 object-contain" alt="Stripe Climate Logo">
-                        <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Stripe Climate Member</span>
-                    </div>
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-black dark:text-white text-gray-900 leading-tight mb-8">
-                        Funding the future of <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Carbon Removal</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl font-medium dark:text-gray-300 text-gray-700 max-w-3xl leading-relaxed mb-12">
-                        At <a href="https://kreativeminds.ae" target="_blank" class="text-km-gold hover:underline font-bold">Kreative Minds</a>, we contribute <span class="text-white font-black dark:text-white">0.5% of our revenue</span> to scale next-generation carbon removal technologies.
-                    </p>
-                    <div class="flex justify-center lg:justify-start gap-4">
-                        <a href="#impact" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-bold shadow-xl transition-all hover:scale-105 active:scale-95">View Our Impact</a>
-                        <a href="https://stripe.com/ae/climate" target="_blank" class="px-8 py-4 bg-white/5 border border-white/10 rounded-full font-bold hover:bg-white/10 transition-all flex items-center gap-2">Learn with Stripe <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                    </div>
-                </div>
-                <div class="lg:w-[35%] w-full" data-aos="fade-left">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-km-dark/50">
-                        <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/Kreative-Climate-Impact.png" alt="Kreative Climate Impact" class="w-full h-auto object-contain grayscale opacity-70 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100">
-                        <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-km-dark/40 via-transparent"></div>
-                    </div>
-                </div>
-            </div>
+    <div class="equiv-grid">
+      <div class="equiv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
+        <p class="num">364 kg</p>
+        <p class="lab">CO₂ Permanently Removed</p>
+      </div>
+      <div class="equiv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+        <p class="num">4 hr</p>
+        <p class="lab">Flying in Economy</p>
+      </div>
+      <div class="equiv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg></div>
+        <p class="num">1,327 km</p>
+        <p class="lab">Distance Driving</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--muted);font-style:italic;font-size:0.9rem;">Estimations provided by Stripe Climate for future impact visualisation.</p>
+  </div>
+</section>
+
+<!-- WHY CARBON REMOVAL -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">02 / Why</div>
+      <div>
+        <h2 class="section-title">Reducing emissions is not enough.</h2>
+      </div>
+    </div>
+    <div class="why-split">
+      <div>
+        <p style="color:var(--ink-soft);font-size:1.05rem;margin:0 0 18px;">To counteract climate change, we must also remove CO₂ directly from the atmosphere. The science is settled, the scaling is just beginning.</p>
+        <p style="color:var(--ink-soft);font-size:1.05rem;margin:0;">A fraction of every purchase from Kreative Minds helps new technologies scale. Most new technology is expensive at first. Early adopters like us help promising companies lower costs and reach commercial scale faster.</p>
+      </div>
+      <div class="why-img">
+        <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&q=80&w=1200" alt="Carbon removal technology" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRONTIER / SELECTION -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">03 / Selection</div>
+      <div>
+        <h2 class="section-title">Vetted by <em>Frontier.</em></h2>
+        <p class="section-lead">Every project in our portfolio is vetted by Frontier, Stripe's in-house team of scientific and commercial experts. Funds support only the most scientifically sound, permanent removal methods.</p>
+      </div>
+    </div>
+    <div class="why-split">
+      <div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:500;margin:0 0 16px;font-size:1.2rem;">Portfolio at a glance</h3>
+        <div class="portfolio-stats">
+          <div class="portfolio-stat"><div class="n">65</div><div class="l">Projects</div></div>
+          <div class="portfolio-stat"><div class="n">5</div><div class="l">Pathways</div></div>
+          <div class="portfolio-stat"><div class="n">15</div><div class="l">Countries</div></div>
         </div>
-    </header>
+      </div>
+      <div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:500;margin:0 0 16px;font-size:1.2rem;">Allocation by pathway</h3>
+        <div class="pathway-row"><span>Direct air capture</span><span class="pct">25%</span></div>
+        <div class="pathway-row"><span>Marine carbon removal</span><span class="pct">25%</span></div>
+        <div class="pathway-row"><span>Biomass removal &amp; storage</span><span class="pct">20%</span></div>
+        <div class="pathway-row"><span>Mineralisation &amp; other</span><span class="pct">30%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 space-y-24 relative z-10">
+<!-- PROJECTS -->
+<section class="block" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">04 / Projects we support</div>
+      <div>
+        <h2 class="section-title">Technologies funded through our contribution.</h2>
+      </div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="head"><h3>pHathom</h3><span class="pill">Bicarbonate</span></div>
+        <p>pHathom captures CO₂ using limestone and seawater weathering reactors, forming a stable bicarbonate solution for safe ocean discharge.</p>
+      </div>
+      <div class="project-card">
+        <div class="head"><h3>Planetary</h3><span class="pill">Ocean Outfalls</span></div>
+        <p>Speeds up sequestration by introducing alkaline materials to ocean outfalls, permanently storing CO₂ as bicarbonate ions.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- LIVE IMPACT DASHBOARD (TWO COLUMN LAYOUT) -->
-        <section id="impact" class="pt-12" data-aos="fade-up">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-4">Real-Time Impact</h2>
-                <p class="text-lg dark:text-gray-400 text-gray-600 max-w-2xl mx-auto">
-                    By partnering with <span class="text-white font-bold">Kreative Minds</span>, you fund the transition from lab to field for permanent carbon removal.
-                </p>
-            </div>
+<!-- CTA -->
+<section class="cta-block" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="cta-headline">Build an <em>impact-driven brand.</em></h2>
+      <div class="cta-actions">
+        <p>Join a coalition scaling the most promising climate technologies.</p>
+        <a href="mailto:hi@kreativeminds.ae" class="btn btn-primary">
+          hi@kreativeminds.ae
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="services.html" class="btn btn-ghost">See services</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="impact-card bg-indigo-600/5 border-indigo-500/20 p-8 md:p-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Column: Counter + Updated Repository Logo -->
-                    <div class="flex flex-col md:flex-row items-center gap-8 border-b lg:border-b-0 lg:border-r border-white/10 pb-8 lg:pb-0 lg:pr-12">
-                        <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/stripe%20climate%20logo%20.webp" class="w-24 h-24 object-contain opacity-90" alt="Stripe Climate Member Logo">
-                        <div class="text-center md:text-left">
-                            <p class="text-xs font-black uppercase tracking-widest text-indigo-400 mb-2">Contribution to date</p>
-                            <div class="flex items-center justify-center md:justify-start gap-3 whitespace-nowrap">
-                                <span class="text-km-gold font-black text-2xl md:text-3xl">AED</span>
-                                <span id="impact-counter" class="text-5xl md:text-7xl font-black text-white dark:text-white">504</span>
-                                <span class="text-indigo-400 font-bold text-sm md:text-lg">+ (and growing)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right Column: Description -->
-                    <div class="text-center lg:text-left">
-                        <p class="text-xl md:text-2xl text-gray-300 leading-relaxed">
-                            Funds allocated to <span class="text-white font-bold">12 projects</span>. This value grows by **0.5%** representing our recurring revenue on stripe commitment.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Equivalency Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div class="impact-card p-8 text-center">
-                    <div class="eq-icon mx-auto"><i class="fas fa-leaf"></i></div>
-                    <p class="text-3xl font-black dark:text-white text-gray-900 mb-1">364 kg</p>
-                    <p class="text-[10px] uppercase font-bold text-gray-500">CO₂ Permanently Removed</p>
-                </div>
-                <div class="impact-card p-8 text-center">
-                    <div class="eq-icon text-purple-400 bg-purple-500/10 mx-auto"><i class="fas fa-plane"></i></div>
-                    <p class="text-3xl font-black dark:text-white text-gray-900 mb-1">4 hr</p>
-                    <p class="text-[10px] uppercase font-bold text-gray-500">Flying in Economy</p>
-                </div>
-                <div class="impact-card p-8 text-center">
-                    <div class="eq-icon text-km-gold bg-yellow-500/10 mx-auto"><i class="fas fa-car"></i></div>
-                    <p class="text-3xl font-black dark:text-white text-gray-900 mb-1">1,327 km</p>
-                    <p class="text-[10px] uppercase font-bold text-gray-500">Distance Driving</p>
-                </div>
-            </div>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-about foot-brand">
+        <a href="index.html" aria-label="Kreative Minds home">
+          <img class="logo-light" src="logo-purple.png" alt="Kreative Minds" />
+          <img class="logo-dark" src="logo-yellow.png" alt="Kreative Minds" />
+        </a>
+        <p>A Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. Working with clients worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="services.html#core">Strategy</a>
+        <a href="services.html#core">Product &amp; SaaS</a>
+        <a href="services.html#core">AI &amp; Automation</a>
+        <a href="services.html#core">Brand &amp; Marketing</a>
+        <a href="pricelist.html">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="index.html#about">About</a>
+        <a href="jobs.html">Careers</a>
+        <a href="climate-impact.html">Sustainability</a>
+        <a href="standards-and-ethics.html">Standards &amp; Ethics</a>
+        <a href="blog/">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:hi@kreativeminds.ae">hi@kreativeminds.ae</a>
+        <a href="https://linkedin.com/in/Khalidgraphy" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="tool/kreativeqr.html">KreativeQR Tool</a>
+        <a href="aieo.html">AIEO Profile</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kreative Minds. KM Marketing &amp; PR, Dubai Mainland License No. 1377759.</span>
+      <span>
+        <a href="privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="standards-and-ethics.html">Standards</a>
+      </span>
+    </div>
+  </div>
+</footer>
 
-            <p class="text-center mt-12 text-base md:text-lg text-gray-500 italic opacity-80 max-w-2xl mx-auto">
-                Estimations provided by Stripe Climate for future impact visualization.
-            </p>
-        </section>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    root.classList.toggle('dark', !isDark);
+    root.classList.toggle('light', isDark);
+    localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
+  });
 
-        <!-- Why Carbon Removal Matters -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-aos="fade-up">
-            <div class="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border border-white/5 group cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&q=80&w=1200" alt="Carbon technology" class="w-full h-full object-cover grayscale opacity-40 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-km-dark/80 via-transparent group-hover:from-transparent transition-all duration-700"></div>
-                <div class="absolute bottom-8 left-8">
-                    <p class="text-sm font-bold text-white uppercase tracking-widest bg-indigo-600/80 px-3 py-1 rounded-lg backdrop-blur-sm">Global Portfolio Vetting</p>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-6">Why Carbon Removal?</h2>
-                <p class="text-lg leading-relaxed dark:text-gray-400 text-gray-600 mb-6">
-                    Reducing emissions is essential, but it isn’t enough. To counteract climate change, we must also remove CO₂ directly from the atmosphere.
-                </p>
-                <p class="text-lg leading-relaxed dark:text-gray-400 text-gray-600">
-                    A fraction of every purchase from <span class="text-km-gold">Kreative Minds</span> helps new technologies scale. Most new technology is expensive at first; early adopters like us help promising companies lower their costs and scale up quickly.
-                </p>
-            </div>
-        </section>
-
-        <!-- Expert Selection Section -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-aos="fade-up">
-            <div>
-                <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-6">Expert Selection through <a href="https://stripe.com/ae/climate" target="_blank" class="text-indigo-400 hover:underline">Stripe Climate</a></h2>
-                <p class="text-lg leading-relaxed dark:text-gray-400 text-gray-600 mb-8">
-                    Every project in our portfolio is vetted by <span class="text-indigo-400 font-bold">Frontier</span>, Stripe’s in-house team of scientific and commercial experts. This ensures funds support only the most scientifically sound, permanent removal methods.
-                </p>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
-                        <p class="text-2xl font-black text-white">65</p>
-                        <p class="text-[10px] uppercase font-bold text-gray-500">Projects</p>
-                    </div>
-                    <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
-                        <p class="text-2xl font-black text-white">5</p>
-                        <p class="text-[10px] uppercase font-bold text-gray-500">Pathways</p>
-                    </div>
-                    <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
-                        <p class="text-2xl font-black text-white">15</p>
-                        <p class="text-[10px] uppercase font-bold text-gray-500">Countries</p>
-                    </div>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
-                    <span class="text-sm font-medium">Direct air capture</span>
-                    <span class="text-indigo-400 font-bold">25%</span>
-                </div>
-                <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
-                    <span class="text-sm font-medium">Marine carbon removal</span>
-                    <span class="text-indigo-400 font-bold">25%</span>
-                </div>
-                <div class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5">
-                    <span class="text-sm font-medium">Biomass removal & storage</span>
-                    <span class="text-indigo-400 font-bold">20%</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Pathways Highlights -->
-        <section id="projects">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <article class="impact-card group" data-aos="fade-up">
-                    <div class="h-48 rounded-2xl bg-black/40 mb-8 overflow-hidden relative border border-white/5 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover grayscale opacity-40 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110" alt="pHathom">
-                        <div class="absolute inset-0 bg-gradient-to-t from-km-dark/80 via-transparent group-hover:from-transparent transition-all duration-700"></div>
-                    </div>
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-2xl font-bold dark:text-white text-gray-900">pHathom</h3>
-                        <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-widest">Bicarbonate</span>
-                    </div>
-                    <p class="text-sm leading-relaxed dark:text-gray-400 text-gray-600">
-                        pHathom captures CO₂ using limestone and seawater weathering reactors, forming a stable bicarbonate solution for safe ocean discharge.
-                    </p>
-                </article>
-
-                <article class="impact-card group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 rounded-2xl bg-black/40 mb-8 overflow-hidden relative border border-white/5 cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover grayscale opacity-40 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110" alt="Planetary">
-                        <div class="absolute inset-0 bg-gradient-to-t from-km-dark/80 via-transparent group-hover:from-transparent transition-all duration-700"></div>
-                    </div>
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-2xl font-bold dark:text-white text-gray-900">Planetary</h3>
-                        <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-widest">Ocean Outfalls</span>
-                    </div>
-                    <p class="text-sm leading-relaxed dark:text-gray-400 text-gray-600">
-                        Speeds up sequestration by introducing alkaline materials to ocean outfalls, permanently storing CO₂ as bicarbonate ions.
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="text-center py-12" data-aos="fade-up">
-            <h2 class="text-3xl font-heading font-bold dark:text-white text-gray-900 mb-6">Build an Impact-Driven Brand</h2>
-            <p class="max-w-2xl mx-auto dark:text-gray-500 text-gray-600 mb-12">
-                Join a coalition scaling the most promising climate technologies.
-            </p>
-            <a href="index.html#contact" class="px-10 py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 inline-flex items-center gap-3">
-                Connect with Us <i class="fas fa-rocket"></i>
-            </a>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="pt-16 pb-8 bg-black/90 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="mb-6 flex flex-wrap justify-center gap-x-4 text-[9px] md:text-xs font-medium text-gray-400 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-km-gold transition-colors">Home</a><span class="text-gray-700">|</span><a href="privacy.html" class="hover:text-km-gold transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="terms.html" class="hover:text-km-gold transition-colors">Terms</a>
-            </div>
-            <p class="text-gray-600 text-[10px] md:text-xs">© 2024&#8211;2026 <a href="index.html" class="text-km-gold font-bold hover:underline">Kreative Minds</a>. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // --- DYNAMIC CONTRIBUTION COUNTER ---
-        // TODAY'S TOTAL IS AED 504 (March 29, 2026)
-        const startAmount = 504;
-        const dailyRate = 0.0015; // 0.15% internal daily compound
-        const startDate = new Date("2026-03-29"); 
-        const today = new Date();
-        const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-        
-        const targetAmount = Math.round(startAmount * Math.pow(1 + dailyRate, daysPassed));
-        const el = document.getElementById("impact-counter");
-
-        function animateCounter() {
-            let current = startAmount;
-            const duration = 1500; 
-            const steps = 80;
-            const increment = (targetAmount - startAmount) / steps;
-            const intervalTime = duration / steps;
-            let count = 0;
-
-            if (targetAmount === startAmount) {
-                el.innerText = startAmount;
-                return;
-            }
-
-            const counter = setInterval(() => {
-                current += increment;
-                count++;
-                if (count >= steps) {
-                    el.innerText = targetAmount;
-                    clearInterval(counter);
-                } else {
-                    el.innerText = Math.round(current);
-                }
-            }, intervalTime);
+  // DYNAMIC CONTRIBUTION COUNTER (preserved from current site)
+  // Base AED 504 as of 2026-03-29, compounded daily at 0.15%
+  var startAmount = 504;
+  var dailyRate = 0.0015;
+  var startDate = new Date('2026-03-29');
+  var today = new Date();
+  var daysPassed = Math.max(0, Math.floor((today - startDate) / (1000 * 60 * 60 * 24)));
+  var targetAmount = Math.round(startAmount * Math.pow(1 + dailyRate, daysPassed));
+  var el = document.getElementById('impact-counter');
+  if (el) {
+    if (targetAmount === startAmount) {
+      el.textContent = startAmount;
+    } else {
+      var current = startAmount;
+      var steps = 80;
+      var increment = (targetAmount - startAmount) / steps;
+      var count = 0;
+      var iv = setInterval(function () {
+        current += increment;
+        count++;
+        if (count >= steps) {
+          el.textContent = targetAmount;
+          clearInterval(iv);
+        } else {
+          el.textContent = Math.round(current);
         }
-
-        function initTheme() {
-            var saved = localStorage.getItem('km-theme');
-            if (saved === 'light') { document.documentElement.classList.remove('dark'); updateIcons(false); } 
-            else { document.documentElement.classList.add('dark'); updateIcons(true); }
-        }
-        function toggleTheme() {
-            var isD = document.documentElement.classList.contains('dark');
-            if (isD) { document.documentElement.classList.remove('dark'); localStorage.setItem('km-theme', 'light'); updateIcons(false); } 
-            else { document.documentElement.classList.add('dark'); localStorage.setItem('km-theme', 'dark'); updateIcons(true); }
-            location.reload(); 
-        }
-        function updateIcons(isD) {
-            const sun = document.getElementById('theme-icon-sun');
-            const moon = document.getElementById('theme-icon-moon');
-            if(sun) sun.style.display = isD ? 'none' : 'inline';
-            if(moon) moon.style.display = isD ? 'inline' : 'none';
-        }
-        
-        initTheme();
-        AOS.init({ once: true, duration: 800 });
-        
-        function updateClock() {
-            const opts = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-            const clockEl = document.getElementById('dubai-clock');
-            if(clockEl) clockEl.textContent = `Dubai, UAE: ${new Intl.DateTimeFormat('en-US', opts).format(new Date())}`;
-        }
-        setInterval(updateClock, 1000); updateClock(); animateCounter();
-
-        function toggleMobileMenu() { 
-            const m = document.getElementById('mobile-menu');
-            if(m) m.classList.toggle('hidden'); 
-        }
-
-        const canvas = document.getElementById('live-bg-canvas'), ctx = canvas.getContext('2d');
-        let p = [];
-        function initBackground() {
-            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-            p = []; const isD = document.documentElement.classList.contains('dark');
-            for (let i = 0; i < 60; i++) p.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.5, vy: (Math.random() - 0.5) * 0.5, r: Math.random() * 1.5 + 0.5 });
-        }
-        function drawBackground() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            const isD = document.documentElement.classList.contains('dark');
-            ctx.fillStyle = isD ? "rgba(251, 191, 36, 0.4)" : "rgba(99, 102, 241, 0.3)";
-            p.forEach((pt) => {
-                pt.x += pt.vx; pt.y += pt.vy;
-                if (pt.x < 0 || pt.x > canvas.width) pt.vx *= -1; if (pt.y < 0 || pt.y > canvas.height) pt.vy *= -1;
-                ctx.beginPath(); ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2); ctx.fill();
-            });
-            requestAnimationFrame(drawBackground);
-        }
-
-        const hc = document.getElementById('hero-stars-canvas'), hct = hc.getContext('2d');
-        let hs = [], ha = 0;
-        function initHeroStars() {
-            hc.width = window.innerWidth; hc.height = window.innerHeight;
-            hs = []; for (let i = 0; i < 150; i++) hs.push({ r: Math.random() * Math.max(hc.width, hc.height) * 1.2, a: Math.random() * Math.PI * 2, s: Math.random() * 1.5, ts: 0.02 + Math.random() * 0.05, b: Math.random() });
-        }
-        function drawHeroStars() {
-            hct.clearRect(0, 0, hc.width, hc.height); ha += 0.0004;
-            const cx = hc.width / 2, cy = hc.height / 2;
-            const isD = document.documentElement.classList.contains('dark');
-            hs.forEach(star => {
-                const x = cx + star.r * Math.cos(star.a + ha), y = cy + star.r * Math.sin(star.a + ha);
-                star.b += star.ts; if (star.b > 1 || star.b < 0) star.ts *= -1;
-                hct.beginPath(); hct.arc(x, y, star.s, 0, Math.PI * 2);
-                hct.fillStyle = isD ? `rgba(255, 255, 255, ${0.2 + (Math.max(0, star.b) * 0.8)})` : `rgba(99, 102, 241, ${0.1 + (Math.max(0, star.b) * 0.3)})`;
-                hct.fill();
-            });
-            requestAnimationFrame(drawHeroStars);
-        }
-        window.addEventListener('resize', () => { initBackground(); initHeroStars(); });
-        initBackground(); drawBackground(); initHeroStars(); drawHeroStars();
-        window.addEventListener('scroll', function() {
-            const n = document.getElementById('navbar');
-            if (window.scrollY > 40) n.classList.add('nav-scrolled'); 
-            else n.classList.remove('nav-scrolled');
-        });
-    </script>
+      }, 1500 / steps);
+    }
+  }
+</script>
 </body>
 </html>

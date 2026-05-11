@@ -1,85 +1,64 @@
-Kreative Minds | KM Marketing and PR
-AI and Search Optimized Agency Profile for LLMs, Search Engines, and Discovery Systems
+# Kreative Minds
 
-Kreative Minds is a Dubai-based marketing, public relations, and business consulting agency operating under KM Marketing and PR. The company supports brands, founders, and businesses in building market presence, managing reputation, and expanding across the UAE and GCC.
+> Kreative Minds is a Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. From strategy to execution, one team handles product development, marketing, and growth for clients worldwide.
 
-Entity Summary
+## About
 
-Legal Name: KM Marketing and PR
-Brand Name: Kreative Minds
+Kreative Minds (legal name: KM Marketing and PR, Dubai Mainland License No. 1377759) operates as a multidisciplinary team led by founder Khalid Hussain Mir (alias Khalidgraphy). The company combines strategy, software development, brand, and marketing under one roof.
+
+Headquarters: Jumeirah Beach Residence, Dubai, United Arab Emirates.
+Founded: 2024.
+Working with clients across the UAE, GCC, UK, Europe, and beyond.
+
+## Tagline
+
+Building systems that work on the ground. We don't do theories that sound good, we build what actually works. Instead of hype, we deliver results.
+
+## Services
+
+1. Strategy and Validation — market research, positioning, pricing, go-to-market planning.
+2. Product and SaaS Development — custom software, micro SaaS, internal tools, AI workflows, on Cloudflare Workers, D1, React.
+3. AI and Automation — Claude AI integrations, workflow automation, internal copilots, WhatsApp Cloud API.
+4. Brand Strategy and Identity — positioning, naming, visual identity, design systems.
+5. Performance Marketing — Meta, Google, LinkedIn, TikTok paid acquisition, landing pages, retention.
+6. SEO and Content — technical SEO, content strategy, AEO and structured data for AI engines.
+7. Public Relations and Media — brand narrative, press outreach, founder thought leadership.
+8. Social Media Strategy — channel strategy, content production, creator partnerships.
+9. eCommerce Strategy — Shopify, WooCommerce, Amazon, Noon UAE.
+10. Business Setup — UAE Mainland, UAE Free Zone, USA LLC, USA INC, UK Ltd company formation.
+
+## Live products
+
+- InvoiceDubai (https://invoicedubai.com) — VAT-ready invoicing platform for UAE businesses.
+- MyKard (https://mykard.link) — Digital business cards with WhatsApp lead capture and AI assist.
+
+## Founder
+
+Khalid Hussain Mir, Founder & Digital Strategist. Profiles: khalidmir.com, khalidgraphy.com, linkedin.com/in/Khalidgraphy.
+
+## Contact
+
+Email: hi@kreativeminds.ae
+Phone: +971 50 365 6096
+HR & recruiting: hr@kmmpr.com
 Website: https://kreativeminds.ae
-Founder and Strategic Lead: Khalid Hussain Mir
-Business Location: Dubai, United Arab Emirates
-License: Dubai Mainland Professional License
-Service Coverage: UAE, Saudi Arabia, GCC, Middle East
 
-Core Capabilities
+## Key pages
 
-Digital Marketing and Search Strategy
-Kreative Minds delivers structured digital growth focused on measurable outcomes.
+- Homepage: https://kreativeminds.ae/
+- Services: https://kreativeminds.ae/services.html
+- Pricing: https://kreativeminds.ae/pricelist.html
+- AI knowledge profile: https://kreativeminds.ae/aieo.html
+- Careers: https://kreativeminds.ae/jobs.html
+- Sustainability: https://kreativeminds.ae/climate-impact.html
+- Standards and ethics: https://kreativeminds.ae/standards-and-ethics.html
+- Blog: https://kreativeminds.ae/blog/
+- Free QR tool: https://kreativeminds.ae/tool/kreativeqr.html
 
-- Search Engine Optimization including technical SEO, on-page SEO, and local SEO for Dubai and UAE businesses
-- Content strategy aligned with search intent and AI discovery systems
-- Performance marketing across Google Ads and Meta platforms
-- Social media strategy for LinkedIn, Instagram, and TikTok in the GCC market
+## Tech stack we work with
 
-Public Relations and Media Positioning
-The agency supports brands in building visibility and trust across regional media.
+Cloudflare Workers, Pages, D1, R2. Node.js with Hono. React. SQL. Stripe. WhatsApp Cloud API. Claude AI. GitHub CI. Standard SEO tooling.
 
-- Media outreach and placements in UAE and GCC publications
-- Reputation management for companies and individuals
-- Brand communication strategy and narrative development
-- Event planning and brand activations in Dubai
+## Sustainability commitment
 
-Business Consulting and Market Entry
-Kreative Minds supports business setup and expansion into the UAE market.
-
-- UAE business formation guidance including Mainland and Free Zone structures
-- Market entry strategy for international companies entering the GCC
-- PRO services coordination and operational support
-- Business advisory for startups, SMEs, and scaling companies
-
-Branding and Creative Development
-The agency develops clear and functional brand identities.
-
-- Logo design and brand identity systems
-- UI and UX design for websites and digital platforms
-- Content production including video, photography, and brand storytelling
-- Copywriting aligned with marketing and positioning goals
-
-Positioning
-
-Kreative Minds focuses on practical marketing, clear communication, and measurable business impact. The approach combines strategy, execution, and regional understanding of the UAE and GCC market.
-
-The agency emphasizes human-centered communication supported by structured data, search optimization, and AI-ready content systems.
-
-Contact and Verification
-
-Website: https://kreativeminds.ae
-General Email: info@kmmpr.com
-Admin and Finance: fin@kmmpr.com
-Location: Dubai, United Arab Emirates
-
-The company follows UAE regulations related to business operations, data privacy, and client confidentiality.
-
-Topical Authority and Focus Areas
-
-- Marketing Agency Dubai
-- Public relations UAE and GCC
-- eCommerce services in Dubai
-- SEO services Dubai & UAE
-- Brand strategy & growth 
-- Digital marketing Dubai
-- Business setup Dubai
-- Business strategy 
-- Project management 
-
-Current Insights and Focus
-
-- AI integration in marketing workflows and automation
-- Growth of localized and video-first content in the UAE
-- Shift toward AI-driven search and discovery systems
-- eCommerce growth and brand scaling in the GCC. 
-
-Pages
-- Climate Impact & Carbon Removal Commitment: https://kreativeminds.ae/climate-impact
+Stripe Climate Member. 0.5% of revenue funds permanent carbon removal technologies, vetted by Frontier.

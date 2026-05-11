@@ -100,7 +100,19 @@
         Start a project
         <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
     </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html#work">Work</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricelist.html">Pricing</a>
+    <a href="blog/">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Start a project</a>
   </div>
 </nav>
 
@@ -123,7 +135,7 @@
           <a href="https://stripe.com/ae/climate" target="_blank" rel="noopener" class="btn btn-ghost">Learn with Stripe</a>
         </div>
       </div>
-      <div class="climate-image">
+      <div class="climate-image zoomable">
         <img src="https://raw.githubusercontent.com/KreativeMindsUAE/KreativeMinds/main/Kreative-Climate-Impact.png" alt="Kreative Climate Impact" />
       </div>
     </div>
@@ -191,7 +203,7 @@
         <p style="color:var(--ink-soft);font-size:1.05rem;margin:0 0 18px;">To counteract climate change, we must also remove CO₂ directly from the atmosphere. The science is settled, the scaling is just beginning.</p>
         <p style="color:var(--ink-soft);font-size:1.05rem;margin:0;">A fraction of every purchase from Kreative Minds helps new technologies scale. Most new technology is expensive at first. Early adopters like us help promising companies lower costs and reach commercial scale faster.</p>
       </div>
-      <div class="why-img">
+      <div class="why-img zoomable">
         <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&q=80&w=1200" alt="Carbon removal technology" />
       </div>
     </div>
@@ -331,6 +343,35 @@
     root.classList.toggle('light', isDark);
     localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
   });
+
+  var navToggle = document.getElementById('navToggle');
+  var navMobile = document.getElementById('navMobile');
+  if (navToggle && navMobile) {
+    navToggle.addEventListener('click', function () {
+      var open = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navMobile.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', function () { navMobile.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
+    });
+  }
+
+  // Reveal-on-scroll
+  var supportsIO = 'IntersectionObserver' in window;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.equiv, .project-card, .pathway-row, .counter-card, .section-head, .climate-hero, .why-split, .why-img, .climate-image').forEach(function (el) { el.classList.add('reveal'); });
+  if (supportsIO && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('is-visible');
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
 
   // DYNAMIC CONTRIBUTION COUNTER (preserved from current site)
   // Base AED 504 as of 2026-03-29, compounded daily at 0.15%

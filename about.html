@@ -131,7 +131,19 @@
         Let's Connect
         <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
     </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html#work">Work</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricelist.html">Pricing</a>
+    <a href="blog/">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Let's Connect</a>
   </div>
 </nav>
 
@@ -165,20 +177,20 @@
   <div class="container">
     <div class="numbers">
       <div class="num-cell">
-        <div class="big">12+</div>
+        <div class="big" data-count="12" data-suffix="+">0+</div>
         <span class="lbl"><strong>Years</strong> building products and scaling businesses</span>
       </div>
       <div class="num-cell">
-        <div class="big">470+</div>
+        <div class="big" data-count="470" data-suffix="+">0+</div>
         <span class="lbl"><strong>Projects delivered</strong> across marketing and product</span>
       </div>
       <div class="num-cell">
-        <div class="big">14</div>
+        <div class="big" data-count="14" data-suffix="">0</div>
         <span class="lbl"><strong>Live products</strong> and platforms in market</span>
       </div>
       <div class="num-cell">
-        <div class="big">8 in 10</div>
-        <span class="lbl"><strong>Clients return</strong> for follow-on work</span>
+        <div class="big" data-count="8" data-suffix=" in 10">0 in 10</div>
+        <span class="lbl"><strong>Clients return</strong> to work with us again</span>
       </div>
     </div>
   </div>
@@ -542,6 +554,55 @@
     root.classList.toggle('light', isDark);
     localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
   });
+
+  var navToggle = document.getElementById('navToggle');
+  var navMobile = document.getElementById('navMobile');
+  if (navToggle && navMobile) {
+    navToggle.addEventListener('click', function () {
+      var open = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navMobile.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', function () { navMobile.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
+    });
+  }
+
+  function animateCount(el) {
+    if (el.dataset.done === '1') return;
+    el.dataset.done = '1';
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var dur = Math.min(2000, 500 + target * 3);
+    var start = performance.now();
+    function frame(t) {
+      var p = Math.min(1, (t - start) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var v = Math.floor(target * eased);
+      el.textContent = v + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(frame);
+  }
+  var supportsIO = 'IntersectionObserver' in window;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.audience-card, .step, .product, .num-cell, .service, .section-head, .partners-head').forEach(function (el) { el.classList.add('reveal'); });
+  if (supportsIO && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('is-visible');
+        var counter = en.target.querySelector('[data-count]');
+        if (counter) animateCount(counter);
+        if (en.target.matches('[data-count]')) animateCount(en.target);
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, [data-count]').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+    document.querySelectorAll('[data-count]').forEach(animateCount);
+  }
 </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
-name: Update Blog Posts JSON
+name: Update Blog Posts JSON and Sitemap
 
 on:
   push:
     paths:
-      - 'blog/*.html'
+      - '**/*.html'
     branches:
       - main
 
@@ -11,21 +11,31 @@ permissions:
   contents: write
 
 jobs:
-  update-posts:
+  update-content-index:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Generate posts.json from blog HTML files
         run: |
           echo "[" > /tmp/posts.json
           first=true
-          for file in blog/*.html; do
+          # newest first based on JSON-LD datePublished, falling back to git commit date
+          for file in $(ls blog/*.html); do
             filename=$(basename "$file")
             if [ "$filename" = "index.html" ] || [ "$filename" = "blog.html" ]; then
               continue
             fi
+            d=$(grep -oP '"datePublished":\s*"\K[0-9]{4}-[0-9]{2}-[0-9]{2}' "$file" | head -1)
+            if [ -z "$d" ]; then
+              d=$(git log -1 --format=%cs -- "$file" 2>/dev/null)
+            fi
+            echo "$d|$file"
+          done | sort -r | while IFS='|' read -r d file; do
+            filename=$(basename "$file")
             slug="${filename%.html}"
             title=$(grep -oP '(?<=<title>).*?(?=</title>)' "$file" | head -1 | sed 's/ | Kreative Minds Blog//')
             description=$(grep -oP '(?<=<meta name="description" content=")[^"]*' "$file" | head -1)
@@ -52,10 +62,87 @@ jobs:
           echo "]" >> /tmp/posts.json
           cp /tmp/posts.json blog/posts.json
 
-      - name: Commit updated posts.json
+      - name: Generate sitemap.xml
+        run: |
+          ROOT="https://kreativeminds.ae"
+          OUT=/tmp/sitemap.xml
+
+          # Pages list: path|priority|changefreq
+          PAGES=(
+            "index.html|1.0|weekly"
+            "about.html|0.95|monthly"
+            "contact.html|0.95|monthly"
+            "services.html|0.9|monthly"
+            "pricelist.html|0.9|monthly"
+            "aieo.html|0.85|monthly"
+            "jobs.html|0.7|monthly"
+            "climate-impact.html|0.7|monthly"
+            "confidentiality.html|0.6|yearly"
+            "standards-and-ethics.html|0.5|yearly"
+            "privacy.html|0.4|yearly"
+            "terms.html|0.4|yearly"
+            "tool/kreativeqr.html|0.6|monthly"
+          )
+
+          emit_url() {
+            local path="$1"
+            local pri="$2"
+            local cf="$3"
+            local loc="$4"
+            local lm
+            lm=$(git log -1 --format=%cs -- "$path" 2>/dev/null)
+            if [ -z "$lm" ]; then lm=$(date +%Y-%m-%d); fi
+            cat >> "$OUT" <<EOF
+            <url>
+              <loc>${loc}</loc>
+              <lastmod>${lm}</lastmod>
+              <changefreq>${cf}</changefreq>
+              <priority>${pri}</priority>
+            </url>
+          EOF
+          }
+
+          cat > "$OUT" <<'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          EOF
+
+          for entry in "${PAGES[@]}"; do
+            IFS='|' read -r path pri cf <<< "$entry"
+            if [ "$path" = "index.html" ]; then
+              loc="${ROOT}/"
+            else
+              loc="${ROOT}/${path}"
+            fi
+            [ -f "$path" ] && emit_url "$path" "$pri" "$cf" "$loc"
+          done
+
+          # blog index
+          [ -f "blog/index.html" ] && emit_url "blog/index.html" "0.8" "weekly" "${ROOT}/blog/"
+
+          # blog posts: newest first by JSON-LD datePublished (fallback to git commit date)
+          for file in $(ls blog/*.html); do
+            filename=$(basename "$file")
+            if [ "$filename" = "index.html" ] || [ "$filename" = "blog.html" ]; then
+              continue
+            fi
+            d=$(grep -oP '"datePublished":\s*"\K[0-9]{4}-[0-9]{2}-[0-9]{2}' "$file" | head -1)
+            if [ -z "$d" ]; then
+              d=$(git log -1 --format=%cs -- "$file" 2>/dev/null)
+            fi
+            echo "$d|$file"
+          done | sort -r | while IFS='|' read -r d file; do
+            filename=$(basename "$file")
+            emit_url "$file" "0.7" "monthly" "${ROOT}/blog/${filename}"
+          done
+
+          echo "</urlset>" >> "$OUT"
+          cp "$OUT" sitemap.xml
+
+      - name: Commit updated posts.json and sitemap.xml
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/posts.json
-          git diff --staged --quiet || git commit -m "Auto-update blog/posts.json"
+          git add blog/posts.json sitemap.xml
+          git diff --staged --quiet || git commit -m "Auto-update posts.json and sitemap.xml"
           git push

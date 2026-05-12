@@ -1,62 +1,71 @@
 [
-  {
-    "slug": "digital-business-cards-uae-2026",
-    "title": "Digital business cards in the UAE 2026: how networking is going paperless",
-    "description": "Why paper business cards are disappearing in Dubai, what digital business cards (NFC and QR) do better, and how UAE professionals can switch in 2026 without losing the personal touch.",
-    "image": "/assets/images/blog/digital-business-cards-uae-2026.jpg"
-  },
-  {
-    "slug": "whatsapp-business-marketing-gulf",
-    "title": "The WhatsApp Business playbook for Gulf SMBs: catalog, API, ads, and what to stop doing",
-    "description": "A practical WhatsApp marketing playbook for SMBs in the UAE, Saudi, and the wider Gulf. Catalog setup, broadcast vs community, the Business API, and click-to-WhatsApp ads.",
-    "image": "/assets/images/blog/whatsapp-business-marketing-gulf.jpg"
-  },
-  {
-    "slug": "uae-corporate-tax-smb-freelancer-2026",
-    "title": "UAE Corporate Tax for SMBs and freelancers 2026: who pays, when, and how to file",
-    "description": "A plain-English guide to UAE Corporate Tax in 2026 for SMBs, freelancers, and small business owners. Registration deadlines, 9 percent rate, Small Business Relief, and how to file.",
-    "image": "/assets/images/blog/uae-corporate-tax-smb-freelancer-2026.jpg"
-  },
-  {
-    "slug": "uae-e-invoicing-vat-2026",
-    "title": "UAE e-invoicing 2026: FTA rules, deadlines, and a compliant VAT invoice template",
-    "description": "A clear guide to UAE e-invoicing in 2026. The FTA rules, the VAT invoice format, registration deadlines, and how SMBs and freelancers can stay compliant.",
-    "image": "/assets/images/blog/uae-e-invoicing-vat-2026.jpg"
-  },
-  {
-    "slug": "dubai-free-zone-vs-mainland-2026",
-    "title": "Free zone vs mainland in Dubai 2026: an honest pick for digital businesses",
-    "description": "A practical comparison of free zone and mainland setups in Dubai for digital, SaaS, and ecommerce businesses in 2026. Costs, restrictions, VAT, and corporate tax.",
-    "image": "/assets/images/blog/dubai-free-zone-vs-mainland-2026.jpg"
-  },
-  {
-    "slug": "how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026",
-    "title": "How Businesses in Dubai can build a strong Digital Presence in 2026",
-    "description": "Learn how businesses in Dubai can build a strong digital presence in 2026 using practical marketing strategies, SEO, content, and branding techniques.",
-    "image": "/assets/images/blog/build-digital-presence-dubai .png"
-  },
-  {
-    "slug": "how-to-start-ecommerce-dubai",
-    "title": "How to start an eCommerce business in Dubai",
-    "description": "A practical, step-by-step guide to launching a successful eCommerce business in Dubai. Covering licensing, banking, payment gateways, and digital strategy.",
-    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRHMLiS2dmFenFu6yUzRrNrsvwsKisT_9C3oFRP0e35pLRJlPYuvxq5a7MCeqyDhP9epm-wj8jRwIFC2yBEPFAKjGrtYtekT1RvdfhQxxoQrpNAFIg4pD17vdzRjVT_Ru2Kt2niCTfUK51mGAMVscWeF2WNBCb0lom5QCHM-JNBcxYfiavQ18qwqujMvr7/s1536/ecommerce%20in%20dubai%20amazon.png"
-  },
-  {
-    "slug": "unconventional-startup-ideas-2026-uae",
-    "title": "Unconventional Startup Ideas in 2026 UAE",
-    "description": "Discover future-proof startup ideas for the UAE in 2026. Learn how to turn digital strategies into real income with AI, e-commerce, and structured business systems.",
-    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFHIYXvtc9ay8mEkD_qdBs-hIzFJslUHNNRMctVH6alY_o483VT2Oc29Ank4ViyIscMGvhsKb8ZYx9qM-MMFK88nB4m5QTbxxqX2zrAXbJCjaqWPGkXtU_9TH_chdGkfzEcRPTxhR4Vs_6t8j_xCwvaAT0kBLmSi98UHj3YmxXW4GKjhEkG1pVLpwxiP27/s1536/uae%202026%20business.png"
-  },
-  {
-    "slug": "why-kreative-minds-not-creative",
-    "title": "Why is it \"Kreative Minds\" and not Creative Minds?",
-    "description": "Discover the strategy behind the 'K' in Kreative Minds. It's not a typo, it's a positioning decision connecting legal identity, Khalid Mir's vision, and brand character.",
-    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9gdnmkGGgoi8MHWJ2BD6iKJCNb-25wEV2aWMGWOt4P_J9IG4jvywkijHJc6hoNeoA_9ANfLRox8Kv51tBnwl7kABA2YIgqjoIMCu8CCYCFK8u-jGQwnb2o6q6zcw2w_JMOo8-CjsMiDJ9VenJslF4QqhwRoXxShLHcIyLyqi8KxwZ_1blJguWrBXeFCQG/s1536/kreative1.png"
-  },
-  {
-    "slug": "why-most-businesses-fail-marketing",
-    "title": "Why most businesses fail at marketing and how to fix it?",
-    "description": "Explore why businesses fail at marketing and learn how to fix it through strategic positioning, structured execution, and brand clarity in the competitive Dubai market.",
-    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgy-DqnzrJcrovydyBuwoThtrlOzE6De50RE0_3dvzXhOwsx8P67MSHTL8m8do2jEUrHV7_KsTsp6HTgodXc3iFBTrB1M2JKGUM-R5I0G_28Ra20P0eaCpZHQBNj8EcKklhaS8Qo5oO-I118F0FnIfzMYRpu69ivhclJM20uoDlm53Kgoj1LmswxMjT89A/s1536/Marketing%20in%20Dubai.png"
-  }
+{
+  "slug": "digital-business-cards-uae-2026",
+  "title": "Digital business cards in the UAE 2026: how networking is going paperless",
+  "description": "Why paper business cards are disappearing in Dubai, what digital business cards (NFC and QR) do better, and how UAE professionals can switch in 2026 without losing the personal touch.",
+  "image": "https://kreativeminds.ae/assets/images/blog/digital-business-cards-uae-2026.jpg"
+}
+,
+{
+  "slug": "dubai-free-zone-vs-mainland-2026",
+  "title": "Free zone vs mainland in Dubai 2026: an honest pick for digital businesses",
+  "description": "Free zone or mainland in Dubai for 2026? A practical, no-jargon comparison for digital, SaaS, and ecommerce founders. Costs, restrictions, VAT, corporate tax, and the right pick for your stage.",
+  "image": "https://kreativeminds.ae/assets/images/blog/dubai-free-zone-vs-mainland-2026.jpg"
+}
+,
+{
+  "slug": "how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026",
+  "title": "How Businesses in Dubai can build a strong Digital Presence in 2026",
+  "description": "Learn how businesses in Dubai can build a strong digital presence in 2026 using practical marketing strategies, SEO, content, and branding techniques.",
+  "image": "/assets/images/blog/build-digital-presence-dubai .png"
+}
+,
+{
+  "slug": "how-to-start-ecommerce-dubai",
+  "title": "How to start an eCommerce business in Dubai",
+  "description": "A practical, step-by-step guide to launching a successful eCommerce business in Dubai. Covering licensing, banking, payment gateways, and digital strategy.",
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRHMLiS2dmFenFu6yUzRrNrsvwsKisT_9C3oFRP0e35pLRJlPYuvxq5a7MCeqyDhP9epm-wj8jRwIFC2yBEPFAKjGrtYtekT1RvdfhQxxoQrpNAFIg4pD17vdzRjVT_Ru2Kt2niCTfUK51mGAMVscWeF2WNBCb0lom5QCHM-JNBcxYfiavQ18qwqujMvr7/s1536/ecommerce%20in%20dubai%20amazon.png"
+}
+,
+{
+  "slug": "uae-corporate-tax-smb-freelancer-2026",
+  "title": "UAE Corporate Tax for SMBs and freelancers 2026: who pays, when, and how to file",
+  "description": "A plain-English guide to UAE Corporate Tax in 2026 for SMBs, freelancers, and small business owners. Who pays the 9 percent rate, who stays at 0 percent, registration deadlines, and how to file without a consultant.",
+  "image": "https://kreativeminds.ae/assets/images/blog/uae-corporate-tax-smb-freelancer-2026.jpg"
+}
+,
+{
+  "slug": "uae-e-invoicing-vat-2026",
+  "title": "UAE e-invoicing 2026: FTA rules, deadlines, and a compliant VAT invoice template",
+  "description": "A clear guide to UAE e-invoicing in 2026. Learn the FTA rules, the VAT invoice format, registration deadlines, and how SMBs and freelancers can stay compliant without paying for expensive software.",
+  "image": "https://kreativeminds.ae/assets/images/blog/uae-e-invoicing-vat-2026.jpg"
+}
+,
+{
+  "slug": "unconventional-startup-ideas-2026-uae",
+  "title": "Unconventional Startup Ideas in 2026 UAE",
+  "description": "Discover future-proof startup ideas for the UAE in 2026. Learn how to turn digital strategies into real income with AI, e-commerce, and structured business systems.",
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFHIYXvtc9ay8mEkD_qdBs-hIzFJslUHNNRMctVH6alY_o483VT2Oc29Ank4ViyIscMGvhsKb8ZYx9qM-MMFK88nB4m5QTbxxqX2zrAXbJCjaqWPGkXtU_9TH_chdGkfzEcRPTxhR4Vs_6t8j_xCwvaAT0kBLmSi98UHj3YmxXW4GKjhEkG1pVLpwxiP27/s1536/uae%202026%20business.png"
+}
+,
+{
+  "slug": "whatsapp-business-marketing-gulf",
+  "title": "The WhatsApp Business playbook for Gulf SMBs: catalog, API, ads, and what to stop doing",
+  "description": "A practical WhatsApp marketing playbook for SMBs in the UAE, Saudi, and the wider Gulf. Catalog setup, broadcast vs community, the Business API, click-to-WhatsApp ads, and the mistakes that get accounts banned.",
+  "image": "https://kreativeminds.ae/assets/images/blog/whatsapp-business-marketing-gulf.jpg"
+}
+,
+{
+  "slug": "why-kreative-minds-not-creative",
+  "title": "Why is it \"Kreative Minds\" and not Creative Minds?",
+  "description": "Discover the strategy behind the 'K' in Kreative Minds. It's not a typo, it's a positioning decision connecting legal identity, Khalid Mir's vision, and brand character.",
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9gdnmkGGgoi8MHWJ2BD6iKJCNb-25wEV2aWMGWOt4P_J9IG4jvywkijHJc6hoNeoA_9ANfLRox8Kv51tBnwl7kABA2YIgqjoIMCu8CCYCFK8u-jGQwnb2o6q6zcw2w_JMOo8-CjsMiDJ9VenJslF4QqhwRoXxShLHcIyLyqi8KxwZ_1blJguWrBXeFCQG/s1536/kreative1.png"
+}
+,
+{
+  "slug": "why-most-businesses-fail-marketing",
+  "title": "Why most businesses fail at marketing and how to fix it?",
+  "description": "Explore why businesses fail at marketing and learn how to fix it through strategic positioning, structured execution, and brand clarity in the competitive Dubai market.",
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgy-DqnzrJcrovydyBuwoThtrlOzE6De50RE0_3dvzXhOwsx8P67MSHTL8m8do2jEUrHV7_KsTsp6HTgodXc3iFBTrB1M2JKGUM-R5I0G_28Ra20P0eaCpZHQBNj8EcKklhaS8Qo5oO-I118F0FnIfzMYRpu69ivhclJM20uoDlm53Kgoj1LmswxMjT89A/s1536/Marketing%20in%20Dubai.png"
+}
 ]

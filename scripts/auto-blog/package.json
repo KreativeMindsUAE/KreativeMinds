@@ -1,0 +1,13 @@
+{
+  "name": "km-auto-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "KreativeMinds.ae weekly auto-blog pipeline (Reddit questions -> OpenRouter article -> Gemini image -> blog HTML).",
+  "scripts": {
+    "run": "node index.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

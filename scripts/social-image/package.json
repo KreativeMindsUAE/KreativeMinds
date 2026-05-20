@@ -1,0 +1,10 @@
+{
+  "name": "km-social-image",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "KreativeMinds standalone social image post pipeline (branded cards + caption + hashtags).",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

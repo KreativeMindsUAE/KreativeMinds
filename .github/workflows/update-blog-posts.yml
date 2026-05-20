@@ -139,10 +139,52 @@ jobs:
           echo "</urlset>" >> "$OUT"
           cp "$OUT" sitemap.xml
 
-      - name: Commit updated posts.json and sitemap.xml
+      - name: Generate blog/feed.xml (RSS for social auto-posting)
+        run: |
+          ROOT="https://kreativeminds.ae"
+          OUT=/tmp/feed.xml
+          cat > "$OUT" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <rss version="2.0"><channel>
+          <title>Kreative Minds Blog</title>
+          <link>${ROOT}/blog/</link>
+          <description>Latest articles from Kreative Minds</description>
+          EOF
+          for file in $(ls blog/*.html); do
+            filename=$(basename "$file")
+            if [ "$filename" = "index.html" ] || [ "$filename" = "blog.html" ]; then continue; fi
+            d=$(grep -oP '"datePublished":\s*"\K[0-9]{4}-[0-9]{2}-[0-9]{2}' "$file" | head -1)
+            if [ -z "$d" ]; then d=$(git log -1 --format=%cs -- "$file" 2>/dev/null); fi
+            echo "$d|$file"
+          done | sort -r | head -20 | while IFS='|' read -r d file; do
+            filename=$(basename "$file")
+            slug="${filename%.html}"
+            title=$(grep -oP '(?<=<title>).*?(?=</title>)' "$file" | head -1 | sed 's/ | Kreative Minds Blog//;s/&/\&amp;/g;s/</\&lt;/g')
+            # Social excerpt = the article's opening lead paragraph (a short para),
+            # falling back to the meta description if absent.
+            desc=$(grep -oP '(?<=<p class="lead">).*?(?=</p>)' "$file" | head -1 | sed 's/<[^>]*>//g')
+            if [ -z "$desc" ]; then desc=$(grep -oP '(?<=<meta name="description" content=")[^"]*' "$file" | head -1); fi
+            desc=$(echo "$desc" | sed 's/&/\&amp;/g;s/</\&lt;/g')
+            image=$(grep -oP '(?<=<meta property="og:image" content=")[^"]*' "$file" | head -1)
+            pub=$(date -u -d "$d" +"%a, %d %b %Y 07:00:00 GMT" 2>/dev/null || echo "")
+            cat >> "$OUT" <<ITEM
+          <item>
+          <title>${title}</title>
+          <link>${ROOT}/blog/${filename}</link>
+          <guid isPermaLink="true">${ROOT}/blog/${filename}</guid>
+          <pubDate>${pub}</pubDate>
+          <description>${desc}</description>
+          <enclosure url="${image}" type="image/jpeg" />
+          </item>
+          ITEM
+          done
+          echo "</channel></rss>" >> "$OUT"
+          cp "$OUT" blog/feed.xml
+
+      - name: Commit updated posts.json, sitemap.xml and feed.xml
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/posts.json sitemap.xml
-          git diff --staged --quiet || git commit -m "Auto-update posts.json and sitemap.xml"
+          git add blog/posts.json sitemap.xml blog/feed.xml
+          git diff --staged --quiet || git commit -m "Auto-update posts.json, sitemap.xml and feed.xml"
           git push

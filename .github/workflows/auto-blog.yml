@@ -1,0 +1,110 @@
+name: Auto Blog (weekly)
+
+# Generates 2 SEO blog posts/week from real visitor questions.
+# Default (cron) opens a Pull Request for review. Once trusted, set
+# DEFAULT_MODE to "publish" below, or run manually with mode=publish.
+
+on:
+  schedule:
+    - cron: '0 6 * * 2'   # Tuesday 06:00 UTC (10:00 Gulf)
+    - cron: '0 6 * * 5'   # Friday 06:00 UTC (10:00 Gulf)
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Force a category (blank = auto-rotate)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - digital-marketing
+          - seo
+          - web-development
+          - ecommerce
+          - ai-tools
+          - business-formation-uae
+      mode:
+        description: 'pr = open PR for review, publish = commit to main'
+        required: false
+        default: 'pr'
+        type: choice
+        options:
+          - pr
+          - publish
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  DEFAULT_MODE: pr   # mode used by the scheduled (cron) runs
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        working-directory: scripts/auto-blog
+        run: npm install --no-audit --no-fund
+
+      - name: Resolve mode
+        id: mode
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ]; then MODE="${{ env.DEFAULT_MODE }}"; fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+
+      - name: Generate post
+        id: gen
+        working-directory: scripts/auto-blog
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.category }}" ]; then
+            ARGS="--category=${{ github.event.inputs.category }}"
+          fi
+          node index.mjs $ARGS
+
+      - name: Open Pull Request (review mode)
+        if: steps.mode.outputs.mode == 'pr'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto-blog/${{ steps.gen.outputs.slug }}
+          base: main
+          commit-message: "Auto blog: ${{ steps.gen.outputs.title }}"
+          title: "Auto blog (${{ steps.gen.outputs.category }}): ${{ steps.gen.outputs.title }}"
+          body: |
+            Automated weekly blog draft for review.
+
+            - **Category:** ${{ steps.gen.outputs.category }}
+            - **Slug:** ${{ steps.gen.outputs.slug }}
+
+            Review the article + hero image, then merge to publish. Merging to `main`
+            triggers posts.json + sitemap regeneration and deploy, after which the
+            Make.com scenario shares it to social.
+          add-paths: |
+            blog/${{ steps.gen.outputs.slug }}.html
+            assets/images/blog/${{ steps.gen.outputs.slug }}.jpg
+            scripts/auto-blog/topics-done.json
+
+      - name: Commit to main (publish mode)
+        if: steps.mode.outputs.mode == 'publish'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "blog/${{ steps.gen.outputs.slug }}.html" \
+                  "assets/images/blog/${{ steps.gen.outputs.slug }}.jpg" \
+                  scripts/auto-blog/topics-done.json
+          git commit -m "Auto blog: ${{ steps.gen.outputs.title }}"
+          git push

@@ -1,0 +1,74 @@
+name: Social Image Post (3x/week)
+
+# Generates a scroll-stopping branded card + caption + hashtags and appends it
+# to social/social-posts.json, which the Make.com scenario watches to publish
+# to Facebook, Instagram, and LinkedIn. Runs on non-blog days (blog = Tue/Fri).
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Monday 07:00 UTC (11:00 Gulf)
+    - cron: '0 7 * * 3'   # Wednesday
+    - cron: '0 7 * * 6'   # Saturday
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Force a topic (blank = auto-rotate)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - brand
+          - marketing
+          - seo
+          - web
+          - ecommerce
+          - ai
+          - business
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install brand font (Outfit) for on-brand card text
+        run: |
+          mkdir -p ~/.fonts
+          curl -sL "https://github.com/google/fonts/raw/main/ofl/outfit/Outfit%5Bwght%5D.ttf" -o ~/.fonts/Outfit.ttf
+          fc-cache -f >/dev/null 2>&1 || true
+          fc-list | grep -i outfit || echo "(Outfit not detected; will fall back to default sans)"
+
+      - name: Install deps
+        working-directory: scripts/social-image
+        run: npm install --no-audit --no-fund
+
+      - name: Generate card + caption
+        id: gen
+        working-directory: scripts/social-image
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.topic }}" ]; then
+            ARGS="--topic=${{ github.event.inputs.topic }}"
+          fi
+          node index.mjs $ARGS
+
+      - name: Commit to main (auto-publish)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add social/
+          git diff --staged --quiet || git commit -m "Social image post: ${{ steps.gen.outputs.id }}"
+          git push

@@ -1,0 +1,291 @@
+// Renders a full blog post HTML matching the existing KreativeMinds template
+// (head tags, nav, hero, prose article, CTA, footer). The Update Blog Posts
+// workflow reads <title>, meta description, og:image, and JSON-LD datePublished
+// from this output, so those must stay in the exact format below.
+import { SITE, CATEGORIES } from './config.mjs';
+
+const esc = (s = '') =>
+  String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+
+const escText = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+function longDate(iso) {
+  const d = new Date(iso + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+}
+
+function renderSections(sections) {
+  return sections
+    .map((s) => {
+      const paras = (s.paragraphs || []).map((p) => `      <p>${escText(p)}</p>`).join('\n');
+      const list =
+        s.list && s.list.length
+          ? `      <ul>\n${s.list.map((li) => `        <li>${escText(li)}</li>`).join('\n')}\n      </ul>`
+          : '';
+      return `      <h2>${escText(s.h2)}</h2>\n${paras}${list ? '\n' + list : ''}`;
+    })
+    .join('\n\n');
+}
+
+function renderFaqJsonLd(faq) {
+  if (!faq || !faq.length) return '';
+  const items = faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  }));
+  return `
+<script type="application/ld+json">
+${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items }, null, 2)}
+</script>`;
+}
+
+export function renderPost({ article, slug, dateIso, categoryId }) {
+  const cat = CATEGORIES[categoryId];
+  const imgUrl = `${SITE.origin}/assets/images/blog/${slug}.jpg`;
+  const pageUrl = `${SITE.origin}/blog/${slug}.html`;
+  const title = escText(article.title);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    image: imgUrl,
+    author: { '@type': 'Person', name: SITE.author, url: SITE.authorUrl },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kreative Minds',
+      logo: { '@type': 'ImageObject', url: SITE.logo },
+    },
+    datePublished: dateIso,
+    description: article.metaDescription,
+    mainEntityOfPage: pageUrl,
+    areaServed: 'United Arab Emirates',
+  };
+
+  return `<!doctype html>
+<html lang="en" class="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>${title} | Kreative Minds Blog</title>
+<meta name="description" content="${esc(article.metaDescription)}" />
+<meta name="keywords" content="${esc(article.keywords || '')}" />
+<meta name="author" content="${esc(SITE.author)} (Khalidgraphy)" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="${pageUrl}" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="${esc(article.ogTitle || article.title)}" />
+<meta property="og:description" content="${esc(article.ogDescription || article.metaDescription)}" />
+<meta property="og:image" content="${imgUrl}" />
+<meta property="og:url" content="${pageUrl}" />
+<meta property="og:site_name" content="Kreative Minds" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${esc(article.twitterTitle || article.title)}" />
+<meta name="twitter:description" content="${esc(article.twitterDescription || article.ogDescription || article.metaDescription)}" />
+<meta name="twitter:image" content="${imgUrl}" />
+
+<script type="application/ld+json">
+${JSON.stringify(jsonLd, null, 2)}
+</script>${renderFaqJsonLd(article.faq)}
+
+<link rel="icon" href="../logo-purple.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script>
+  (function () {
+    var saved = localStorage.getItem('km-theme');
+    if (saved === 'dark') document.documentElement.classList.replace('light', 'dark');
+  })();
+</script>
+
+<link rel="stylesheet" href="../assets/css/site.css" />
+
+<style>
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 32px; }
+  .back-link:hover { color: var(--accent); }
+  .post-meta { display: flex; gap: 24px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 24px; }
+  .post-hero-image { max-width: 70ch; margin: 40px auto 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .post-hero-image img { width: 100%; height: auto; display: block; }
+  .prose .lead { font-size: 1.2rem; line-height: 1.6; color: var(--ink); font-family: 'Outfit', sans-serif; font-style: italic; font-weight: 400; }
+  .prose .pull { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.35rem; color: var(--accent); line-height: 1.35; margin-top: 2.4em; }
+  .prose table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: 0.95rem; }
+  .prose th, .prose td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+  .prose th { background: var(--surface-2, rgba(0,0,0,0.04)); font-weight: 600; }
+</style>
+<!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0GC80HWSSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0GC80HWSSL');
+</script>
+<!-- Umami Analytics -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="d8e81d62-3ba2-4649-b50f-3946e745d41b"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="brand" aria-label="Kreative Minds home">
+      <img class="logo-light" src="../logo-purple.png" alt="Kreative Minds" />
+      <img class="logo-dark" src="../logo-yellow.png" alt="Kreative Minds" />
+      <span class="brand-text">Kreative Minds</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../services.html">Services</a>
+      <a href="../pricelist.html">Pricing</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="../contact.html" class="btn btn-primary">
+        Start a project
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Blog
+    </a>
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>${escText(cat.eyebrow)}</span>
+    </div>
+    <h1>${title}</h1>
+    <p class="page-lead">${escText(article.pageLead || '')}</p>
+    <div class="post-meta">
+      <span>Published ${longDate(dateIso)}</span>
+      <span>${escText(String(article.readMinutes || 5))} min read</span>
+    </div>
+    <div class="post-hero-image">
+      <img src="../assets/images/blog/${slug}.jpg" alt="${esc(article.heroAlt || article.title)}" />
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<section class="block">
+  <article class="prose">
+    <div class="container">
+      <p class="lead">${escText(article.lead || '')}</p>
+
+${renderSections(article.sections)}
+
+      <p>${escText(article.closingParagraph || '')}</p>
+
+      <p class="pull">${escText(article.pullQuote || '')}</p>
+    </div>
+  </article>
+</section>
+
+<!-- CTA -->
+<section class="cta-block" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="cta-headline">${escText(article.ctaHeadline || "Let's talk.")}</h2>
+      <div class="cta-actions">
+        <p>${escText(article.ctaText || 'Tell us what you are building. We will give you a short, honest recommendation.')}</p>
+        <a href="mailto:hi@kreativeminds.ae" class="btn btn-primary">
+          hi@kreativeminds.ae
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="index.html" class="btn btn-ghost">Read more articles</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-about foot-brand">
+        <a href="../index.html" aria-label="Kreative Minds home">
+          <img class="logo-light" src="../logo-purple.png" alt="Kreative Minds" />
+          <img class="logo-dark" src="../logo-yellow.png" alt="Kreative Minds" />
+        </a>
+        <p>A Dubai-based digital agency building tech tools, brands, and campaigns that move businesses forward. Working with clients worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="../services.html#core">Strategy</a>
+        <a href="../services.html#core">Product &amp; SaaS</a>
+        <a href="../services.html#core">AI &amp; Automation</a>
+        <a href="../services.html#core">Brand &amp; Marketing</a>
+        <a href="../pricelist.html">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="../about.html">About</a>
+        <a href="../jobs.html">Careers</a>
+        <a href="../climate-impact.html">Sustainability</a>
+        <a href="../confidentiality.html">Confidentiality</a>
+        <a href="../standards-and-ethics.html">Standards &amp; Ethics</a>
+        <a href="index.html">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="../contact.html">Contact form</a>
+        <a href="mailto:hi@kreativeminds.ae">hi@kreativeminds.ae</a>
+        <a href="https://linkedin.com/in/Khalidgraphy" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../tool/kreativeqr.html">KreativeQR Tool</a>
+        <a href="../aieo.html">AIEO Profile</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kreative Minds. KM Marketing &amp; PR, Dubai Mainland License No. 1377759.</span>
+      <span>
+        <a href="../privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="../terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="../standards-and-ethics.html">Standards</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    root.classList.toggle('dark', !isDark);
+    root.classList.toggle('light', isDark);
+    localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
+  });
+</script>
+</body>
+</html>
+`;
+}

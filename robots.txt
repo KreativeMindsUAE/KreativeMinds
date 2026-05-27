@@ -63,9 +63,11 @@ Disallow: /
 
 # END Cloudflare Managed Content
 
-# Sitemaps & AI Discovery
+# Sitemaps
 Sitemap: https://kreativeminds.ae/sitemap.xml
-Sitemap: https://kreativeminds.ae/llms.txt
-Sitemap: https://kreativeminds.ae/aieo
+
+# AI discovery (informational, not crawler directives)
+# llms.txt: https://kreativeminds.ae/llms.txt
+# aieo profile: https://kreativeminds.ae/aieo
 
 # End of robots.txt

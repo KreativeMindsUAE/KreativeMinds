@@ -10,6 +10,17 @@
       ],
       "date": "2026-05-20",
       "fallbackImage": false
+    },
+    {
+      "slug": "small-business-digital-marketing-budget",
+      "category": "digital-marketing",
+      "questions": [
+        "How much should a small business spend on digital marketing each month?",
+        "What digital marketing channels work best for a new business with a small budget?",
+        "How do I measure if my marketing is actually working?"
+      ],
+      "date": "2026-06-30",
+      "fallbackImage": false
     }
   ]
 }

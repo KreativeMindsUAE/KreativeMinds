@@ -1,5 +1,54 @@
 [
 {
+  "slug": "tech-stack-uae-startup-2026",
+  "title": "The right tech stack for a UAE startup in 2026 (and what it costs to run)",
+  "description": "A pragmatic tech stack for a UAE startup in 2026. Frontend, edge and serverless backend, database, auth, and payments, why edge-first wins for lean Gulf startups, what it costs to run each month, and what to avoid.",
+  "image": "https://kreativeminds.ae/assets/images/blog/tech-stack-uae-startup-2026.jpg"
+}
+,
+{
+  "slug": "mvp-development-cost-dubai-2026",
+  "title": "How much does it cost to build an MVP in Dubai in 2026?",
+  "description": "What an MVP really costs to build in Dubai in 2026. Realistic AED price bands by app type, what drives the cost, freelancer vs agency, the running costs after launch, and how to build lean without cutting corners.",
+  "image": "https://kreativeminds.ae/assets/images/blog/mvp-development-cost-dubai-2026.jpg"
+}
+,
+{
+  "slug": "case-study-payxem-freelancer-payments",
+  "title": "Case study: building Payxem, invoicing and payments for emerging-market freelancers",
+  "description": "How Kreative Minds designed and built Payxem, an invoicing, payments, and portfolio platform for freelancers in emerging markets who are locked out of the usual payment tools. The problem, the build, the stack, and what it demonstrates.",
+  "image": "https://kreativeminds.ae/assets/images/blog/case-study-payxem-freelancer-payments.jpg"
+}
+,
+{
+  "slug": "case-study-mykard-digital-business-cards",
+  "title": "Case study: building MyKard, digital business cards without the app",
+  "description": "How Kreative Minds built MyKard, a no-app digital business card that people save with a tap or scan, with portfolio links, WhatsApp, and connection tracking. The problem, the build, and the design decisions.",
+  "image": "https://kreativeminds.ae/assets/images/blog/case-study-mykard-digital-business-cards.jpg"
+}
+,
+{
+  "slug": "case-study-invoicedubai-vat-invoicing",
+  "title": "Case study: building InvoiceDubai, free VAT invoices and payslips in the browser",
+  "description": "How Kreative Minds built InvoiceDubai, a free browser-based tool that generates UAE VAT invoices and MOHRE-style payslips with auto 5 percent VAT, a TRN field, and PDF export, with no account needed.",
+  "image": "https://kreativeminds.ae/assets/images/blog/case-study-invoicedubai-vat-invoicing.jpg"
+}
+,
+{
+  "slug": "case-study-gulfwholesale-b2b-marketplace",
+  "title": "Case study: building GulfWholesale, a B2B sourcing platform for Gulf marketplace sellers",
+  "description": "How Kreative Minds built GulfWholesale, a B2B wholesale sourcing and fulfilment platform for Amazon, Noon, and Shopify sellers in the Gulf, with a 2000-plus SKU catalogue, seller accounts, and warehousing.",
+  "image": "https://kreativeminds.ae/assets/images/blog/case-study-gulfwholesale-b2b-marketplace.jpg"
+}
+,
+{
+  "slug": "case-study-ai-for-gcc",
+  "title": "Case study: building AI for GCC, an AI intelligence platform for the region",
+  "description": "How Kreative Minds built AI for GCC, a platform that tracks the AI tools, news, and playbooks that matter across the Gulf and MENA, kept current by an automated daily content pipeline.",
+  "image": "https://kreativeminds.ae/assets/images/blog/case-study-ai-for-gcc.jpg"
+}
+,
+{
   "slug": "ai-seo-link-building-2025",
   "title": "How AI is reshaping SEO and link building in 2025",
   "description": "Learn how AI changes SEO strategy, discover practical backlink tactics for dull niches in 2025, and see why search rules keep moving.",

@@ -111,11 +111,8 @@ jobs:
             IFS='|' read -r path pri cf <<< "$entry"
             if [ "$path" = "index.html" ]; then
               loc="${ROOT}/"
-            elif [[ "$path" == tool/* ]]; then
-              # keep tool/ paths with .html (CF Pages serves them at that exact URL)
-              loc="${ROOT}/${path}"
             else
-              # top-level pages: emit without .html to match canonical (CF Pages 308s .html -> no-ext)
+              # CF Pages 308s any .html -> no-ext, so always emit the extensionless canonical
               loc_path="${path%.html}"
               loc="${ROOT}/${loc_path}"
             fi
@@ -138,7 +135,8 @@ jobs:
             echo "$d|$file"
           done | sort -r | while IFS='|' read -r d file; do
             filename=$(basename "$file")
-            emit_url "$file" "0.7" "monthly" "${ROOT}/blog/${filename}"
+            slug="${filename%.html}"
+            emit_url "$file" "0.7" "monthly" "${ROOT}/blog/${slug}"
           done
 
           echo "</urlset>" >> "$OUT"

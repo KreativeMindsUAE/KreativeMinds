@@ -157,7 +157,7 @@ section.block-sm { padding: 80px 0; border-top: 1px solid var(--line); }
 @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* PRODUCTS / CARDS */
-.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 @media (max-width: 900px) { .products { grid-template-columns: 1fr; } }
 .product {
   border: 1px solid var(--line); border-radius: 18px; padding: 36px; background: var(--bg-elev);

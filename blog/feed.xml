@@ -5,128 +5,146 @@
 <description>Latest articles from Kreative Minds</description>
 <item>
 <title>The right tech stack for a UAE startup in 2026 (and what it costs to run)</title>
-<link>https://kreativeminds.ae/blog/tech-stack-uae-startup-2026</link>
-<guid>https://kreativeminds.ae/blog/tech-stack-uae-startup-2026</guid>
-<description>A pragmatic tech stack for a UAE startup in 2026. Frontend, edge and serverless backend, database, auth, and payments, why edge-first wins for lean Gulf startups, what it costs to run each month, and what to avoid.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/tech-stack-uae-startup-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/tech-stack-uae-startup-2026.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>There is no single best stack, only the best stack for your constraints. And a UAE startup has a specific set of constraints: users spread across the Gulf, payments that must work locally, a need to serve Arabic and English, and a budget that has to survive until revenue arrives.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/tech-stack-uae-startup-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>How much does it cost to build an MVP in Dubai in 2026?</title>
-<link>https://kreativeminds.ae/blog/mvp-development-cost-dubai-2026</link>
-<guid>https://kreativeminds.ae/blog/mvp-development-cost-dubai-2026</guid>
-<description>What an MVP really costs to build in Dubai in 2026. Realistic AED price bands by app type, what drives the cost, freelancer vs agency, the running costs after launch, and how to build lean without cutting corners.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/mvp-development-cost-dubai-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/mvp-development-cost-dubai-2026.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>An MVP is not a cheap version of your product. It is the smallest thing you can put in front of real users to learn whether the idea works. Price it like a lottery ticket and you will overpay. Price it like a science experiment and the numbers start to make sense.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/mvp-development-cost-dubai-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Case study: building Payxem, invoicing and payments for emerging-market freelancers</title>
-<link>https://kreativeminds.ae/blog/case-study-payxem-freelancer-payments</link>
-<guid>https://kreativeminds.ae/blog/case-study-payxem-freelancer-payments</guid>
-<description>How Kreative Minds designed and built Payxem, an invoicing, payments, and portfolio platform for freelancers in emerging markets who are locked out of the usual payment tools. The problem, the build, the stack, and what it demonstrates.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/case-study-payxem-freelancer-payments.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/case-study-payxem-freelancer-payments.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>The best payment tools were never built for most of the world. Payxem is what happens when you design payments for the freelancer that Stripe and PayPal forgot, and then build it properly.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/case-study-payxem-freelancer-payments.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Case study: building MyKard, digital business cards without the app</title>
-<link>https://kreativeminds.ae/blog/case-study-mykard-digital-business-cards</link>
-<guid>https://kreativeminds.ae/blog/case-study-mykard-digital-business-cards</guid>
-<description>How Kreative Minds built MyKard, a no-app digital business card that people save with a tap or scan, with portfolio links, WhatsApp, and connection tracking. The problem, the build, and the design decisions.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/case-study-mykard-digital-business-cards.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/case-study-mykard-digital-business-cards.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>Networking did not stop. The paper card just stopped keeping up. MyKard is our take on the handshake that actually leads somewhere.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/case-study-mykard-digital-business-cards.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Case study: building InvoiceDubai, free VAT invoices and payslips in the browser</title>
-<link>https://kreativeminds.ae/blog/case-study-invoicedubai-vat-invoicing</link>
-<guid>https://kreativeminds.ae/blog/case-study-invoicedubai-vat-invoicing</guid>
-<description>How Kreative Minds built InvoiceDubai, a free browser-based tool that generates UAE VAT invoices and MOHRE-style payslips with auto 5 percent VAT, a TRN field, and PDF export, with no account needed.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/case-study-invoicedubai-vat-invoicing.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/case-study-invoicedubai-vat-invoicing.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>Some of the most valuable things you can build are small and free. InvoiceDubai does one job, does it well, and asks for nothing in return.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/case-study-invoicedubai-vat-invoicing.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Case study: building GulfWholesale, a B2B sourcing platform for Gulf marketplace sellers</title>
-<link>https://kreativeminds.ae/blog/case-study-gulfwholesale-b2b-marketplace</link>
-<guid>https://kreativeminds.ae/blog/case-study-gulfwholesale-b2b-marketplace</guid>
-<description>How Kreative Minds built GulfWholesale, a B2B wholesale sourcing and fulfilment platform for Amazon, Noon, and Shopify sellers in the Gulf, with a 2000-plus SKU catalogue, seller accounts, and warehousing.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/case-study-gulfwholesale-b2b-marketplace.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/case-study-gulfwholesale-b2b-marketplace.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>Behind every marketplace listing is a supply chain that has to actually work. GulfWholesale is a platform built for the sellers who live on that supply chain every day.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/case-study-gulfwholesale-b2b-marketplace.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Case study: building AI for GCC, an AI intelligence platform for the region</title>
-<link>https://kreativeminds.ae/blog/case-study-ai-for-gcc</link>
-<guid>https://kreativeminds.ae/blog/case-study-ai-for-gcc</guid>
-<description>How Kreative Minds built AI for GCC, a platform that tracks the AI tools, news, and playbooks that matter across the Gulf and MENA, kept current by an automated daily content pipeline.</description>
-<pubDate>2026-07-18</pubDate>
+<link>https://kreativeminds.ae/blog/case-study-ai-for-gcc.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/case-study-ai-for-gcc.html</guid>
+<pubDate>Sat, 18 Jul 2026 07:00:00 GMT</pubDate>
+<description>The problem with AI in 2026 is not a shortage of information. It is the flood of it. AI for GCC exists to turn that flood into a short, regional, useful daily read.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/case-study-ai-for-gcc.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>How AI is reshaping SEO and link building in 2025</title>
-<link>https://kreativeminds.ae/blog/ai-seo-link-building-2025</link>
-<guid>https://kreativeminds.ae/blog/ai-seo-link-building-2025</guid>
-<description>Learn how AI changes SEO strategy, discover practical backlink tactics for dull niches in 2025, and see why search rules keep moving.</description>
-<pubDate>2026-05-20</pubDate>
+<link>https://kreativeminds.ae/blog/ai-seo-link-building-2025.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/ai-seo-link-building-2025.html</guid>
+<pubDate>Wed, 20 May 2026 07:00:00 GMT</pubDate>
+<description>Search engines are getting smarter, and so must we. In 2025 AI tools help us write, analyse, and optimise at speed, but the fundamentals, relevant content, trustworthy links, and user intent, still matter. Below are three practical answers to the most common questions we hear.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/ai-seo-link-building-2025.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Digital business cards in the UAE 2026: how networking is going paperless</title>
-<link>https://kreativeminds.ae/blog/digital-business-cards-uae-2026</link>
-<guid>https://kreativeminds.ae/blog/digital-business-cards-uae-2026</guid>
-<description>Why paper business cards are disappearing in Dubai, what digital business cards (NFC and QR) do better, and how UAE professionals can switch in 2026 without losing the personal touch.</description>
-<pubDate>2026-05-12</pubDate>
+<link>https://kreativeminds.ae/blog/digital-business-cards-uae-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/digital-business-cards-uae-2026.html</guid>
+<pubDate>Tue, 12 May 2026 07:00:00 GMT</pubDate>
+<description>For decades, a paper visiting card was the first handshake of UAE business. In 2026 it is becoming something else: a tap, a scan, a saved contact, a follow-up that arrives before the coffee gets cold.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/digital-business-cards-uae-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>The WhatsApp Business playbook for Gulf SMBs: catalog, API, ads, and what to stop doing</title>
-<link>https://kreativeminds.ae/blog/whatsapp-business-marketing-gulf</link>
-<guid>https://kreativeminds.ae/blog/whatsapp-business-marketing-gulf</guid>
-<description>A practical WhatsApp marketing playbook for SMBs in the UAE, Saudi, and the wider Gulf. Catalog setup, broadcast vs community, the Business API, click-to-WhatsApp ads, and the mistakes that get accounts banned.</description>
-<pubDate>2026-05-04</pubDate>
+<link>https://kreativeminds.ae/blog/whatsapp-business-marketing-gulf.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/whatsapp-business-marketing-gulf.html</guid>
+<pubDate>Mon, 04 May 2026 07:00:00 GMT</pubDate>
+<description>Walk into any cafe in Dubai, Riyadh, or Doha and notice what people are doing on their phones. It is rarely email. It is WhatsApp. For a Gulf SMB, ignoring this is leaving revenue on the table.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/whatsapp-business-marketing-gulf.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>UAE Corporate Tax for SMBs and freelancers 2026: who pays, when, and how to file</title>
-<link>https://kreativeminds.ae/blog/uae-corporate-tax-smb-freelancer-2026</link>
-<guid>https://kreativeminds.ae/blog/uae-corporate-tax-smb-freelancer-2026</guid>
-<description>A plain-English guide to UAE Corporate Tax in 2026 for SMBs, freelancers, and small business owners. Who pays the 9 percent rate, who stays at 0 percent, registration deadlines, and how to file without a consultant.</description>
-<pubDate>2026-04-26</pubDate>
+<link>https://kreativeminds.ae/blog/uae-corporate-tax-smb-freelancer-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/uae-corporate-tax-smb-freelancer-2026.html</guid>
+<pubDate>Sun, 26 Apr 2026 07:00:00 GMT</pubDate>
+<description>For the first time in modern UAE history, almost every business has a corporate tax filing to do. Most owners we speak to know the headline number, 9 percent, but very few know whether they actually owe anything, when to register, or what counts as taxable income.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/uae-corporate-tax-smb-freelancer-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>UAE e-invoicing 2026: FTA rules, deadlines, and a compliant VAT invoice template</title>
-<link>https://kreativeminds.ae/blog/uae-e-invoicing-vat-2026</link>
-<guid>https://kreativeminds.ae/blog/uae-e-invoicing-vat-2026</guid>
-<description>A clear guide to UAE e-invoicing in 2026. Learn the FTA rules, the VAT invoice format, registration deadlines, and how SMBs and freelancers can stay compliant without paying for expensive software.</description>
-<pubDate>2026-04-18</pubDate>
+<link>https://kreativeminds.ae/blog/uae-e-invoicing-vat-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/uae-e-invoicing-vat-2026.html</guid>
+<pubDate>Sat, 18 Apr 2026 07:00:00 GMT</pubDate>
+<description>If you sell anything in the UAE, your invoices are about to change shape. The Federal Tax Authority (FTA) is rolling out a national e-invoicing framework, and the paper PDF you email today will no longer be enough.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/uae-e-invoicing-vat-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>Free zone vs mainland in Dubai 2026: an honest pick for digital businesses</title>
-<link>https://kreativeminds.ae/blog/dubai-free-zone-vs-mainland-2026</link>
-<guid>https://kreativeminds.ae/blog/dubai-free-zone-vs-mainland-2026</guid>
-<description>Free zone or mainland in Dubai for 2026? A practical, no-jargon comparison for digital, SaaS, and ecommerce founders. Costs, restrictions, VAT, corporate tax, and the right pick for your stage.</description>
-<pubDate>2026-04-10</pubDate>
+<link>https://kreativeminds.ae/blog/dubai-free-zone-vs-mainland-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/dubai-free-zone-vs-mainland-2026.html</guid>
+<pubDate>Fri, 10 Apr 2026 07:00:00 GMT</pubDate>
+<description>If you are about to register a business in Dubai, you will hear two phrases on repeat: "free zone" and "mainland". Both are valid. Both work. But they suit different businesses, and the wrong choice is expensive to undo.</description>
+<enclosure url="https://kreativeminds.ae/assets/images/blog/dubai-free-zone-vs-mainland-2026.jpg" type="image/jpeg" />
 </item>
 <item>
 <title>How Businesses in Dubai can build a strong Digital Presence in 2026</title>
-<link>https://kreativeminds.ae/blog/how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026</link>
-<guid>https://kreativeminds.ae/blog/how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026</guid>
+<link>https://kreativeminds.ae/blog/how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/how-businesses-in-dubai-can-build-a-strong-digital-presence-in-2026.html</guid>
+<pubDate>Thu, 19 Mar 2026 07:00:00 GMT</pubDate>
 <description>Learn how businesses in Dubai can build a strong digital presence in 2026 using practical marketing strategies, SEO, content, and branding techniques.</description>
-<pubDate>2026-03-19</pubDate>
+<enclosure url="/assets/images/blog/build-digital-presence-dubai .png" type="image/jpeg" />
 </item>
 <item>
 <title>Why most businesses fail at marketing and how to fix it?</title>
-<link>https://kreativeminds.ae/blog/why-most-businesses-fail-marketing</link>
-<guid>https://kreativeminds.ae/blog/why-most-businesses-fail-marketing</guid>
-<description>Explore why businesses fail at marketing and learn how to fix it through strategic positioning, structured execution, and brand clarity in the competitive Dubai market.</description>
-<pubDate>2026-03-18</pubDate>
+<link>https://kreativeminds.ae/blog/why-most-businesses-fail-marketing.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/why-most-businesses-fail-marketing.html</guid>
+<pubDate>Wed, 18 Mar 2026 07:00:00 GMT</pubDate>
+<description>In today's competitive environment, marketing is everywhere. Every business claims to offer digital marketing, social media management, SEO, or advertising services. Yet many businesses still struggle to see real results.</description>
+<enclosure url="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgy-DqnzrJcrovydyBuwoThtrlOzE6De50RE0_3dvzXhOwsx8P67MSHTL8m8do2jEUrHV7_KsTsp6HTgodXc3iFBTrB1M2JKGUM-R5I0G_28Ra20P0eaCpZHQBNj8EcKklhaS8Qo5oO-I118F0FnIfzMYRpu69ivhclJM20uoDlm53Kgoj1LmswxMjT89A/s1536/Marketing%20in%20Dubai.png" type="image/jpeg" />
 </item>
 <item>
 <title>Why is it "Kreative Minds" and not Creative Minds?</title>
-<link>https://kreativeminds.ae/blog/why-kreative-minds-not-creative</link>
-<guid>https://kreativeminds.ae/blog/why-kreative-minds-not-creative</guid>
-<description>Discover the strategy behind the 'K' in Kreative Minds. It's not a typo, it's a positioning decision connecting legal identity, Khalid Mir's vision, and brand character.</description>
-<pubDate>2026-03-18</pubDate>
+<link>https://kreativeminds.ae/blog/why-kreative-minds-not-creative.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/why-kreative-minds-not-creative.html</guid>
+<pubDate>Wed, 18 Mar 2026 07:00:00 GMT</pubDate>
+<description>Let's address the question we get often. Yes, the dictionary spells it Creative with a C. And yes, our brand spells it Kreative with a K.</description>
+<enclosure url="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9gdnmkGGgoi8MHWJ2BD6iKJCNb-25wEV2aWMGWOt4P_J9IG4jvywkijHJc6hoNeoA_9ANfLRox8Kv51tBnwl7kABA2YIgqjoIMCu8CCYCFK8u-jGQwnb2o6q6zcw2w_JMOo8-CjsMiDJ9VenJslF4QqhwRoXxShLHcIyLyqi8KxwZ_1blJguWrBXeFCQG/s1536/kreative1.png" type="image/jpeg" />
 </item>
 <item>
 <title>Unconventional Startup Ideas in 2026 UAE</title>
-<link>https://kreativeminds.ae/blog/unconventional-startup-ideas-2026-uae</link>
-<guid>https://kreativeminds.ae/blog/unconventional-startup-ideas-2026-uae</guid>
-<description>Discover future-proof startup ideas for the UAE in 2026. Learn how to turn digital strategies into real income with AI, e-commerce, and structured business systems.</description>
-<pubDate>2026-03-18</pubDate>
+<link>https://kreativeminds.ae/blog/unconventional-startup-ideas-2026-uae.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/unconventional-startup-ideas-2026-uae.html</guid>
+<pubDate>Wed, 18 Mar 2026 07:00:00 GMT</pubDate>
+<description>In 2026, launching a business in the UAE no longer requires heavy capital, retail space, or complex infrastructure. What it requires is clarity, systems thinking, and smart use of technology.</description>
+<enclosure url="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFHIYXvtc9ay8mEkD_qdBs-hIzFJslUHNNRMctVH6alY_o483VT2Oc29Ank4ViyIscMGvhsKb8ZYx9qM-MMFK88nB4m5QTbxxqX2zrAXbJCjaqWPGkXtU_9TH_chdGkfzEcRPTxhR4Vs_6t8j_xCwvaAT0kBLmSi98UHj3YmxXW4GKjhEkG1pVLpwxiP27/s1536/uae%202026%20business.png" type="image/jpeg" />
 </item>
 <item>
 <title>How to start an eCommerce business in Dubai</title>
-<link>https://kreativeminds.ae/blog/how-to-start-ecommerce-dubai</link>
-<guid>https://kreativeminds.ae/blog/how-to-start-ecommerce-dubai</guid>
-<description>A practical, step-by-step guide to launching a successful eCommerce business in Dubai. Covering licensing, banking, payment gateways, and digital strategy.</description>
-<pubDate>2026-03-18</pubDate>
+<link>https://kreativeminds.ae/blog/how-to-start-ecommerce-dubai.html</link>
+<guid isPermaLink="true">https://kreativeminds.ae/blog/how-to-start-ecommerce-dubai.html</guid>
+<pubDate>Wed, 18 Mar 2026 07:00:00 GMT</pubDate>
+<description>Dubai has become one of the fastest growing eCommerce markets in the region. High internet penetration, advanced logistics infrastructure, strong payment ecosystems, and direct access to the wider GCC make Dubai a powerful launchpad for online businesses.</description>
+<enclosure url="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRHMLiS2dmFenFu6yUzRrNrsvwsKisT_9C3oFRP0e35pLRJlPYuvxq5a7MCeqyDhP9epm-wj8jRwIFC2yBEPFAKjGrtYtekT1RvdfhQxxoQrpNAFIg4pD17vdzRjVT_Ru2Kt2niCTfUK51mGAMVscWeF2WNBCb0lom5QCHM-JNBcxYfiavQ18qwqujMvr7/s1536/ecommerce%20in%20dubai%20amazon.png" type="image/jpeg" />
 </item>
 </channel></rss>

@@ -299,6 +299,48 @@
     localStorage.setItem('km-theme', isDark ? 'light' : 'dark');
   });
 
+  // Rate-limited AJAX submit via /api/contact. Falls back to a direct FormSubmit
+  // post on any server error so a genuine lead is never lost.
+  (function () {
+    var form = document.getElementById('contactForm');
+    var success = document.getElementById('formSuccess');
+    if (!form || !success) return;
+    var SUCCESS_TEXT = "Thanks. Your message is on its way. We'll reply within a working day.";
+    var LIMIT_TEXT = "You have reached the submission limit. Please email us directly at hi@kreativeminds.ae and we'll get back to you.";
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (data) {
+            return { status: res.status, ok: res.ok, data: data };
+          });
+        })
+        .then(function (r) {
+          if (r.status === 429) {
+            success.textContent = (r.data && r.data.message) ? r.data.message : LIMIT_TEXT;
+            success.classList.add('show');
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (btn) btn.disabled = false;
+            return;
+          }
+          if (r.ok && r.data && r.data.ok) {
+            success.textContent = SUCCESS_TEXT;
+            success.classList.add('show');
+            form.reset();
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (btn) btn.disabled = false;
+            return;
+          }
+          form.submit(); // fallback: deliver directly via FormSubmit
+        })
+        .catch(function () {
+          form.submit(); // network error: deliver directly via FormSubmit
+        });
+    });
+  })();
+
   // Show success banner if redirected back from successful submit
   if (new URLSearchParams(window.location.search).get('sent') === '1') {
     document.getElementById('formSuccess').classList.add('show');

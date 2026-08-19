@@ -17,6 +17,9 @@ const LIMIT_MESSAGE =
 export async function onRequestPost({ request, env }) {
   const now = Math.floor(Date.now() / 1000);
   const ip = request.headers.get("CF-Connecting-IP") || "0.0.0.0";
+  // Key IPv4 on the full address; IPv6 on the /64 prefix (a single user/network),
+  // so an IPv6 client cannot slip the cap by rotating its /128 address.
+  const key = ip.indexOf(":") === -1 ? ip : ip.split(":").slice(0, 4).join(":");
   const db = env.RL_DB;
 
   if (db) {
@@ -24,18 +27,18 @@ export async function onRequestPost({ request, env }) {
       await db.prepare("DELETE FROM submissions WHERE ts < ?").bind(now - DAY).run();
       const h = await db
         .prepare("SELECT COUNT(*) AS c FROM submissions WHERE ip = ? AND ts > ?")
-        .bind(ip, now - HOUR)
+        .bind(key, now - HOUR)
         .first();
       const d = await db
         .prepare("SELECT COUNT(*) AS c FROM submissions WHERE ip = ? AND ts > ?")
-        .bind(ip, now - DAY)
+        .bind(key, now - DAY)
         .first();
       const perHour = (h && h.c) || 0;
       const perDay = (d && d.c) || 0;
       if (perHour >= MAX_PER_HOUR || perDay >= MAX_PER_DAY) {
         return json({ ok: false, limit: true, message: LIMIT_MESSAGE }, 429);
       }
-      await db.prepare("INSERT INTO submissions (ip, ts) VALUES (?, ?)").bind(ip, now).run();
+      await db.prepare("INSERT INTO submissions (ip, ts) VALUES (?, ?)").bind(key, now).run();
     } catch (e) {
       // On any DB error, allow the submission through (never block a genuine lead).
     }

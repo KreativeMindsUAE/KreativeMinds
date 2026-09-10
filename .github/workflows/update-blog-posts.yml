@@ -76,6 +76,7 @@ jobs:
             "pricelist.html|0.9|monthly"
             "aieo.html|0.85|monthly"
             "jobs.html|0.7|monthly"
+            "jobs/social-media-assistant.html|0.6|monthly"
             "climate-impact.html|0.7|monthly"
             "confidentiality.html|0.6|yearly"
             "standards-and-ethics.html|0.5|yearly"

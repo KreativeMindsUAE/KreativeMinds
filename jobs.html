@@ -208,6 +208,15 @@
   .apply-list h4 { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
   .apply-list p { margin: 8px 0; font-size: 0.92rem; color: var(--ink-soft); display: flex; align-items: center; gap: 12px; }
   .apply-list svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .openings { max-width: 760px; }
+  .opening-card { display: block; padding: 28px 30px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-elev); text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .opening-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .opening-card .op-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .opening-card h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.25rem; margin: 0; }
+  .opening-card .op-arrow { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; }
+  .opening-card p { color: var(--ink-soft); margin: 10px 0 0; font-size: 0.95rem; }
+  .opening-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .opening-tags span { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 6px 12px; }
   .faq-list { max-width: 760px; }
   .faq-item { padding: 22px 0; border-top: 1px solid var(--line); }
   .faq-item:last-child { border-bottom: 1px solid var(--line); }
@@ -340,11 +349,38 @@
   </div>
 </section>
 
+<!-- CURRENT OPENINGS -->
+<section class="block-sm">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num mono">03 / Current openings</div>
+      <div>
+        <h2 class="section-title">Live opening we are hiring for right now.</h2>
+        <p class="section-lead">We are <strong>regularly looking for talent</strong> across the disciplines above and select people on a rolling basis as the right fit comes along. When a specific role is open, you will find it here. Even if nothing below matches, you are welcome to introduce yourself at <a href="mailto:hr@kmmpr.com">hr@kmmpr.com</a>.</p>
+      </div>
+    </div>
+    <div class="openings">
+      <a href="/jobs/social-media-assistant" class="opening-card">
+        <div class="op-top">
+          <h3>Social Media Assistant</h3>
+          <svg class="op-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <p>Manage social media accounts and Meta Ads campaigns for our brands and clients. Remote to start, with the possibility of UAE relocation and visa support for strong performers.</p>
+        <div class="opening-tags">
+          <span>Remote</span>
+          <span>Meta Ads</span>
+          <span>Future UAE relocation</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="block-sm">
   <div class="container">
     <div class="section-head">
-      <div class="section-num mono">03 / FAQ</div>
+      <div class="section-num mono">04 / FAQ</div>
       <div>
         <h2 class="section-title">Common questions.</h2>
       </div>

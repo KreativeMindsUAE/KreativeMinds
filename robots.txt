@@ -32,7 +32,6 @@ User-agent: *
 Content-Signal: search=yes,ai-train=no
 Allow: /
 Allow: /llms.txt
-Allow: /llms-full.txt
 Allow: /aieo
 
 # Specific AI & Search Bot Permissions

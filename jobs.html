@@ -486,9 +486,16 @@
         </div>
       </div>
 
-      <div class="field">
-        <label for="jf-edu">Educational qualification <span class="req">*</span></label>
-        <input type="text" id="jf-edu" name="education" placeholder="e.g. BSc Computer Science" required />
+      <div class="row">
+        <div class="field">
+          <label for="jf-edu">Educational qualification <span class="req">*</span></label>
+          <input type="text" id="jf-edu" name="education" placeholder="e.g. BSc Computer Science" required />
+        </div>
+        <div class="field">
+          <label for="jf-salary">Expected salary / remuneration</label>
+          <input type="number" id="jf-salary" name="expected_salary_usd" min="0" step="50" placeholder="e.g. 1500" />
+          <span class="field-note">Optional. In US dollars (USD), per month.</span>
+        </div>
       </div>
 
       <div class="field">

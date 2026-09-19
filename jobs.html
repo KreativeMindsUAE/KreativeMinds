@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Remote & Contract Jobs in the UAE | Careers at Kreative Minds Dubai</title>
-<meta name="description" content="Remote and contract based freelance roles at Kreative Minds Dubai: software engineering, AI, digital marketing, branding, social media, PR, eCommerce, and web. We hire freelancers, not full-time staff. Apply to hr@kmmpr.com." />
+<title>Remote & Contract Jobs in Dubai | UAE Careers at Kreative Minds</title>
+<meta name="description" content="Apply online for remote and contract jobs in Dubai. Kreative Minds hires freelance software, AI, digital marketing, branding, PR and eCommerce talent across the UAE. Submit your CV today." />
 <meta name="keywords" content="remote jobs UAE, contract jobs Dubai, freelance marketing jobs UAE, remote software developer jobs UAE, freelance web developer Dubai, AI automation jobs UAE, social media freelancer Dubai, PR jobs UAE, ecommerce freelancer UAE, digital agency careers GCC" />
 <meta name="author" content="Khalid Hussain Mir (Khalidgraphy)" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://kreativeminds.ae/jobs" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Remote & Contract Jobs in the UAE | Kreative Minds Dubai" />
-<meta property="og:description" content="Remote, contract based freelance roles across software, AI, marketing, branding, PR, and eCommerce. We work with freelancers, not full-time staff. Apply to hr@kmmpr.com." />
+<meta property="og:title" content="Remote & Contract Jobs in Dubai | UAE Careers at Kreative Minds" />
+<meta property="og:description" content="Apply online for remote and contract jobs in Dubai. Kreative Minds hires freelance software, AI, digital marketing, branding, PR and eCommerce talent across the UAE. Submit your CV today." />
 <meta property="og:url" content="https://kreativeminds.ae/jobs" />
 <meta property="og:site_name" content="Kreative Minds" />
 <meta property="og:image" content="https://kreativeminds.ae/assets/images/kreativeminds-uae-og.jpg" />
@@ -23,8 +23,8 @@
 <meta property="og:locale" content="en_AE" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Remote & Contract Jobs in the UAE | Kreative Minds Dubai" />
-<meta name="twitter:description" content="Remote, contract based freelance roles across software, AI, marketing, branding, PR, and eCommerce. We work with freelancers, not full-time staff. Apply to hr@kmmpr.com." />
+<meta name="twitter:title" content="Remote & Contract Jobs in Dubai | UAE Careers at Kreative Minds" />
+<meta name="twitter:description" content="Apply online for remote and contract jobs in Dubai. Kreative Minds hires freelance software, AI, digital marketing, branding, PR and eCommerce talent across the UAE. Submit your CV today." />
 <meta name="twitter:image" content="https://kreativeminds.ae/assets/images/kreativeminds-uae-og.jpg" />
 
 <script type="application/ld+json">
@@ -222,6 +222,11 @@
   .faq-item:last-child { border-bottom: 1px solid var(--line); }
   .faq-item h3 { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 1.1rem; margin: 0 0 8px; }
   .faq-item p { color: var(--ink-soft); margin: 0; }
+  /* Careers hero CTA */
+  .jobs-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; flex-wrap: wrap; }
+  .jobs-hero-text { flex: 1 1 420px; min-width: 0; }
+  .jobs-hero-cta { flex-shrink: 0; padding-bottom: 4px; }
+  @media (max-width: 760px) { .jobs-hero-cta { width: 100%; } .jobs-hero-cta .btn { width: 100%; justify-content: center; } }
   /* Job application form */
   .job-form { max-width: 760px; margin: 0 auto; }
   .job-form .req { color: var(--accent); }
@@ -283,12 +288,22 @@
 <!-- HEADER -->
 <header class="page-header">
   <div class="container">
-    <div class="hero-eyebrow">
-      <span class="dot"></span>
-      <span>Careers</span>
+    <div class="jobs-hero">
+      <div class="jobs-hero-text">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span>Careers</span>
+        </div>
+        <h1>Remote, contract work with a team that <em>ships its own.</em></h1>
+        <p class="page-lead">We're a Dubai based digital agency and a growing team. We work with <strong>remote, contract based freelancers, not full-time permanent staff.</strong> Most of our work is delivered remotely from across South Asia, while our clients sit in the UAE, GCC, UK, and Europe. If your skills fit one of the roles below, <a href="#apply">complete the application form</a> and attach your CV and portfolio.</p>
+      </div>
+      <div class="jobs-hero-cta">
+        <a href="#apply" class="btn btn-primary">
+          Apply online now
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
     </div>
-    <h1>Remote, contract work with a team that <em>ships its own.</em></h1>
-    <p class="page-lead">We're a Dubai based digital agency and a growing team. We work with <strong>remote, contract based freelancers, not full-time permanent staff.</strong> Most of our work is delivered remotely from across South Asia, while our clients sit in the UAE, GCC, UK, and Europe. If your skills fit one of the roles below, <a href="#apply">complete the application form</a> and attach your CV and portfolio.</p>
   </div>
 </header>
 
@@ -493,7 +508,7 @@
         </div>
         <div class="field">
           <label for="jf-salary">Expected salary / remuneration</label>
-          <input type="number" id="jf-salary" name="expected_salary_usd" min="0" step="50" placeholder="e.g. 1500" />
+          <input type="number" id="jf-salary" name="expected_salary_usd" min="0" step="50" placeholder="e.g. 500" />
           <span class="field-note">Optional. In US dollars (USD), per month.</span>
         </div>
       </div>

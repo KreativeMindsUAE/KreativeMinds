@@ -5,10 +5,16 @@ name: Social Image Post (3x/week)
 # to Facebook, Instagram, and LinkedIn. Runs on non-blog days (blog = Tue/Fri).
 
 on:
-  schedule:
-    - cron: '0 7 * * 1'   # Monday 07:00 UTC (11:00 Gulf)
-    - cron: '0 7 * * 3'   # Wednesday
-    - cron: '0 7 * * 6'   # Saturday
+  # Cron PAUSED 2026-09-24: the OpenRouter ":free" model slugs in
+  # scripts/social-image/config.mjs were retired upstream (404 "unavailable for
+  # free" on 4 models, 429 rate-limit on the 5th), so every scheduled run failed
+  # and emailed a failure notice ~3x/week. Re-enable by uncommenting the three
+  # schedule entries below AFTER pointing OPENROUTER_MODEL (repo var) at a
+  # currently-valid model or switching the writer to a keyed provider.
+  # schedule:
+  #   - cron: '0 7 * * 1'   # Monday 07:00 UTC (11:00 Gulf)
+  #   - cron: '0 7 * * 3'   # Wednesday
+  #   - cron: '0 7 * * 6'   # Saturday
   workflow_dispatch:
     inputs:
       topic:

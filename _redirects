@@ -1,3 +1,8 @@
 # Redirects for orphan / legacy URLs
 /blog/blog.html  /blog/  301
 /blog/blog       /blog/  301
+
+# The custom 404 page is served (with a real 404 status) for unmatched paths.
+# Its own clean URL /404 would otherwise be a crawlable 200 error page, which
+# Google flags as "Soft 404". Redirect that vanity URL to home.
+/404  /  301
